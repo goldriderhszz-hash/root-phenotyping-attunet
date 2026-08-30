@@ -13,14 +13,15 @@ from skimage.morphology import skeletonize
 warnings.filterwarnings("ignore")
 
 # ==========================================
-# 1. 基础配置与路径设置
+# 1. Basic Configuration and Path Setup
 # ==========================================
 random.seed(42)
 torch.manual_seed(42)
 np.random.seed(42)
 
-ORIGINAL_DATA_DIR = r"D:\萌发袋照片建模"
-WORKSPACE_DIR = r"D:\Root_Workspace_Sliding_lastest"
+# Modified to standard relative paths for open-source repository
+ORIGINAL_DATA_DIR = r"./data/raw_images"
+WORKSPACE_DIR = r"./workspace/root_segmentation"
 
 MODEL_SAVE_DIR = os.path.join(WORKSPACE_DIR, "models")
 GT_10_DIR = os.path.join(WORKSPACE_DIR, "GT_10")
@@ -40,7 +41,7 @@ def robust_imread(path):
     except: return None
 
 # ==========================================
-# 2. 网络架构：Attention U-Net
+# 2. Network Architecture: Attention U-Net
 # ==========================================
 class DoubleConv(nn.Module):
     def __init__(self, in_c, out_c):
@@ -122,7 +123,7 @@ class AttentionUNet(nn.Module):
         return torch.sigmoid(self.out(u4))
 
 # ==========================================
-# 3. 损失函数：可微 clDice 拓扑损失
+# 3. Loss Functions: Differentiable clDice Topology Loss
 # ==========================================
 def dice_loss(pred, target):
     smooth = 1.0
@@ -158,28 +159,28 @@ def cldice_loss(pred, target):
     tsens = (skel_target * pred).sum() / (skel_target.sum() + smooth)
     return 1.0 - 2.0 * (tprec * tsens) / (tprec + tsens + smooth)
 
-# 核心改进：引入 epoch 参数，实现训练中后期损失函数对假阳性噪声的动态压制
+# Proposed Improvement: Dynamic loss weighting based on epoch to suppress false positives in later stages
 def combined_topology_loss(pred, target, epoch):
     bce = nn.BCELoss()(pred, target)
     dice = dice_loss(pred, target)
     cldice = cldice_loss(pred, target)
     
     if epoch <= 25:
-        # 前25轮：聚焦低对比度侧根的连通性建立 (Recall优先)
+        # First 25 epochs: Focus on connectivity of low-contrast lateral roots (Recall priority)
         return 0.2 * bce + 0.8 * dice + 0.3 * cldice
     else:
-        # 后25轮：加大刚性BCE权重至0.4，强力清除褶皱、水珠边缘等背景假阳性噪声 (Precision优先)
+        # Later 25 epochs: Increase BCE weight to 0.4 to suppress background noise like wrinkles and water drops (Precision priority)
         return 0.4 * bce + 0.8 * dice + 0.3 * cldice
 
 # ==========================================
-# 4. 数据集：过滤海量黑背景 + 根系多维数据增强
+# 4. Dataset: Background Filtering and Multi-dimensional Augmentation
 # ==========================================
 class PatchDataset(Dataset):
     def __init__(self, files):
         self.samples = []
         clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(16, 16))
         
-        print("正在从巨图中智能筛选高质量原分辨率切片...")
+        print("Extracting high-quality original resolution patches from large-scale images...")
         for name in files:
             img_path = os.path.join(ORIGINAL_DATA_DIR, f"{name}.tif")
             mask_path = None
@@ -209,7 +210,7 @@ class PatchDataset(Dataset):
                             i_p = img[y:y+PATCH_SIZE, x:x+PATCH_SIZE].astype(np.float32) / 255.0
                             self.samples.append((i_p.copy(), m_p.copy()))
                             
-        print(f"智能切片提取完毕，共捕获高质量图块 {len(self.samples)} 张！")
+        print(f"Patch extraction complete. Total high-quality patches captured: {len(self.samples)}")
                         
     def __len__(self): return len(self.samples)
     def __getitem__(self, idx):
@@ -233,7 +234,7 @@ class PatchDataset(Dataset):
         return torch.tensor(img).unsqueeze(0).float(), torch.tensor(mask).unsqueeze(0).float()
 
 # ==========================================
-# 5. 推理模块：2D 高斯加权滑窗推理
+# 5. Inference Module: 2D Gaussian-weighted Sliding Window
 # ==========================================
 def get_gaussian_window(patch_size=256, sigma=64):
     x = np.arange(patch_size)
@@ -270,7 +271,7 @@ def gaussian_sliding_window_predict(model, img, patch_size=256, overlap_ratio=0.
     return pred_map / (weight_map + 1e-8)
 
 # ==========================================
-# 6. 主程序与多维定量评估
+# 6. Main Program and Quantitative Evaluation
 # ==========================================
 if __name__ == "__main__":
     all_files = [f.replace('.tif', '') for f in os.listdir(ORIGINAL_DATA_DIR) if f.endswith('.tif') and 'mask' not in f.lower()]
@@ -287,18 +288,18 @@ if __name__ == "__main__":
             if os.path.exists(p): src_mask = p; break
         if src_mask: shutil.copy(src_mask, os.path.join(GT_10_DIR, f"{name}_mask.png"))
 
-    # --- 1. 训练准备 (扩展至 50 轮) ---
+    # --- 1. Training Preparation (Extended to 50 epochs) ---
     train_dataset = PatchDataset(train_files)
     train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
     
     model = AttentionUNet().to(DEVICE)
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)
-    EPOCHS = 50  # 🌟 核心改进：提升训练轮数至 50 轮
+    EPOCHS = 50  # Extended training epochs for thorough convergence
     
-    # 余弦退火 T_max 同步扩展至 50，让低学习率的收敛雕刻过程更持久、更精细
+    # Cosine annealing T_max scaled to 50 for finer learning rate decay
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOCHS, eta_min=1e-5)
     
-    print(f"\n 开始 50 轮深度精细化训练 (当前设备: {DEVICE})...")
+    print(f"\nStarting {EPOCHS}-epoch deep refinement training (Device: {DEVICE})...")
     for epoch in range(1, EPOCHS + 1):
         model.train()
         epoch_loss = 0
@@ -306,7 +307,7 @@ if __name__ == "__main__":
             x, y = x.to(DEVICE), y.to(DEVICE)
             optimizer.zero_grad()
             pred = model(x)
-            loss = combined_topology_loss(pred, y, epoch=epoch) # 传入当前轮数进行损失权重切换
+            loss = combined_topology_loss(pred, y, epoch=epoch) # Switch loss weights based on current epoch
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
@@ -317,8 +318,8 @@ if __name__ == "__main__":
         
     torch.save(model.state_dict(), os.path.join(MODEL_SAVE_DIR, "precision_boost_attention_unet.pth"))
     
-    # --- 2. 高斯重叠滑窗推理 (引入防噪声动态阈值) ---
-    print(f"\n启动高斯权重滑窗推理...")
+    # --- 2. Gaussian Overlapping Sliding Window Inference (Dynamic noise threshold) ---
+    print(f"\nInitiating Gaussian-weighted sliding window inference...")
     model.eval()
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(16, 16))
 
@@ -336,9 +337,11 @@ if __name__ == "__main__":
         pred_prob = gaussian_sliding_window_predict(model, img_prep, patch_size=PATCH_SIZE, overlap_ratio=0.5)
         
         pred_prob = pred_prob[:h, :w]
-        # 核心改进：将二值化阈值由 0.5 轻微收紧至 0.53，直接滤除边缘虚化噪声和反光毛刺
+        # Optimization: Tighten binarization threshold from 0.5 to 0.53 to filter out edge blur and reflection noise
         pred_mask = (pred_prob > 0.53).astype(np.uint8) * 255
         
         cv2.imencode('.tif', pred_mask)[1].tofile(os.path.join(PRED_10_DIR, f"{name}.tif"))
+
+
 
 
