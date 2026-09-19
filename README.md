@@ -15,6 +15,9 @@ data/
 src/root_phenotyping/
   pipeline.py      Attention U-Net, two-stage loss, training, and inference
   phenotypes.py    skeletonization and four mask-derived descriptors
+  gui.py           reconstructed PyQt interface for single-image analysis
+  onnx_inference.py  ONNX Runtime sliding-window inference
+software/           auditable desktop source, archived ONNX model, build recipe
 analysis/           manuscript evaluation scripts
 models/             archived combined-model checkpoint (Git LFS)
 artifacts/ablation/  four archived checkpoints, predictions, and training logs
@@ -94,6 +97,10 @@ Add `--include-gpu-robustness` to rerun the CUDA perturbation and timing analysi
 ## Archived checkpoint
 
 `models/combined_attention_unet_cldice.pth` is the checkpoint used by the frozen-model robustness analysis. Model assumptions, intended use, and limitations are documented in [`docs/MODEL_CARD.md`](docs/MODEL_CARD.md).
+
+## Desktop software
+
+The authors' `AI_Phenotype_Tool.zip` has been reconstructed as reviewable source under [`software/`](software/README.md). The original opaque PyInstaller bundle is not duplicated in the submission tree; its ONNX model is retained byte-for-byte with provenance and checksums. Follow the software-specific installation instructions, then run `python -m root_phenotyping.gui`. A reproducible Windows build recipe is provided for a post-review GitHub Release.
 
 ## Citation
 

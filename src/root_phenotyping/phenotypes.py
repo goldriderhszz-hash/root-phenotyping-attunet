@@ -2,8 +2,6 @@ import argparse
 import os
 import cv2
 import numpy as np
-import matplotlib.pyplot as plt
-from scipy import stats
 from skimage.morphology import skeletonize
 
 # =================================================================
@@ -13,11 +11,6 @@ from skimage.morphology import skeletonize
 WORKSPACE_DIR = "./runs/manuscript/phenotypes"
 GT_DIR = "./runs/manuscript/ground_truth"
 PRED_DIR = "./runs/manuscript/predictions"
-
-# Academic plotting configuration (sans-serif fonts)
-plt.rcParams['font.family'] = 'sans-serif'
-plt.rcParams['font.sans-serif'] = ['Arial', 'Liberation Sans', 'DejaVu Sans']
-plt.rcParams['axes.unicode_minus'] = False
 
 def robust_imread(path):
     """Safely read an image from a path, returning a grayscale numpy array."""
@@ -211,6 +204,14 @@ def extract_phenotypes_decoupled(mask):
 # 3. Evaluation and Visualization Pipeline
 # =================================================================
 def main():
+    import matplotlib.pyplot as plt
+    from scipy import stats
+
+    # Academic plotting configuration (sans-serif fonts)
+    plt.rcParams['font.family'] = 'sans-serif'
+    plt.rcParams['font.sans-serif'] = ['Arial', 'Liberation Sans', 'DejaVu Sans']
+    plt.rcParams['axes.unicode_minus'] = False
+
     global WORKSPACE_DIR, GT_DIR, PRED_DIR
     parser = argparse.ArgumentParser(description="Extract and compare the four mask-derived descriptors.")
     parser.add_argument("--ground-truth-dir", default=GT_DIR)

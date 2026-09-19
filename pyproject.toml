@@ -20,6 +20,15 @@ dependencies = [
 
 [project.optional-dependencies]
 test = ["pytest>=8"]
+software = [
+  "onnxruntime>=1.17,<1.24",
+  "opencv-python-headless>=4.8",
+  "PyQt5>=5.15",
+  "pyinstaller>=6.0",
+]
+
+[project.scripts]
+root-phenotyper = "root_phenotyping.gui:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
