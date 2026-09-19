@@ -1,0 +1,63 @@
+{
+  "status": "complete",
+  "checkpoint": "D:\\Root_Workspace_Sliding_lastest\\03_消融实验\\Exp4_Ours_AttUNet_clDice\\models\\best_model.pth",
+  "checkpoint_sha256": "a3aceea2a989b818d04b209dcbe0202706dfef169505217cdffbfce5c902f6f3",
+  "source_sha256": "95f7f20cac100b027bd79450e109530b4eea28980e60a9a08f4f06800cceeb5f",
+  "source_definitions_executed_without_changes": [
+    "DoubleConv",
+    "AttentionGate",
+    "AttentionUNet",
+    "get_gaussian_window",
+    "gaussian_sliding_window_predict"
+  ],
+  "python": "3.12.13 (main, Aug  7 2026, 02:26:41) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.7.1+cu126",
+  "CUDA": "12.6",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU, 560.94, 8188 MiB",
+  "cpu": "AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cv2": "5.0.0",
+  "cudnn": 90701,
+  "cudnn_benchmark": false,
+  "cudnn_allow_tf32": true,
+  "matmul_allow_tf32": false,
+  "seed": 20260903,
+  "conditions": [
+    "original",
+    "gamma_0.8",
+    "gamma_1.2",
+    "blur_sigma1.0"
+  ],
+  "binary_threshold": 0.53,
+  "numpy": "2.5.2",
+  "skimage": "0.26.0",
+  "configuration": {
+    "patch_size": 256,
+    "overlap_ratio": 0.5,
+    "binary_threshold": 0.53,
+    "pad_to_multiple": 256,
+    "padding": "numpy reflect",
+    "CLAHE_clipLimit": 2.0,
+    "CLAHE_tileGridSize": [
+      16,
+      16
+    ],
+    "gamma_order": "before padding and CLAHE",
+    "gamma_LUT": "round((v/255)^gamma*255)",
+    "blur_kernel": [
+      3,
+      3
+    ],
+    "blur_sigma": 1.0,
+    "blur_border": "BORDER_REFLECT_101",
+    "GPU_warmup_patches": 10,
+    "evaluation_seed": 20260903
+  },
+  "wrapper_sha256": "2227bd2c0d20e5fa5ea3352004c3cc9b6b616da6024ff3e211ff9f87ce04443f",
+  "common_sha256": "6359c3308f8b43799f053ae26bb64e5632f46553053f5264ffd895e7c032dac2",
+  "phenotype_source_sha256": "987ca19c288702bd051c95b630542dfed3c34514fdf39eca0d7583d0c51fc7be",
+  "notes": "Synthetic input sensitivity on the already-used 10-image set, not new biological replicates or external validation. No parameter/threshold search. All source functions unchanged. Timings exclude startup, metric computation and disk output; perturbation and phenotype timings separate.",
+  "completed_cases": 40,
+  "saved_Exp4_exact_reproduction_images": 0,
+  "source_weight_hash_after": "a3aceea2a989b818d04b209dcbe0202706dfef169505217cdffbfce5c902f6f3"
+}

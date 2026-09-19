@@ -1,0 +1,50 @@
+seed: 42
+input:
+  channels: 1
+  image_size: [3209, 2311]
+  patch_size: 256
+  stride: 128
+  clahe_clip_limit: 2.0
+  clahe_grid_size: [16, 16]
+sampling:
+  keep_all_above_foreground_pixels: 150
+  keep_probability_between_31_and_150: 0.5
+  discard_at_or_below_foreground_pixels: 30
+augmentation:
+  rotations_degrees: [0, 90, 180, 270]
+  horizontal_flip_probability: 0.5
+  vertical_flip_probability: 0.5
+  gamma_probability: 0.5
+  gamma_range: [0.8, 1.2]
+model:
+  architecture: AttentionUNet
+  encoder_channels: [32, 64, 128, 256]
+  bottleneck_channels: 512
+  trainable_parameters: 7981277
+training:
+  epochs: 50
+  batch_size: 8
+  optimizer: AdamW
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler: cosine
+  minimum_learning_rate: 0.00001
+loss:
+  dice_coefficient: 0.8
+  skeleton_coefficient: 0.3
+  skeleton_iterations: 12
+  bce_coefficient_epochs_1_25: 0.2
+  bce_coefficient_epochs_26_50: 0.4
+inference:
+  threshold: 0.53
+  gaussian_sigma_pixels: 64
+  gaussian_minimum_weight: 0.1
+  reflection_padding: true
+phenotypes:
+  binary_threshold: 127
+  closing_kernel_pixels: 5
+  pruning_iterations: 15
+  minimum_component_pixels: 10
+  lateral_vector_distance_pixels: [8, 15]
+  axis_vector_path_indices: 12
+  path_multiplier: 1.12

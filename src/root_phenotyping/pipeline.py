@@ -1,3 +1,4 @@
+import argparse
 import os
 import random
 import shutil
@@ -19,9 +20,10 @@ random.seed(42)
 torch.manual_seed(42)
 np.random.seed(42)
 
-# Modified to standard relative paths for open-source repository
-ORIGINAL_DATA_DIR = r"./data/raw_images"
-WORKSPACE_DIR = r"./workspace/root_segmentation"
+# Repository-relative defaults. Command-line arguments can override every path.
+ORIGINAL_DATA_DIR = r"./data/images"
+MASK_DATA_DIR = r"./data/masks"
+WORKSPACE_DIR = r"./runs/manuscript"
 
 MODEL_SAVE_DIR = os.path.join(WORKSPACE_DIR, "models")
 GT_10_DIR = os.path.join(WORKSPACE_DIR, "GT_10")
@@ -185,7 +187,7 @@ class PatchDataset(Dataset):
             img_path = os.path.join(ORIGINAL_DATA_DIR, f"{name}.tif")
             mask_path = None
             for suffix in [f"{name}_mask.png", f"{name}_mask.tif", f"{name}.png"]:
-                p = os.path.join(ORIGINAL_DATA_DIR, suffix)
+                p = os.path.join(MASK_DATA_DIR, suffix)
                 if os.path.exists(p): mask_path = p; break
             if not mask_path: continue
                 
@@ -273,7 +275,29 @@ def gaussian_sliding_window_predict(model, img, patch_size=256, overlap_ratio=0.
 # ==========================================
 # 6. Main Program and Quantitative Evaluation
 # ==========================================
-if __name__ == "__main__":
+def main():
+    global ORIGINAL_DATA_DIR, MASK_DATA_DIR, WORKSPACE_DIR
+    global MODEL_SAVE_DIR, GT_10_DIR, PRED_10_DIR
+
+    parser = argparse.ArgumentParser(description="Train and evaluate the manuscript Attention U-Net.")
+    parser.add_argument("--data-dir", default=ORIGINAL_DATA_DIR, help="Directory containing source TIFF images.")
+    parser.add_argument("--mask-dir", default=MASK_DATA_DIR, help="Directory containing binary masks.")
+    parser.add_argument("--output-dir", default=WORKSPACE_DIR, help="Directory for checkpoints and predictions.")
+    parser.add_argument("--epochs", type=int, default=50)
+    parser.add_argument("--batch-size", type=int, default=8)
+    parser.add_argument("--num-workers", type=int, default=0)
+    parser.add_argument("--threshold", type=float, default=0.53)
+    args = parser.parse_args()
+
+    ORIGINAL_DATA_DIR = os.path.abspath(args.data_dir)
+    MASK_DATA_DIR = os.path.abspath(args.mask_dir)
+    WORKSPACE_DIR = os.path.abspath(args.output_dir)
+    MODEL_SAVE_DIR = os.path.join(WORKSPACE_DIR, "models")
+    GT_10_DIR = os.path.join(WORKSPACE_DIR, "ground_truth")
+    PRED_10_DIR = os.path.join(WORKSPACE_DIR, "predictions")
+    for d in [MODEL_SAVE_DIR, GT_10_DIR, PRED_10_DIR]:
+        os.makedirs(d, exist_ok=True)
+
     all_files = [f.replace('.tif', '') for f in os.listdir(ORIGINAL_DATA_DIR) if f.endswith('.tif') and 'mask' not in f.lower()]
     all_files = sorted(list(set(all_files)))
     random.shuffle(all_files)
@@ -284,17 +308,22 @@ if __name__ == "__main__":
     for name in test_files:
         src_mask = None
         for suffix in [f"{name}_mask.png", f"{name}_mask.tif", f"{name}.png"]:
-            p = os.path.join(ORIGINAL_DATA_DIR, suffix)
+            p = os.path.join(MASK_DATA_DIR, suffix)
             if os.path.exists(p): src_mask = p; break
         if src_mask: shutil.copy(src_mask, os.path.join(GT_10_DIR, f"{name}_mask.png"))
 
     # --- 1. Training Preparation (Extended to 50 epochs) ---
     train_dataset = PatchDataset(train_files)
-    train_loader = DataLoader(train_dataset, batch_size=8, shuffle=True)
+    train_loader = DataLoader(
+        train_dataset,
+        batch_size=args.batch_size,
+        shuffle=True,
+        num_workers=args.num_workers,
+    )
     
     model = AttentionUNet().to(DEVICE)
     optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-4)
-    EPOCHS = 50  # Extended training epochs for thorough convergence
+    EPOCHS = args.epochs
     
     # Cosine annealing T_max scaled to 50 for finer learning rate decay
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOCHS, eta_min=1e-5)
@@ -338,9 +367,13 @@ if __name__ == "__main__":
         
         pred_prob = pred_prob[:h, :w]
         # Optimization: Tighten binarization threshold from 0.5 to 0.53 to filter out edge blur and reflection noise
-        pred_mask = (pred_prob > 0.53).astype(np.uint8) * 255
+        pred_mask = (pred_prob > args.threshold).astype(np.uint8) * 255
         
         cv2.imencode('.tif', pred_mask)[1].tofile(os.path.join(PRED_10_DIR, f"{name}.tif"))
+
+
+if __name__ == "__main__":
+    main()
 
 
 

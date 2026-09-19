@@ -1,0 +1,2 @@
+image_a,image_b,both_in_test,cross_train_test,different_mask_pixels,tp,fp,fn,precision,recall,dice,iou
+10-1-4,447-1-1(1),False,False,80573,89186,51330,29243,0.6347035213071821,0.7530756824764204,0.6888412597269691,0.5253683162601099

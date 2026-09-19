@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite the accompanying manuscript."
+title: "Root segmentation and skeleton measurements in rhizobag seedlings"
+type: software
+authors:
+  - family-names: Wang
+    given-names: Zeen
+  - family-names: Tian
+    given-names: Junyao
+  - family-names: Zhang
+    given-names: He
+  - family-names: Li
+    given-names: Fanchuang
+  - family-names: Song
+    given-names: Tianyuan
+  - family-names: Zhang
+    given-names: Zhanguo
+  - family-names: Li
+    given-names: Yang
+  - family-names: Chen
+    given-names: Qingshan
+  - family-names: Zhu
+    given-names: Rongsheng
+    email: rshzhu@126.com
+repository-code: "https://github.com/goldriderhszz-hash/root-phenotyping-attunet"
+version: 1.0.0
+date-released: 2026-09-19
+keywords:
+  - root phenotyping
+  - rhizobag imaging
+  - Attention U-Net
+  - skeleton analysis
+  - image segmentation
+preferred-citation:
+  type: article
+  title: "Root segmentation and skeleton measurements in rhizobag seedlings using Attention U-Net and two-stage loss weighting"
+  authors:
+    - family-names: Wang
+      given-names: Zeen
+    - family-names: Tian
+      given-names: Junyao
+    - family-names: Zhang
+      given-names: He
+    - family-names: Li
+      given-names: Fanchuang
+    - family-names: Song
+      given-names: Tianyuan
+    - family-names: Zhang
+      given-names: Zhanguo
+    - family-names: Li
+      given-names: Yang
+    - family-names: Chen
+      given-names: Qingshan
+    - family-names: Zhu
+      given-names: Rongsheng

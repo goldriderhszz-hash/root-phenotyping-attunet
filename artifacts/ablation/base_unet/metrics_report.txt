@@ -1,0 +1,5 @@
+Experiment: Exp1_BaseUNet
+Precision: 72.25%
+Recall: 76.90%
+F1-Score: 74.50%
+Relaxed F1: 72.19%

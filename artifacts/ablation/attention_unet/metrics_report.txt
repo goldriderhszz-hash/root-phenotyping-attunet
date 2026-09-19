@@ -1,0 +1,5 @@
+Experiment: Exp2_AttUNet
+Precision: 72.72%
+Recall: 76.79%
+F1-Score: 74.70%
+Relaxed F1: 71.72%

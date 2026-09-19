@@ -1,0 +1,5 @@
+Experiment: Exp4_Ours_AttUNet_clDice
+Precision: 71.49%
+Recall: 78.99%
+F1-Score: 75.06%
+Relaxed F1: 72.62%

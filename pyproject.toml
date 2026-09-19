@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "root-phenotyping-attunet"
+version = "1.0.0"
+description = "Attention U-Net segmentation and skeleton measurements for rhizobag seedling images"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+authors = [{name = "Zeen Wang et al."}]
+dependencies = [
+  "numpy>=1.26",
+  "opencv-python-headless>=4.8",
+  "scikit-image>=0.22",
+  "scipy>=1.11",
+  "matplotlib>=3.8",
+  "torch>=2.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

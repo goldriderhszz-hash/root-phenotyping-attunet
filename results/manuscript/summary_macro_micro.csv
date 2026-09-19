@@ -1,0 +1,65 @@
+model,aggregation,metric,value,ci95_low,ci95_high,n_images
+Base U-Net,macro_image,precision,0.7118537874390107,0.6644626693577653,0.7501457699312981,10
+Base U-Net,macro_image,recall,0.7879702168727082,0.7586060042833652,0.8157785511437987,10
+Base U-Net,macro_image,dice,0.7437494450096287,0.7214693247076904,0.7616837177449922,10
+Base U-Net,macro_image,iou,0.5931090002275673,0.5667081320932806,0.6154306209395518,10
+Base U-Net,macro_image,cldice,0.8435315746900036,0.8089003237020429,0.8684336291750578,10
+Base U-Net,macro_image,topology_precision,0.8211884043791192,0.7544855676443702,0.8683434112934909,10
+Base U-Net,macro_image,topology_recall,0.877203708183453,0.8546812715530907,0.8994458854856989,10
+Base U-Net,macro_image,tolerance2_f1,0.8657277719547661,0.840180473758733,0.8865025700928455,10
+Base U-Net,micro_pooled_counts,precision,0.7224934872186316,,,10
+Base U-Net,micro_pooled_counts,recall,0.7690446422092344,,,10
+Base U-Net,micro_pooled_counts,dice,0.7450426300394838,,,10
+Base U-Net,micro_pooled_counts,iou,0.5936796323710378,,,10
+Base U-Net,micro_pooled_counts,topology_precision,0.833533925078983,,,10
+Base U-Net,micro_pooled_counts,topology_recall,0.8668956010737346,,,10
+Base U-Net,micro_pooled_counts,cldice,0.8498874924050195,,,10
+Base U-Net,micro_pooled_counts,tolerance2_f1,0.8676699785197552,,,10
+Attention U-Net,macro_image,precision,0.7160366645720472,0.6671669796449468,0.7528243733835909,10
+Attention U-Net,macro_image,recall,0.7858896876472308,0.7567071283194885,0.8112964047095497,10
+Attention U-Net,macro_image,dice,0.7453608089503139,0.7223442031898842,0.7628084415466321,10
+Attention U-Net,macro_image,iou,0.5951583525898282,0.5679974023881367,0.6165601129833443,10
+Attention U-Net,macro_image,cldice,0.8442348607228285,0.8132291400787011,0.8670642414241824,10
+Attention U-Net,macro_image,topology_precision,0.8199069625764516,0.758478024905293,0.8642461400363937,10
+Attention U-Net,macro_image,topology_recall,0.8796229673031963,0.8574555070604598,0.9023538987128141,10
+Attention U-Net,macro_image,tolerance2_f1,0.8674861573579806,0.8408434320629815,0.8884953372599632,10
+Attention U-Net,micro_pooled_counts,precision,0.727159765046763,,,10
+Attention U-Net,micro_pooled_counts,recall,0.7678586086172419,,,10
+Attention U-Net,micro_pooled_counts,dice,0.7469552150891955,,,10
+Attention U-Net,micro_pooled_counts,iou,0.5961121454588441,,,10
+Attention U-Net,micro_pooled_counts,topology_precision,0.8312644881477604,,,10
+Attention U-Net,micro_pooled_counts,topology_recall,0.8699668689995406,,,10
+Attention U-Net,micro_pooled_counts,cldice,0.8501754461862967,,,10
+Attention U-Net,micro_pooled_counts,tolerance2_f1,0.8697789510233316,,,10
+U-Net + clDice,macro_image,precision,0.7001974408285367,0.6529324162697814,0.7373844144515589,10
+U-Net + clDice,macro_image,recall,0.8068141913844113,0.7781586536088476,0.8328567822903274,10
+U-Net + clDice,macro_image,dice,0.7457585824491721,0.7220579188400402,0.7645844798902807,10
+U-Net + clDice,macro_image,iou,0.5957776500880432,0.5668703783082799,0.6192767409567653,10
+U-Net + clDice,macro_image,cldice,0.8438290415480518,0.8081273571340771,0.8703229547231037,10
+U-Net + clDice,macro_image,topology_precision,0.8110739311104801,0.7439191251479222,0.8586093911517834,10
+U-Net + clDice,macro_image,topology_recall,0.8896143799965428,0.8687787588326007,0.9098496042539279,10
+U-Net + clDice,macro_image,tolerance2_f1,0.868726700024532,0.8422104714476184,0.8895044635647589,10
+U-Net + clDice,micro_pooled_counts,precision,0.7111580031101324,,,10
+U-Net + clDice,micro_pooled_counts,recall,0.7872045176340712,,,10
+U-Net + clDice,micro_pooled_counts,dice,0.747251462912817,,,10
+U-Net + clDice,micro_pooled_counts,iou,0.596489591319166,,,10
+U-Net + clDice,micro_pooled_counts,topology_precision,0.8234346982837487,,,10
+U-Net + clDice,micro_pooled_counts,topology_recall,0.8793439094580542,,,10
+U-Net + clDice,micro_pooled_counts,cldice,0.8504714394227807,,,10
+U-Net + clDice,micro_pooled_counts,tolerance2_f1,0.8707451354093895,,,10
+Ours,macro_image,precision,0.7028169605315449,0.653827533836694,0.7401204080003493,10
+Ours,macro_image,recall,0.8089932068035294,0.7809994673237349,0.8335854653585114,10
+Ours,macro_image,dice,0.7483232280254141,0.7242400449175701,0.7677989851635676,10
+Ours,macro_image,iou,0.5991730372031989,0.5687852038509981,0.6229914735546767,10
+Ours,macro_image,cldice,0.846349969066643,0.8106912443662867,0.871871367831935,10
+Ours,macro_image,topology_precision,0.8101911770672483,0.7467782496093583,0.8563042636939874,10
+Ours,macro_image,topology_recall,0.8954336160812947,0.8755171760707302,0.9150659816292074,10
+Ours,macro_image,tolerance2_f1,0.8710729142039243,0.842866277555906,0.8933187768857178,10
+Ours,micro_pooled_counts,precision,0.7149448714366696,,,10
+Ours,micro_pooled_counts,recall,0.7899304915318153,,,10
+Ours,micro_pooled_counts,dice,0.7505694725416886,,,10
+Ours,micro_pooled_counts,iou,0.6007292570868707,,,10
+Ours,micro_pooled_counts,topology_precision,0.8235122449475911,,,10
+Ours,micro_pooled_counts,topology_recall,0.8840354525888129,,,10
+Ours,micro_pooled_counts,cldice,0.8527012407618584,,,10
+Ours,micro_pooled_counts,tolerance2_f1,0.8737355198314372,,,10

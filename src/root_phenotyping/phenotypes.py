@@ -1,3 +1,4 @@
+import argparse
 import os
 import cv2
 import numpy as np
@@ -9,9 +10,9 @@ from skimage.morphology import skeletonize
 # 1. Configuration & Setup
 # =================================================================
 # Define workspace directories (modify these paths according to your environment)
-WORKSPACE_DIR = "./Root_Workspace"
-GT_DIR = os.path.join(WORKSPACE_DIR, "GT_10")
-PRED_DIR = os.path.join(WORKSPACE_DIR, "Pred_10")
+WORKSPACE_DIR = "./runs/manuscript/phenotypes"
+GT_DIR = "./runs/manuscript/ground_truth"
+PRED_DIR = "./runs/manuscript/predictions"
 
 # Academic plotting configuration (sans-serif fonts)
 plt.rcParams['font.family'] = 'sans-serif'
@@ -209,13 +210,24 @@ def extract_phenotypes_decoupled(mask):
 # =================================================================
 # 3. Evaluation and Visualization Pipeline
 # =================================================================
-if __name__ == "__main__":
+def main():
+    global WORKSPACE_DIR, GT_DIR, PRED_DIR
+    parser = argparse.ArgumentParser(description="Extract and compare the four mask-derived descriptors.")
+    parser.add_argument("--ground-truth-dir", default=GT_DIR)
+    parser.add_argument("--prediction-dir", default=PRED_DIR)
+    parser.add_argument("--output-dir", default=WORKSPACE_DIR)
+    args = parser.parse_args()
+    GT_DIR = os.path.abspath(args.ground_truth_dir)
+    PRED_DIR = os.path.abspath(args.prediction_dir)
+    WORKSPACE_DIR = os.path.abspath(args.output_dir)
+
     print("Initializing phenotype extraction and evaluating metrics...")
     
     traits_gt = {"length": [], "count": [], "junctions": [], "angle": []}
     traits_pred = {"length": [], "count": [], "junctions": [], "angle": []}
     
-    # Process actual data or generate demo data if paths do not exist
+    # Process actual data. Missing inputs are treated as an error so that a
+    # manuscript rerun can never silently switch to synthetic demonstration data.
     if os.path.exists(PRED_DIR) and os.path.exists(GT_DIR):
         files = [f for f in os.listdir(PRED_DIR) if f.endswith('.tif')]
         for name in files:
@@ -237,12 +249,7 @@ if __name__ == "__main__":
             traits_gt["junctions"].append(gj); traits_pred["junctions"].append(pj)
             traits_gt["angle"].append(ga);  traits_pred["angle"].append(pa)
     else:
-        print("Warning: Dataset directories not found. Generating mock data for demonstration.")
-        np.random.seed(42)
-        for key in traits_gt.keys():
-            traits_gt[key] = np.random.uniform(20, 100, 30)
-            noise = np.random.normal(0, 3, 30)
-            traits_pred[key] = traits_gt[key] * 1.05 + noise - 2
+        raise FileNotFoundError(f"Expected ground-truth and prediction directories: {GT_DIR}, {PRED_DIR}")
 
     # Global plot typography adjustments
     plt.rcParams.update({
@@ -325,3 +332,7 @@ if __name__ == "__main__":
         print(f"Generated: {file_names[i]}")
 
     print(f"\nAll figures successfully saved to: {WORKSPACE_DIR}")
+
+
+if __name__ == "__main__":
+    main()

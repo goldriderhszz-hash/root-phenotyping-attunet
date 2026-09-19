@@ -1,0 +1,5 @@
+Experiment: Exp3_BaseUNet_clDice
+Precision: 71.12%
+Recall: 78.72%
+F1-Score: 74.73%
+Relaxed F1: 72.70%
