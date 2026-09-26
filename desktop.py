@@ -126,7 +126,7 @@ class RootScopeApp(Window):
         topbar.grid_propagate(False)
         self.breadcrumb = label(topbar, "RootScope  /  图像分析", 9, color=MUTED, bg=WHITE)
         self.breadcrumb.pack(side="left", padx=32)
-        label(topbar, f"研究版 {__version__}   ·   ONNX 本地推理", 9, color=TEAL, bg=WHITE).pack(side="right", padx=32)
+        label(topbar, "研究发布版   ·   ONNX 本地推理", 9, color=TEAL, bg=WHITE).pack(side="right", padx=32)
         self.pages = tk.Frame(outer, bg=BG)
         self.pages.grid(row=1, column=0, sticky="nsew")
         self.pages.grid_rowconfigure(0, weight=1)

@@ -1,7 +1,7 @@
 {
   "status": "verified",
-  "software_version": "RootScope Desktop 1.1.0",
-  "binary_sha256": "a222acf1b546a38440ebc82129528331b2367412e7eabffe9e661670dca9cfcb",
+  "software_version": "RootScope Desktop research-release",
+  "binary_sha256": "cd714c6352b4a60e26d9e335b87b2256281fb7cc7d3899ac0a6bb3122c54a670",
   "image_name": "10-1-2(3).tif",
   "image_sha256": "796085da0db4cacc03e427054d21d951760232ed1c6a49ba9e40094878cd5e2d",
   "reference_sha256": "0508c3be24e6c021d5aacff3b5010997bb235211f0adc484cda889c0830022b8",

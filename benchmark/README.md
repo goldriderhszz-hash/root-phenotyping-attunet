@@ -4,7 +4,7 @@ The comparison uses the official [RhizoVision Explorer 2.0.3 Windows archive](ht
 
 RhizoVision Explorer was run in **Whole root** mode, **Keep largest component** enabled, with its other preprocessing controls at their defaults and no ROI. The rhizobag images contain dark roots; its documented high-contrast input assumption requires bright roots. Each image was converted to grayscale and intensity-inverted (`255 - grayscale`) without geometric changes. A pilot on one fold-1 validation image established the polarity and threshold range. The subsequent grid of 50, 60, and 70 was fixed before evaluating the full ten-image fold-1 validation set. The threshold with highest validation macro Dice was 60. The fold-0 test images were not used for this choice. RVE saved its actual binary segmentation PNGs; the official application was executed, rather than a reimplementation of its thresholding routine.
 
-| Held-out fold 0, 10 full images | RootScope 1.1.0 | RhizoVision Explorer 2.0.3 |
+| Held-out fold 0, 10 full images | RootScope research release | RhizoVision Explorer 2.0.3 |
 | --- | ---: | ---: |
 | Macro Dice | 0.59845 | 0.47626 |
 | Macro IoU | 0.42776 | 0.31673 |

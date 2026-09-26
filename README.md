@@ -4,13 +4,15 @@
 
 **中文速览：** 下载 Windows 发布包后解压整个 `RootScope` 文件夹，双击其中的 `RootScope.exe`。导入一张或多张根系图像，按需加入同名参考掩膜，点击“开始分析”。软件会生成分割掩膜、叠加图、骨架图、描述符 CSV、JSON 和结果压缩包。首次运行和较大图像的分析需要一些时间；所有计算在本机完成。
 
-![RootScope 1.1.0 native desktop interface with five-fold model selection](assets/rootscope-desktop-v1.1.png)
+![RootScope native desktop interface with five-fold model selection](assets/rootscope-desktop.png)
 
 The screenshot shows the initial empty workspace; no example image or result is implied.
 
+This repository publishes one fixed research release. Use the `research-release` tag and its commit hash to identify the exact software in a paper or analysis record.
+
 ## Windows download and launch
 
-1. Download `RootScope-Desktop-Windows-x64-v1.1.0.zip` from the [GitHub Releases page](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases).
+1. Download `RootScope-Desktop-Windows-x64.zip` from the [single research release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/research-release).
 2. Extract the whole archive. Keep `RootScope.exe` and its `_internal` folder together.
 3. Double-click `RootScope.exe`. No Python installation is required for this packaged build.
 4. Click **选择图片** or **导入文件夹**, select one of five fold models if needed, optionally **添加参考掩膜**, choose the result directory, and click **开始分析**.
@@ -88,7 +90,7 @@ When **同时保存 float32 概率图** is selected, each image directory also c
 .venv\Scripts\python desktop.py --self-test self-test.json
 ```
 
-The self-test checks all five bundled ONNX hashes, loads each model, and runs a 256 × 256 prediction. To build a Windows ZIP from source, install `requirements-build.txt` and run `scripts/build_windows.ps1`. Native binaries must be built on their target operating system. GitHub Actions runs the tests, packages the Windows application, and attaches a ZIP to version-tag releases.
+The self-test checks all five bundled ONNX hashes, loads each model, and runs a 256 × 256 prediction. To build a Windows ZIP from source, install `requirements-build.txt` and run `scripts/build_windows.ps1`. Native binaries must be built on their target operating system. GitHub Actions runs the tests, packages the Windows application, and attaches the ZIP to the `research-release` tag.
 
 The published `model/` directory contains five inference-ready ONNX graphs and `catalog.json`. Training checkpoints are identified by SHA-256 in the catalog and can be re-exported using `scripts/export_fold_models.py` when those original study artifacts are available. They are not required to run the desktop application.
 
@@ -114,4 +116,4 @@ These evidence files report results actually produced by the binaries and script
 
 ## License and citation
 
-The RootScope source code and supplied model files are released under the [MIT License](LICENSE). Bundled third-party libraries retain their own licenses. For publications, describe the exact RootScope version, selected model/fold, threshold, and any manual reference masks, and cite the associated manuscript when bibliographic details are available. See [CITATION.md](CITATION.md).
+The RootScope source code and supplied model files are released under the [MIT License](LICENSE). Bundled third-party libraries retain their own licenses. For publications, describe the `research-release` tag or its exact commit, selected model/fold, threshold, and any manual reference masks, and cite the associated manuscript when bibliographic details are available. See [CITATION.md](CITATION.md).

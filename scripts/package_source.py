@@ -7,7 +7,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE = ROOT.parent / "RootScope-Desktop-Source-v1.1.0.zip"
+ARCHIVE = ROOT.parent / "RootScope-Desktop-Source.zip"
 OMIT_DIRS = {".build-venv", ".venv", "_qa", "build", "dist", "release", "__pycache__", ".git",
              "validation_runs", "data", "cache", "oof_predictions"}
 OMIT_FILES = {"build-log.txt", "final-build-log.txt", "RootScope.spec"}
