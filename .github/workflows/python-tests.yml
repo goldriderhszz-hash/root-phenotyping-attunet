@@ -1,0 +1,27 @@
+name: Source tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install runtime dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Test five model artifacts and batch pipeline
+        run: python -m unittest discover -s tests -v
+      - name: Check Python syntax
+        run: python -m compileall -q rootscope scripts benchmark research desktop.py cli.py

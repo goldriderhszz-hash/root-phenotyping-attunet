@@ -1,0 +1,41 @@
+{
+  "dataset_n": 50,
+  "folds": 5,
+  "split_seed": 20260920,
+  "seeds": [
+    42,
+    3407,
+    2026
+  ],
+  "epochs": 50,
+  "checkpoint_selection": "highest validation macro Dice at threshold 0.50, evaluated after every epoch",
+  "threshold_selection": {
+    "split": "validation only",
+    "minimum": 0.1,
+    "maximum": 0.9,
+    "step": 0.01,
+    "tie_break": "lower threshold"
+  },
+  "test_policy": "each held-out test fold is evaluated once after checkpoint and threshold lock",
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001
+  },
+  "scheduler": {
+    "name": "CosineAnnealingLR",
+    "T_max": 50,
+    "eta_min": 1e-05
+  },
+  "batch_size": 12,
+  "patch_size": 256,
+  "training_stride": 128,
+  "inference_stride": 128,
+  "fusion": "Gaussian-weighted overlap",
+  "configs": {
+    "unet_pixel": "U-Net; 0.2 BCE + 0.8 Dice",
+    "attunet_pixel": "Attention U-Net; 0.2 BCE + 0.8 Dice",
+    "attunet_cl_fixed": "Attention U-Net; 0.2 BCE + 0.8 Dice + 0.3 corrected soft-clDice for epochs 1-50",
+    "attunet_cl_schedule": "Attention U-Net; fixed loss for epochs 1-25; BCE weight changes from 0.2 to 0.4 for epochs 26-50"
+  }
+}

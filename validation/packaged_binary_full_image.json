@@ -1,0 +1,20 @@
+{
+  "status": "verified",
+  "software_version": "RootScope Desktop 1.1.0",
+  "binary_sha256": "a222acf1b546a38440ebc82129528331b2367412e7eabffe9e661670dca9cfcb",
+  "image_name": "10-1-2(3).tif",
+  "image_sha256": "796085da0db4cacc03e427054d21d951760232ed1c6a49ba9e40094878cd5e2d",
+  "reference_sha256": "0508c3be24e6c021d5aacff3b5010997bb235211f0adc484cda889c0830022b8",
+  "width": 2311,
+  "height": 3209,
+  "model_id": "fold_0",
+  "onnx_sha256": "f81770d5c8e2e710da1b30f3354fef4e69d4641079b291fd7e857d4c647b8892",
+  "threshold": 0.47,
+  "packaged_dice": 0.55029130634251,
+  "packaged_iou": 0.37958750523470514,
+  "source_pipeline_dice": 0.55029130634251,
+  "source_pipeline_iou": 0.37958750523470514,
+  "dice_absolute_difference": 0.0,
+  "iou_absolute_difference": 0.0,
+  "interpretation": "Single full-image smoke and parity test of the packaged Windows binary; the 50-image OOF validation uses the same source pipeline and released ONNX files."
+}

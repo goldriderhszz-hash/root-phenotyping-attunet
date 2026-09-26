@@ -1,0 +1,35 @@
+{
+  "status": "ok",
+  "version": "1.1.0",
+  "models": [
+    {
+      "id": "fold_0",
+      "sha256": "f81770d5c8e2e710da1b30f3354fef4e69d4641079b291fd7e857d4c647b8892",
+      "provider": "CPUExecutionProvider"
+    },
+    {
+      "id": "fold_1",
+      "sha256": "abcfbccab4d37b4696bb27c6474eed9e30bf0eaf722223990b77dcb78b6dc039",
+      "provider": "CPUExecutionProvider"
+    },
+    {
+      "id": "fold_2",
+      "sha256": "a070c19c20783b5e6dce7d437ec7e973ff625726f9021638e34276ca9123cc59",
+      "provider": "CPUExecutionProvider"
+    },
+    {
+      "id": "fold_3",
+      "sha256": "7b087ce9197ca5463dcfc873e2f0fae935a64317fd25ce0013df44a365bb01fd",
+      "provider": "CPUExecutionProvider"
+    },
+    {
+      "id": "fold_4",
+      "sha256": "85fd5f8fbad1b31dde9c3f97855caa8089256c283f852d061579865d734f9603",
+      "provider": "CPUExecutionProvider"
+    }
+  ],
+  "shape": [
+    256,
+    256
+  ]
+}

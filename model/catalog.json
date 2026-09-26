@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "architecture": "Attention U-Net with fixed soft-clDice loss",
+  "seed": 42,
+  "selection": "Each checkpoint and threshold was selected on its own validation fold before its test fold was evaluated.",
+  "models": [
+    {
+      "id": "fold_0",
+      "fold": 0,
+      "filename": "rootscope-attunet-fixed.onnx",
+      "sha256": "f81770d5c8e2e710da1b30f3354fef4e69d4641079b291fd7e857d4c647b8892",
+      "source_checkpoint_sha256": "be9605d801cda3f92fbd10a3bb7fa28392bc93fc048f9c4cefad0a29853ccb50",
+      "threshold": 0.47,
+      "conversion_max_absolute_error": 1.7881393432617188e-07
+    },
+    {
+      "id": "fold_1",
+      "fold": 1,
+      "filename": "rootscope-attunet-fixed-fold1.onnx",
+      "sha256": "abcfbccab4d37b4696bb27c6474eed9e30bf0eaf722223990b77dcb78b6dc039",
+      "source_checkpoint_sha256": "485a70d52d484f296e38c1eb90b414fbf0419e9d93f0d97fe273c6bb7401b35f",
+      "threshold": 0.1,
+      "conversion_max_absolute_error": 1.7881393432617188e-07
+    },
+    {
+      "id": "fold_2",
+      "fold": 2,
+      "filename": "rootscope-attunet-fixed-fold2.onnx",
+      "sha256": "a070c19c20783b5e6dce7d437ec7e973ff625726f9021638e34276ca9123cc59",
+      "source_checkpoint_sha256": "877ff0a7bb1c581f2a7f74a171b8a70bd9fe74e399d9425f8c14d195e333913b",
+      "threshold": 0.82,
+      "conversion_max_absolute_error": 1.1920928955078125e-07
+    },
+    {
+      "id": "fold_3",
+      "fold": 3,
+      "filename": "rootscope-attunet-fixed-fold3.onnx",
+      "sha256": "7b087ce9197ca5463dcfc873e2f0fae935a64317fd25ce0013df44a365bb01fd",
+      "source_checkpoint_sha256": "7667596688e702abbd6394f29b80a3bd29c1e179f5851521b9c08283bf8a96b9",
+      "threshold": 0.1,
+      "conversion_max_absolute_error": 1.7881393432617188e-07
+    },
+    {
+      "id": "fold_4",
+      "fold": 4,
+      "filename": "rootscope-attunet-fixed-fold4.onnx",
+      "sha256": "85fd5f8fbad1b31dde9c3f97855caa8089256c283f852d061579865d734f9603",
+      "source_checkpoint_sha256": "5d42a481d6628dddc07d9f2b3ea7565b72526070e0934354b1116e68aa92f3e2",
+      "threshold": 0.89,
+      "conversion_max_absolute_error": 1.7881393432617188e-07
+    }
+  ]
+}

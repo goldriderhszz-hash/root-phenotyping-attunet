@@ -1,0 +1,10 @@
+{
+  "source_checkpoint_sha256": "be9605d801cda3f92fbd10a3bb7fa28392bc93fc048f9c4cefad0a29853ccb50",
+  "onnx_sha256": "f81770d5c8e2e710da1b30f3354fef4e69d4641079b291fd7e857d4c647b8892",
+  "onnx_bytes": 31923476,
+  "opset": 17,
+  "test_max_absolute_error": 1.7881393432617188e-07,
+  "torch": "2.7.1+cu126",
+  "onnx": "1.23.0",
+  "onnxruntime": "1.30.0"
+}

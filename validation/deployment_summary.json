@@ -1,0 +1,84 @@
+{
+  "protocol": "Locked seed-42 five-fold out-of-fold validation through released ONNX desktop pipeline",
+  "completed_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "requested_folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_full_images": 50,
+  "image_level_macro_dice": 0.580983842507416,
+  "image_level_macro_dice_bootstrap_95_percentile_ci": [
+    0.5662616512703866,
+    0.5951623962522382
+  ],
+  "image_level_macro_iou": 0.4112492010225737,
+  "image_level_macro_hard_cldice": 0.6703201737739858,
+  "pooled_dice": 0.5859087844786641,
+  "pooled_iou": 0.4143359198102761,
+  "max_dice_absolute_difference_from_research": 0.00045788800587487355,
+  "max_iou_absolute_difference_from_research": 0.0004320108692793534,
+  "descriptor_image_space_mae": {
+    "dominant_path_length": {
+      "n_evaluable": 50,
+      "mae": 1272.0442043866321,
+      "units": "pixels"
+    },
+    "retained_segment_count": {
+      "n_evaluable": 50,
+      "mae": 95.0,
+      "units": "segments"
+    },
+    "junction_region_count": {
+      "n_evaluable": 50,
+      "mae": 105.58,
+      "units": "regions"
+    },
+    "mean_local_acute_angle_deg": {
+      "n_evaluable": 50,
+      "mae": 7.357611410007442,
+      "units": "degrees"
+    }
+  },
+  "folds": {
+    "0": {
+      "n": 10,
+      "threshold": 0.47,
+      "macro_dice": 0.5984495809302802,
+      "macro_iou": 0.4277566797012451
+    },
+    "1": {
+      "n": 10,
+      "threshold": 0.1,
+      "macro_dice": 0.5888765491816232,
+      "macro_iou": 0.419745314004048
+    },
+    "2": {
+      "n": 10,
+      "threshold": 0.82,
+      "macro_dice": 0.5891524560038206,
+      "macro_iou": 0.41877638430341746
+    },
+    "3": {
+      "n": 10,
+      "threshold": 0.1,
+      "macro_dice": 0.550827246291993,
+      "macro_iou": 0.38323176347570304
+    },
+    "4": {
+      "n": 10,
+      "threshold": 0.89,
+      "macro_dice": 0.5776133801293624,
+      "macro_iou": 0.40673586362845526
+    }
+  },
+  "interpretation": "These are internal OOF scores of five separate checkpoints, not accuracy of one checkpoint on 50 images or external generalization."
+}

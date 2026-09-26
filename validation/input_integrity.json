@@ -1,0 +1,11 @@
+{
+  "status": "verified",
+  "included_images": 50,
+  "manifest_sha256": "a68f86f79f50bec43effa84d062f184d2929d358caaf82370620e725321a5ccf",
+  "checks": [
+    "image file SHA-256",
+    "binary mask pixel SHA-256",
+    "image/mask dimensions"
+  ],
+  "raw_data_in_repository": false
+}
