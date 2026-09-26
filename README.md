@@ -97,7 +97,7 @@ The published `model/` directory contains five inference-ready ONNX graphs and `
 ## Validation and comparison
 
 - [Full-image deployment validation](validation/README.md) runs the released ONNX application pipeline on each fold's ten held-out images, yielding 50 out-of-fold results. It reports image-level and pooled segmentation metrics, descriptor outputs, per-image model hashes, and parity with the original research pipeline. This is internal validation; it is not an independent external cohort.
-- [Direct software comparison](benchmark/README.md) runs the official RhizoVision Explorer 2.0.3 binary on the same fold-0 test images. Its threshold was selected on fold 1, the validation set for RootScope fold 0. On ten held-out images, macro Dice was 0.59845 for RootScope and 0.47626 for RhizoVision Explorer; the paired mean difference was 0.12219, with a 95% image-bootstrap interval of 0.07519–0.18695. The software serves different acquisition settings, so the comparison describes this rhizobag dataset only.
+- [RhizoVision Explorer comparison audit](benchmark/README.md) documents a polarity and exported-mask interpretation error in the earlier direct comparison. Its reported 12.22 percentage point Dice advantage has been withdrawn pending a corrected run.
 - [Research protocol and training code](research/README.md) include fold assignments, image-hash manifest, architecture, loss, checkpoint selection, and aggregation scripts. Raw images and annotations are not included in this software repository yet; paths to them are supplied locally for validation.
 
 These evidence files report results actually produced by the binaries and scripts. Do not substitute the manuscript's three-seed aggregate scores for this released five-model package.
@@ -117,3 +117,4 @@ These evidence files report results actually produced by the binaries and script
 ## License and citation
 
 The RootScope source code and supplied model files are released under the [MIT License](LICENSE). Bundled third-party libraries retain their own licenses. For publications, describe the `research-release` tag or its exact commit, selected model/fold, threshold, and any manual reference masks, and cite the associated manuscript when bibliographic details are available. See [CITATION.md](CITATION.md).
+
