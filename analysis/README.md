@@ -6,7 +6,7 @@ pairings/counts and regenerates statistics, fold robustness and difference limit
 `make_descriptor_figures.py` exports figures with source records.
 
 `audit_uncertainty.py` replays the recorded seed-and-image segmentation resampling.
-Historical tail-fraction/Holm columns are retained as archival computational output;
+Recorded tail-fraction/Holm columns are retained as computational output;
 they are not calibrated hypothesis-test p-values and support no significance claim.
 `source_denominators.py` audits width-stratum contributions and optionally reads
 existing image metadata. Verification records are in `validation/analysis_audits/`.

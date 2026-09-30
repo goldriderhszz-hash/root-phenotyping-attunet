@@ -1,4 +1,4 @@
-"""RootScope native desktop application. No browser or local web server is used."""
+"""RootScope Desktop native application. No browser or local web server is used."""
 from __future__ import annotations
 from rootscope.i18n import tr, set_language, get_language, load_language, save_language
 import os
@@ -18,7 +18,7 @@ except ImportError:
     DND_FILES = None
     Window = tk.Tk
 from rootscope.batch import IMAGE_SUFFIXES, run_batch
-from rootscope import __version__
+from rootscope import APPLICATION_NAME
 from rootscope.engine import DEFAULT_THRESHOLD
 from rootscope.models import DEFAULT_MODEL_ID, catalog, model_spec
 BG = '#f4f8f6'
@@ -145,7 +145,7 @@ class RootScopeApp(Window):
         self.language_choice.set('English' if self.language == 'en' else '中文')
         self.language_choice.pack(side='bottom', padx=20, pady=12)
         self.language_choice.bind('<<ComboboxSelected>>', self._change_language)
-        label(sidebar, '◈  RootScope', 18, 'bold', WHITE, NAVY).pack(anchor='w', padx=25, pady=(31, 2))
+        label(sidebar, '◈  RootScope Desktop', 12, 'bold', WHITE, NAVY).pack(anchor='w', padx=25, pady=(31, 2))
         label(sidebar, 'RESEARCH DESKTOP', 8, 'bold', '#9ebcb8', NAVY).pack(anchor='w', padx=54)
         label(sidebar, tr('text_1bf3defde730'), 9, 'bold', '#8aadaa', NAVY).pack(anchor='w', padx=24, pady=(58, 13))
         self.analysis_nav = tk.Button(sidebar, text=tr('text_c59591205d33'), command=lambda: self._show_page('analysis'), anchor='w', padx=20, pady=12, bd=0, relief='flat', font=(FONT, 11, 'bold'), fg=WHITE, bg='#24565b', cursor='hand2')
@@ -688,7 +688,7 @@ def main():
             if probability.shape != (256, 256) or not np.isfinite(probability).all():
                 raise RuntimeError(f"Self-test failed: invalid output for {spec['id']}")
             checked.append({'id': spec['id'], 'sha256': spec['sha256'], 'provider': engine.device})
-        report = {'status': 'ok', 'version': __version__, 'models': checked, 'shape': [256, 256]}
+        report = {'status': 'ok', 'application': APPLICATION_NAME, 'models': checked, 'shape': [256, 256]}
         if len(sys.argv) >= 3:
             Path(sys.argv[2]).write_text(json.dumps(report, indent=2), encoding='utf-8')
         else:

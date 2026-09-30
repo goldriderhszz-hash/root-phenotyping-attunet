@@ -1,6 +1,6 @@
 # RootScope Desktop user guide
 
-This guide describes version 1.1.0 from image import to traceable exports.
+This guide describes RootScope Desktop from image import to traceable exports.
 
 ## Import and configure
 

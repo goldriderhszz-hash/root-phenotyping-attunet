@@ -24,7 +24,7 @@ def main():
         assert np.allclose([mean,low,high],[float(old[label][k]) for k in ['mean_paired_difference','bootstrap_ci95_low','bootstrap_ci95_high']],atol=1e-12,rtol=0), label
         report.append({'comparison':label,'mean_difference':mean,'lower_descriptive_percentile':low,'upper_descriptive_percentile':high,'random_seed':20260920,'draws':10000,'resampling':'independent draws of 3 seed indices and 50 image indices; paired treatment/control retained on Cartesian index product; not fold resampling'})
     target=ROOT/'generated';target.mkdir(exist_ok=True)
-    output={'status':'passed','matches_recorded_intervals':True,'original_manuscript_resampling_label_incorrect':True,'correction':'Recorded segmentation intervals use seed-and-image resampling, not five-fold bootstrap. Point estimates and intervals are unchanged. No p-values are endorsed. Folds share training data and unknown biological dependence is not represented.','comparisons':report}
+    output={'status':'passed','matches_recorded_intervals':True,'definition':'Segmentation intervals use seed-and-image resampling with fixed folds. These descriptive intervals do not model unknown biological dependence or support calibrated p-values.','comparisons':report}
     (target/'uncertainty_audit.json').write_text(json.dumps(output,indent=2),encoding='utf-8')
     with (target/'paired_segmentation_descriptive.csv').open('w',encoding='utf-8',newline='') as f:w=csv.DictWriter(f,fieldnames=list(report[0]));w.writeheader();w.writerows(report)
     print(json.dumps(output,indent=2))

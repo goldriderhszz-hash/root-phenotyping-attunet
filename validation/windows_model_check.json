@@ -1,6 +1,6 @@
 {
   "status": "ok",
-  "version": "research-release",
+  "application": "RootScope Desktop",
   "models": [
     {
       "id": "fold_0",

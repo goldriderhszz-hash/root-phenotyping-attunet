@@ -51,7 +51,7 @@ def main() -> None:
     if len(matching) != 1 or int(matching[0]["fold"]) != 0:
         raise ValueError("The image is not in held-out fold 0")
     study = matching[0]
-    report = {"status": "verified", "software_version": provenance["application"],
+    report = {"status": "verified", "application": provenance["application"],
               "binary_sha256": sha256(args.exe), "image_name": args.image.name,
               "image_sha256": item["image_sha256"], "reference_sha256": item["reference_sha256"],
               "width": item["width"], "height": item["height"], "model_id": provenance["model_id"],

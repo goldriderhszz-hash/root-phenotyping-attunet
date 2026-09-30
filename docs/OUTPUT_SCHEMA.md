@@ -16,4 +16,4 @@ Field names are identical in both interface languages. `results.json` stores nes
 
 QC flags are `empty_prediction`, `very_low_foreground` (<0.001), `high_foreground` (>0.2), `touches_image_border`, `path_unavailable` and `angle_unavailable`. These are review heuristics, not calibrated error probabilities.
 
-Provenance identifies the version, timestamps, model/fold/seed, ONNX/checkpoint hashes, default/used thresholds, input/reference hashes, processing settings, runtime provider and library versions. Per-image IDs, paths and timestamps can differ between equivalent runs. Private `_` keys are omitted from public result JSON. CSV uses UTF-8 BOM.
+Provenance identifies the application, timestamps, model/fold/seed, ONNX/checkpoint hashes, default/used thresholds, input/reference hashes, processing settings, runtime provider and library versions. Per-image IDs, paths and timestamps can differ between equivalent runs. Private `_` keys are omitted from public result JSON. CSV uses UTF-8 BOM.

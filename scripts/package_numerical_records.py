@@ -43,7 +43,7 @@ their input/model assets are in the separately prepared software/research packag
 They are verification records, not an additional independent biological dataset.
 Recomputing from masks or retraining needs owner-authorized access to the research
 assets and full source. Numerical records alone reproduce arithmetic, not source
-image annotations or independent anatomical truth. These records accompany the version 1.1.0 GitHub release. The main software's MIT license does not automatically
+image annotations or independent anatomical truth. These records accompany RootScope Desktop. The main software's MIT license does not automatically
 license the research data. See DATA_AVAILABILITY in the full source package.
 ''')
     assert TARGET.stat().st_size<20_000_000, 'Journal additional-file size exceeded'

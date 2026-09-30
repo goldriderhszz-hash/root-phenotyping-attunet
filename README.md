@@ -2,7 +2,7 @@
 
 RootScope segments rhizobag root images and extracts skeleton-derived image descriptors. This repository accompanies **Automated segmentation and skeleton-derived root descriptors in rhizobag seedling images: a controlled evaluation of Attention U-Net**. It contains a native Tkinter interface, a batch command, five frozen ONNX models and the study's numerical evidence.
 
-**Version 1.1.0** — [Download the Windows application, source and numerical records](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.1.0). [Release information](docs/RELEASE_STATUS.md) describes the assets and verification scope.
+[Download RootScope Desktop, source and numerical records](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop). [Download guide](docs/DOWNLOADS.md) describes the packages and verification scope.
 
 [English guide](docs/USER_GUIDE.md) · [中文说明](docs/USER_GUIDE.zh-CN.md) · [Reproduce the paper](docs/REPRODUCIBILITY.md) · [Models](MODEL.md) · [Data availability](DATA_AVAILABILITY.md) · [Citation](CITATION.md)
 
@@ -75,7 +75,7 @@ RootScope_<timestamp>_<id>/
   results.csv                 stable English scientific columns
   results.json                nested per-image results
   errors.csv                  per-image failures
-  provenance.json             hashes, model, threshold, settings and versions
+  provenance.json             hashes, model, threshold, settings and dependencies
   images/<image-id>/prediction_mask.png
   images/<image-id>/overlay.png
   images/<image-id>/skeleton.png
@@ -108,10 +108,10 @@ Included numeric records support audit and table/figure regeneration without tra
 | `model/` | Five ONNX graphs, hashes and conversion records |
 | `research/` | Protocol, split metadata and all 60 run records |
 | `analysis/` | Three-seed numeric evidence, portable analysis and figure scripts |
-| `validation/` | Historical deployment and version-specific checks |
+| `validation/` | Deployment and executable verification |
 | `examples/` | Synthetic input, reference and expected output |
-| `docs/` | Guides, schema, reproduction, limits and release status |
+| `docs/` | Guides, schema, reproduction, limits and downloads |
 | `manuscript/` | Final figure assets, caption/hash manifest and generation scope |
 | `tests/`, `scripts/` | Behavioral checks, validation, timing and packaging |
 
-Report software version, release tag or commit, fold model, hash and threshold. [CITATION.cff](CITATION.cff) describes this software; the manuscript is unpublished. Issue reports should include version, OS, dimensions, model, threshold and a minimal permitted example. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Report the source commit, fold model, hash and threshold. [CITATION.cff](CITATION.cff) describes this software; the manuscript is unpublished. Issue reports should include the source commit or executable hash, OS, dimensions, model, threshold and a minimal permitted example. See [CONTRIBUTING.md](CONTRIBUTING.md).

@@ -1,0 +1,72 @@
+{
+  "checks": [
+    "explicit English initial interface and stable layer IDs",
+    "import/output selection, actual worker inference, disabled language during run, idle language switch preserves input/model/threshold/result/selection/layer",
+    "clear input and empty-input dialog",
+    "minimum-window key controls visible at simulated 100% Tk scaling",
+    "minimum-window key controls visible at simulated 125% Tk scaling",
+    "minimum-window key controls visible at simulated 150% Tk scaling",
+    "application title and interface use RootScope Desktop"
+  ],
+  "screenshots": [
+    "rootscope-desktop-en.png",
+    "rootscope-settings-en.png",
+    "rootscope-desktop-zh.png",
+    "rootscope-methods-en.png"
+  ],
+  "layout_findings": [
+    {
+      "scale": 1.0,
+      "table_mapped": true,
+      "preview_mapped": true,
+      "window": [
+        1080,
+        700
+      ],
+      "preview_size": [
+        320,
+        167
+      ]
+    },
+    {
+      "scale": 1.25,
+      "table_mapped": true,
+      "preview_mapped": true,
+      "window": [
+        1080,
+        700
+      ],
+      "preview_size": [
+        320,
+        167
+      ]
+    },
+    {
+      "scale": 1.5,
+      "table_mapped": true,
+      "preview_mapped": true,
+      "window": [
+        1080,
+        700
+      ],
+      "preview_size": [
+        320,
+        167
+      ]
+    }
+  ],
+  "font_check": {
+    "available_English_preference": "Segoe UI",
+    "actual_interface_family": "Segoe UI",
+    "fallback_is_real_family": true
+  },
+  "actual_image": {
+    "name": "DN50-235-25-6(3)",
+    "fold": 1,
+    "threshold": 0.1,
+    "dice": 0.5877279604279722,
+    "selection_rule": "seed-42 OOF Dice nearest median",
+    "mask_sha256": "cc6e9de16c22c0006a415240eb14f3931b93a89277dbb9a1570f83ff0216eb7b"
+  },
+  "application": "RootScope Desktop"
+}

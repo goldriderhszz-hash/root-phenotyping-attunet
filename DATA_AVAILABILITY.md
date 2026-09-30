@@ -1,6 +1,6 @@
 # Data and materials availability
 
-The versioned [v1.1.0 release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.1.0) provides the source, Windows application
+The [RootScope Desktop download page](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop) provides the source, Windows application
 and a separate numerical-record archive. The repository includes the evidence
 needed to regenerate the reported numerical summaries without training.
 

@@ -14,4 +14,4 @@
 | Output writing fails | Choose a writable directory and check disk space |
 | Language not retained | Read-only profiles still allow an in-session switch |
 
-Issue reports should identify version, OS, dimensions, fold, threshold, error and optional reference. Use a minimal permitted example instead of uploading an unpublished collection.
+Issue reports should identify the source commit or executable hash, OS, dimensions, fold, threshold, error and optional reference. Use a minimal permitted example instead of uploading an unpublished collection.

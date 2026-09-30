@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "application": "RootScope Desktop",
+  "exe_sha256": "ffb547db94852f003ecb6c56055b086a2eecae5206c8614e0ab9e240971f7fa8",
+  "image_name": "DN50-235-25-6(3).tif",
+  "image_sha256": "473b581777a272aee1e7ee0872fc9f346fe59d97691cb8f475ff3c7ccd843c6f",
+  "reference_sha256": "1c99a68f93f5396eb9701167417e60c3f506eddaae41784653661a85b4318891",
+  "model_id": "fold_1",
+  "threshold": 0.1,
+  "mask_sha256": "cc6e9de16c22c0006a415240eb14f3931b93a89277dbb9a1570f83ff0216eb7b",
+  "source_GUI_and_packaged_CLI_numerical_rows_identical": true,
+  "source_GUI_and_packaged_CLI_masks_identical": true,
+  "synthetic_source_English_and_packaged_Chinese_rows_masks_identical": true,
+  "all_five_model_self_test": {
+    "status": "ok",
+    "application": "RootScope Desktop",
+    "models": [
+      {
+        "id": "fold_0",
+        "sha256": "f81770d5c8e2e710da1b30f3354fef4e69d4641079b291fd7e857d4c647b8892",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "fold_1",
+        "sha256": "abcfbccab4d37b4696bb27c6474eed9e30bf0eaf722223990b77dcb78b6dc039",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "fold_2",
+        "sha256": "a070c19c20783b5e6dce7d437ec7e973ff625726f9021638e34276ca9123cc59",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "fold_3",
+        "sha256": "7b087ce9197ca5463dcfc873e2f0fae935a64317fd25ce0013df44a365bb01fd",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "fold_4",
+        "sha256": "85fd5f8fbad1b31dde9c3f97855caa8089256c283f852d061579865d734f9603",
+        "provider": "CPUExecutionProvider"
+      }
+    ],
+    "shape": [
+      256,
+      256
+    ]
+  },
+  "evaluation": {
+    "precision": 0.47288047875558537,
+    "recall": 0.7762554892130233,
+    "dice": 0.5877279604279722,
+    "iou": 0.4161577542851278,
+    "hard_cldice": 0.6364475443513102,
+    "tp": 64874,
+    "fp": 72315,
+    "fn": 18699,
+    "width_le3_n": 608,
+    "width_le3_recall": 0.7516447368421053,
+    "width_3_6_n": 2049,
+    "width_3_6_recall": 0.7901415324548561,
+    "width_6_12_n": 5304,
+    "width_6_12_recall": 0.8261689291101055,
+    "width_gt12_n": 1173,
+    "width_gt12_recall": 0.8985507246376812
+  },
+  "scope": "one full-image GUI/packaged-CLI comparison, one synthetic English-source/Chinese-packaged comparison, and five packaged ONNX model checks"
+}

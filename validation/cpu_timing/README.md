@@ -1,4 +1,4 @@
-# Candidate source ONNX CPU timing
+# Source ONNX CPU timing
 
 All 50 own-fold images were processed three times (150 actual image-runs) on
 AMD Ryzen 7 7840H with Radeon 780M Graphics, 8 physical cores and

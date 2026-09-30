@@ -14,6 +14,6 @@
     0.1875,
     0.46875
   ],
-  "scope": "fresh preparation directory on 50 miniature synthetic image/annotation fixtures only; no biological files modified and no training",
+  "scope": "Preparation on 50 miniature synthetic image/annotation fixtures; this is an installation/protocol test, not biological validation.",
   "audit_outputs_created": true
 }

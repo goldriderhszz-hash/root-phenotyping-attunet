@@ -24,8 +24,8 @@ Leave-one-fold-out omits existing test-fold records; no models are retrained. De
 50 image indices independently and average the paired Cartesian index product
 (10,000 draws; RNG seed 20260920). Folds are held fixed in this calculation. Descriptor error differences average three seeds
 within image, then sample ten images within each fixed fold (seed 20260925).
-Deployment Dice samples 50 own-fold image scores (seed 20260926). Historical bootstrap
-tail-fraction/Holm columns remain archival output, not calibrated p-values; no
+Deployment Dice samples 50 own-fold image scores (seed 20260926). Recorded bootstrap
+tail-fraction/Holm columns are computational output, not calibrated p-values; no
 significance claim is based on them. See `analysis/audit_uncertainty.py`.
 
 `source_denominators.py` confirms 50 distinct images contribute reference points to
@@ -40,7 +40,7 @@ python scripts/validate_deployment.py research path\to\original-data --run-root 
 python scripts/benchmark_cpu.py path\to\original-data
 ```
 
-Five frozen seed-42 ONNX models and thresholds are catalogued in `model/`. Each study image must use its own held-out model. Aggregate deployment scores describe five separate models, not a default model or ensemble on new images. `validation/` identifies historical and version 1.1.0 executable checks. Synthetic examples test installation, not biological accuracy.
+Five frozen seed-42 ONNX models and thresholds are catalogued in `model/`. Each study image must use its own held-out model. Aggregate deployment scores describe five separate models, not a default model or ensemble on new images. `validation/` identifies source-pipeline and executable checks. Synthetic examples test installation, not biological accuracy.
 
 ## Recompute analyses from masks
 

@@ -1,0 +1,16 @@
+test_corrupt_image_and_reference_mismatch_are_logged (test_language_and_errors.LanguageAndFailureTests.test_corrupt_image_and_reference_mismatch_are_logged) ... ok
+test_empty_inputs_threshold_missing_hash_and_write_errors (test_language_and_errors.LanguageAndFailureTests.test_empty_inputs_threshold_missing_hash_and_write_errors) ... ok
+test_language_context_is_isolated_between_threads (test_language_and_errors.LanguageAndFailureTests.test_language_context_is_isolated_between_threads) ... ok
+test_language_does_not_change_masks_or_measurements (test_language_and_errors.LanguageAndFailureTests.test_language_does_not_change_masks_or_measurements) ... ok
+test_pre_cancelled_batch_writes_a_cancelled_report (test_language_and_errors.LanguageAndFailureTests.test_pre_cancelled_batch_writes_a_cancelled_report) ... ok
+test_translation_placeholders_match (test_language_and_errors.LanguageAndFailureTests.test_translation_placeholders_match) ... ok
+test_all_five_locked_models_load_and_predict (test_pipeline.RootScopePipelineTests.test_all_five_locked_models_load_and_predict) ... ok
+test_identical_reference_scores_one (test_pipeline.RootScopePipelineTests.test_identical_reference_scores_one) ... ok
+test_model_and_batch_outputs (test_pipeline.RootScopePipelineTests.test_model_and_batch_outputs) ... ok
+test_model_hash_and_output_shape (test_pipeline.RootScopePipelineTests.test_model_hash_and_output_shape) ... ok
+test_selected_fold_threshold_is_recorded (test_pipeline.RootScopePipelineTests.test_selected_fold_threshold_is_recorded) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.259s
+
+OK

@@ -24,8 +24,8 @@
     "zh": "骨架"
   },
   "text_ade46984c67e": {
-    "en": "RootScope | Rhizobag image analysis",
-    "zh": "RootScope | 根系图像表型分析"
+    "en": "RootScope Desktop | Rhizobag image analysis",
+    "zh": "RootScope Desktop | 根系图像表型分析"
   },
   "text_1bf3defde730": {
     "en": "WORKSPACE",
@@ -52,12 +52,12 @@
     "zh": "本地桌面分析 · 无需浏览器"
   },
   "text_ea69ab24bbaa": {
-    "en": "RootScope  /  Image analysis",
-    "zh": "RootScope  /  图像分析"
+    "en": "RootScope Desktop  /  Image analysis",
+    "zh": "RootScope Desktop  /  图像分析"
   },
   "text_dd02c56cd370": {
     "en": "ONNX local inference",
-    "zh": "研究发布版   ·   ONNX 本地推理"
+    "zh": "ONNX 本地推理"
   },
   "text_26bf8c801559": {
     "en": "Ready. Import images to begin.",
@@ -292,8 +292,8 @@
     "zh": "优势路径是像素空间图像指标，不等于总根长或独立验证的解剖学主根长度。保留线段、候选连接区域和局部角度不能直接解释为真实侧根、分枝点和萌发角。软件未使用物理标尺，长度单位仅为像素。跨拍摄条件和跨物种性能仍需外部验证。 局部锐角按坐标顺序选点，受此规则影响，只作为探索性描述符。"
   },
   "text_f27f162f13bf": {
-    "en": "RootScope  /  Methods and evidence",
-    "zh": "RootScope  /  方法与证据"
+    "en": "RootScope Desktop  /  Methods and evidence",
+    "zh": "RootScope Desktop  /  方法与证据"
   },
   "text_9f934685f984": {
     "en": "Images selected: {p0}",
