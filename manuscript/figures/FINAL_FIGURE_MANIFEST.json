@@ -1,0 +1,167 @@
+[
+  {
+    "file": "Fig1.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Fig. 1. Fold-isolated preparation, training, validation selection, out-of-fold prediction and geometric descriptor extraction. The test fold is used only after the checkpoint and threshold have been selected from the validation fold.",
+    "pixels": [
+      4016,
+      3188
+    ],
+    "sha256": "e45e7ce54bbd6c9301088f071593f4d2ea4a0ed70cc5b2b69c7f618b1193e14c",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Fig2.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Fig. 2. Shared Attention U-Net architecture used in the controlled evaluation. Attention gates modulate skip features before decoder concatenation; the probability threshold is selected separately on each validation fold.",
+    "pixels": [
+      8000,
+      4500
+    ],
+    "sha256": "5ab74b2621abf7441d0ab16a62099a69648a60ae7b0ea7a1ef3ee4a45ec5b1b4",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Fig3.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Fig. 3. Dominant path extraction from the raw skeleton. The component with the greatest vertical span supplies the upper and lower endpoints. Eight-neighbor edges are weighted by Euclidean pixel distance, and the shortest route between the endpoints defines the dominant path.",
+    "pixels": [
+      4323,
+      3827
+    ],
+    "sha256": "fbeffd25fc02b60033998aadcc75685878b792fee0e29b035cc753debf5df02d",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Fig4.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Fig. 4. Descriptor extraction from the closed-and-pruned skeleton. Junction pixels are grouped into candidate regions. After the reconstructed axis and junction pixels are removed, the remaining components provide retained-segment counts and local acute angles. Mean angles are calculated from valid vector pairs.",
+    "pixels": [
+      4323,
+      3827
+    ],
+    "sha256": "39ca2e7be50f461918442536c5ba85df0ddbfb40d46ea945353d8a4d9501dd44",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Algorithm1.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Algorithm 1. Dominant path search on the raw skeleton. The selected weighted route is a pixel-space image descriptor.",
+    "pixels": [
+      2400,
+      2445
+    ],
+    "sha256": "4b0b176c81cdeae8c1e2cd6cb4ed5b1e998be0d18d7509bac2946bbb48be8bdf",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Algorithm2.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Algorithm 2. Candidate junction regions, retained segments and local acute angles from the closed-and-pruned skeleton.",
+    "pixels": [
+      2400,
+      2625
+    ],
+    "sha256": "d60cf39f9a5c0c4682e4f3559308200908593988b8048f325fc277a07a00cd2d",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Fig5.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Fig. 5. Controlled segmentation comparison. (a) Complete-image out-of-fold Dice for 50 images and three seeds, shown on an expanded vertical scale. (b) Paired image-level differences, with points averaging three seeds and thin ranges spanning them. (c) Fifteen fold-by-seed differences per contrast; labels indicate the number of folds with a positive mean difference. Configuration comparisons are paired by image, fold and seed. pp, percentage points.",
+    "pixels": [
+      4393,
+      2456
+    ],
+    "sha256": "9aef2662667181e5fc80f19e8f3cbf6712db3d596b644d8b302afa4731055e4a",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Fig6.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Fig. 6. Width-stratified exact annotation-centerline recall and held-out examples. (a) Width is twice the annotation distance to background; values are 50-image means averaged across three seeds, with seed standard-deviation bands. (b,c) Low- and high-recall fixed-loss cases (seed 42), selected among 38 images with at least 750 annotation skeleton points \u22643 pixels wide. Each row shows the same 384 \u00d7 384-pixel crop as grayscale source, display-widened reference centerline and prediction-error map. Blue is overlap, red missed annotation and orange extra prediction; scale bars are 100 image pixels. Original grayscale was linearly stretched between its 1st and 99th intensity percentiles for display only.",
+    "pixels": [
+      4384,
+      3732
+    ],
+    "sha256": "4bd24193874f24c1adcd5dc619d10d7f613d9fad420f5e401146b65a886e7beb",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Fig7.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Fig. 7. Agreement of three skeleton-derived descriptors for fixed skeleton loss. (a\u2013c) Pale points show all 150 seed-specific pairs per descriptor; diamonds show 50 image means and vertical ranges span seeds. Dashed diagonals denote equality. CCC and MAE annotations summarize three seed-specific statistics. (d\u2013f) Each point is one image\u2019s mean prediction-minus-annotation difference; vertical ranges span seed predictions. Solid green lines show bias, dotted green lines show descriptive limits at bias \u00b1 1.96 sample SD across the 50 image means, and grey dashed lines show zero. (g\u2013i) MAE under four configurations; symbols represent training seeds, horizontal bars means and vertical bars seed SD. Reference values use the same extractor on annotation masks, not independent anatomical truth. The averaged-prediction limits do not estimate single-checkpoint generalization.",
+    "pixels": [
+      4085,
+      4324
+    ],
+    "sha256": "5f092ae36c137721ac7b9ee8515e2bfe8ef7d387eb5ade47e4dc8cfa0b038dca",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Fig8.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Fig. 8. Extractor sensitivity of retained-segment and candidate-junction descriptors. The grid covers 36 combinations of closing, pruning and minimum component size. Left panels show annotation-mask means and right panels show out-of-fold MAEs calculated against references at matching settings. Values are percentage changes from the retained default (closing 5 pixels, pruning 15 iterations, minimum size 10 pixels), which is outlined. Blue/red indicate decreases/increases and each panel has its own color scale; compare numerical ranges rather than color intensity across panels. Errors are calculated within each of three seeds then averaged. Exploratory angle sensitivity is retained in Supplementary Fig. S4. This is computational sensitivity, not test-based parameter optimization.",
+    "pixels": [
+      4085,
+      3022
+    ],
+    "sha256": "650c8a146778926f43986e4477721e361149033615822455cf684827f93053ce",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Fig9.png",
+    "document": "Manuscript_PlantMethods_revised",
+    "caption": "Fig. 9. RootScope Desktop version 1.1.0 in English. Crops show model/threshold configuration, image descriptors and inspection of a held-out image. The example was selected by seed-42 out-of-fold deployment Dice closest to the 50-image median and uses its own fold-1 model at threshold 0.10. The local-angle column is exploratory. This image demonstrates the interface, not external biological accuracy. A complete interface and user guide are included in the accompanying software materials.",
+    "pixels": [
+      4015,
+      2480
+    ],
+    "sha256": "06da9f954f3fc999eb8ebbcaa04ff7cc68e5443759c5aa9add84bccd31d5273c",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Supplementary_FigS1.png",
+    "document": "Supplementary_information_PlantMethods_revised",
+    "caption": "Original source image, its 256 \u00d7 256-pixel tile, binary annotation and spatial Gaussian weights. The source panel is padded only for display, and the inference weights have minimum 0.1 and maximum approximately 1. The panels illustrate image preparation; it does not present a model comparison or physical scale.",
+    "pixels": [
+      5083,
+      1588
+    ],
+    "sha256": "3736ebd9bbfb1da77a734bc6b3781ca208b263e69c100b401c6fc031cce00a43",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Supplementary_FigS2.png",
+    "document": "Supplementary_information_PlantMethods_revised",
+    "caption": "Panel a shows median and interquartile range of validation-image mean Dice at the fixed checkpoint-selection threshold 0.50 for the fixed and two-stage skeleton-loss configurations (15 fold-by-seed runs each). The vertical line separates epochs 1\u201325 from 26\u201350, when only the two-stage candidate increases the BCE coefficient. Panel b shows the selected checkpoint epoch for all 60 runs; 14/15 two-stage checkpoints were selected at or before epoch 25. Panel c shows validation-selected inference thresholds for the 60 runs. These points represent fold-by-seed runs, not plants or independent acquisitions.",
+    "pixels": [
+      4392,
+      2266
+    ],
+    "sha256": "cfcc42611e1afef493186e55e8fbe615a65f4e2fb3f5e96901746d6d38596072",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Supplementary_FigS3.png",
+    "document": "Supplementary_information_PlantMethods_revised",
+    "caption": "Complete descriptor plots including exploratory local acute angle. The panels show path, count and exploratory-angle agreement. Pale points are seed-specific pairs; diamonds are image means. Difference limits use 50 image means; angle agreement remains exploratory.",
+    "pixels": [
+      4085,
+      4179
+    ],
+    "sha256": "f6fef04a5b7f0ccb7b70ade39d40c12992ef8cfdbdd573b92beea4dcf70fc71e",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  },
+  {
+    "file": "Supplementary_FigS4.png",
+    "document": "Supplementary_information_PlantMethods_revised",
+    "caption": "Complete sensitivity panels including exploratory local acute angles. Each reference is processed at the same setting as its prediction; the grid characterizes computational sensitivity rather than biological accuracy or parameter optimization. Color scales differ between panels; compare numerical ranges rather than color intensity across panels.",
+    "pixels": [
+      4085,
+      4487
+    ],
+    "sha256": "f83927d4bba03e021109bd7a0d2f2bd5851de95c506a90be05df6f3fd04b06fc",
+    "source": "exact embedded final-document image; retained images are not newly regenerated"
+  }
+]

@@ -1,0 +1,14 @@
+* text=auto
+*.py -text
+*.md text eol=lf
+*.json -text
+*.csv -text
+*.txt -text
+*.yml text eol=lf
+*.cff text eol=lf
+*.ps1 text eol=crlf
+*.onnx binary
+*.png binary
+*.pdf binary
+*.docx binary
+third_party_licenses/** -text -whitespace

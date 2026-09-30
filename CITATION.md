@@ -1,9 +1,20 @@
 # Citing RootScope
 
-For a manuscript or dataset that uses RootScope, report:
+Wang, Z. (2026). *RootScope Desktop* (Version 1.1.0) [Computer software]. GitHub. https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.1.0
 
-> RootScope Desktop, research release (`research-release` tag); fixed skeleton-loss Attention U-Net, seed 42; selected fold model and ONNX SHA-256 from `model/catalog.json`; segmentation threshold from that fold's validation set unless changed; GitHub release URL and access date.
+```bibtex
+@software{wang2026rootscope,
+  author = {Wang, Zeen},
+  title = {RootScope Desktop},
+  year = {2026},
+  version = {1.1.0},
+  url = {https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.1.0}
+}
+```
 
-Software home page: https://github.com/goldriderhszz-hash/root-phenotyping-attunet. The DOI field will be added after a permanent software archive has actually been deposited; no DOI is claimed for this repository at present.
+Report the release tag or exact source commit, the selected fold model, its ONNX
+SHA-256 and threshold. Machine-readable software metadata is in [CITATION.cff](CITATION.cff).
 
-Also cite the associated research paper when it has final authorship, journal, and DOI. Those bibliographic fields are intentionally omitted here because they were not supplied for this software release.
+The associated manuscript, *Automated segmentation and skeleton-derived root
+descriptors in rhizobag seedling images: a controlled evaluation of Attention U-Net*,
+is unpublished. No article DOI or software archive DOI has been assigned.

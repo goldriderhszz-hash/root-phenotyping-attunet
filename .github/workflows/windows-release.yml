@@ -1,17 +1,17 @@
-name: Windows desktop release
+name: Windows desktop build
 
 on:
   push:
     branches: [main]
-    tags: ["research-release"]
   pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: windows-latest
-    permissions:
-      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -47,14 +47,3 @@ jobs:
           path: |
             release/RootScope-Desktop-Windows-x64.zip
             release/SHA256SUMS.txt
-      - name: Publish tagged release
-        if: github.ref == 'refs/tags/research-release'
-        shell: pwsh
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh release create $env:GITHUB_REF_NAME `
-            release/RootScope-Desktop-Windows-x64.zip `
-            release/SHA256SUMS.txt `
-            --title "RootScope Research Release" `
-            --notes "Native Windows desktop application and source release. See README.md and MODEL.md for usage and model provenance."

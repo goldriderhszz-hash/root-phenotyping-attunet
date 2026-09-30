@@ -19,3 +19,6 @@ research/oof_predictions/
 research/mask_cache_before_regeneration/
 model/*.pth
 *.log
+analysis/generated/
+.pause-cpu-benchmark
+research/runs/**/best_model.pth

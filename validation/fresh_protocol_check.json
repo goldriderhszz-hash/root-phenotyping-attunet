@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "n_pairs": 50,
+  "byte_duplicate_groups": [],
+  "pixel_duplicate_groups": [],
+  "fold_sizes": {
+    "0": 10,
+    "1": 10,
+    "2": 10,
+    "3": 10,
+    "4": 10
+  },
+  "foreground_ratio_range": [
+    0.1875,
+    0.46875
+  ],
+  "scope": "fresh preparation directory on 50 miniature synthetic image/annotation fixtures only; no biological files modified and no training",
+  "audit_outputs_created": true
+}

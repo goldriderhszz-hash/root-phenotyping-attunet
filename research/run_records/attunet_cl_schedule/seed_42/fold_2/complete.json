@@ -1,0 +1,59 @@
+{
+  "fold": 2,
+  "config": "attunet_cl_schedule",
+  "config_values": {
+    "name": "attunet_cl_schedule",
+    "attention": true,
+    "skeleton_weight": 0.3,
+    "bce_mode": "schedule",
+    "normalize_weights": false,
+    "transition_epoch": 25
+  },
+  "seed": 42,
+  "epochs": 50,
+  "batch_size": 12,
+  "training_tiles": 4057,
+  "best_epoch": 5,
+  "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+  "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+  "selected_threshold": 0.49,
+  "validation": {
+    "n_images": 10,
+    "macro_dice": 0.5195783488151744,
+    "macro_iou": 0.35383109148150593,
+    "macro_hard_cldice": 0.5801540279694031,
+    "pooled_precision": 0.5498733921594985,
+    "pooled_recall": 0.5251094049324286,
+    "pooled_dice": 0.5372061590681592,
+    "pooled_iou": 0.3672466645921504,
+    "mean_seconds": 1.9444166200002655
+  },
+  "test": {
+    "n_images": 10,
+    "macro_dice": 0.5516043341628989,
+    "macro_iou": 0.38286147219110883,
+    "macro_hard_cldice": 0.6154297877134428,
+    "pooled_precision": 0.5802046765342552,
+    "pooled_recall": 0.4946762518335211,
+    "pooled_dice": 0.5340377098700232,
+    "pooled_iou": 0.36429157384578686,
+    "mean_seconds": 1.9489690000009432
+  },
+  "complexity": {
+    "parameters": 7981277,
+    "model_size_mib_float32": 30.446155548095703,
+    "macs_per_256_tile": 14317125632,
+    "approx_flops_per_256_tile": 28634251264
+  },
+  "best_model_sha256": "b4888fd5963d1b9ba3719202be642501b9ce2fb0c4150378933549885c4c62c1",
+  "wall_seconds": 7659.964382300001,
+  "software": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.7.1+cu126",
+    "numpy": "2.5.2",
+    "opencv": "5.0.0",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  }
+}

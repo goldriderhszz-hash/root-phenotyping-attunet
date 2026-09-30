@@ -8,6 +8,7 @@ from pathlib import Path
 
 from rootscope.batch import IMAGE_SUFFIXES, run_batch
 from rootscope.models import DEFAULT_MODEL_ID, catalog
+from rootscope.i18n import set_language
 
 
 def image_paths(inputs: list[str]) -> list[Path]:
@@ -36,7 +37,9 @@ def main(argv: list[str] | None = None) -> int:
                         help="Override the selected model's validation threshold")
     parser.add_argument("--save-probability", action="store_true")
     parser.add_argument("--no-zip", action="store_true")
+    parser.add_argument("--language", choices=['en', 'zh'], default='en', help="Language of progress and diagnostic messages; exported field names remain stable")
     args = parser.parse_args(argv)
+    set_language(args.language)
     try:
         images = image_paths(args.images)
         references = image_paths(args.references)

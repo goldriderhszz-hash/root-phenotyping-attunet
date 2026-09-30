@@ -1,0 +1,59 @@
+{
+  "fold": 0,
+  "config": "attunet_cl_schedule",
+  "config_values": {
+    "name": "attunet_cl_schedule",
+    "attention": true,
+    "skeleton_weight": 0.3,
+    "bce_mode": "schedule",
+    "normalize_weights": false,
+    "transition_epoch": 25
+  },
+  "seed": 3407,
+  "epochs": 50,
+  "batch_size": 12,
+  "training_tiles": 4439,
+  "best_epoch": 23,
+  "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+  "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+  "selected_threshold": 0.35,
+  "validation": {
+    "n_images": 10,
+    "macro_dice": 0.6314726759662133,
+    "macro_iou": 0.4623956307235996,
+    "macro_hard_cldice": 0.7423770541259642,
+    "pooled_precision": 0.5560119861116242,
+    "pooled_recall": 0.7383860067361621,
+    "pooled_dice": 0.6343512156089739,
+    "pooled_iou": 0.46450538590846074,
+    "mean_seconds": 2.216326700000354
+  },
+  "test": {
+    "n_images": 10,
+    "macro_dice": 0.6236773596744231,
+    "macro_iou": 0.4537642952019253,
+    "macro_hard_cldice": 0.7282282663202044,
+    "pooled_precision": 0.5426061651551912,
+    "pooled_recall": 0.7383555141668604,
+    "pooled_dice": 0.6255241831673,
+    "pooled_iou": 0.4551001738311692,
+    "mean_seconds": 2.226815920000445
+  },
+  "complexity": {
+    "parameters": 7981277,
+    "model_size_mib_float32": 30.446155548095703,
+    "macs_per_256_tile": 14317125632,
+    "approx_flops_per_256_tile": 28634251264
+  },
+  "best_model_sha256": "4ac5f02ed2f96a945f64bb91f0415596ed0bb22506866e83f750324ac411db8b",
+  "wall_seconds": 3711.8837329999988,
+  "software": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.7.1+cu126",
+    "numpy": "2.5.2",
+    "opencv": "5.0.0",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+  }
+}

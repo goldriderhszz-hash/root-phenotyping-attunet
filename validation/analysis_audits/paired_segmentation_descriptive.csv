@@ -1,0 +1,4 @@
+comparison,mean_difference,lower_descriptive_percentile,upper_descriptive_percentile,random_seed,draws,resampling
+attention_architecture_effect,0.008625012669703785,-0.006751228501486325,0.028534718512404435,20260920,10000,independent draws of 3 seed indices and 50 image indices; paired treatment/control retained on Cartesian index product; not fold resampling
+fixed_skeleton_loss_effect,0.025296392052306563,0.01374227030897564,0.034000640297649896,20260920,10000,independent draws of 3 seed indices and 50 image indices; paired treatment/control retained on Cartesian index product; not fold resampling
+two_stage_schedule_effect,-0.008904714589958474,-0.03481547239678923,0.015782510942621585,20260920,10000,independent draws of 3 seed indices and 50 image indices; paired treatment/control retained on Cartesian index product; not fold resampling

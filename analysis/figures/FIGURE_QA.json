@@ -1,0 +1,18 @@
+{
+  "all_fixed_pairs": 600,
+  "main_figure_pairs": 450,
+  "exploratory_angle_pairs": 150,
+  "n_distinct_images": 50,
+  "seeds": [
+    42,
+    3407,
+    2026
+  ],
+  "difference_limit_estimand": "50 per-image prediction means across three seeds; descriptive bias +/-1.96 image-level sample SD",
+  "all_sensitivity_cells": 108,
+  "main_count_cells": 72,
+  "angle_cells_in_supplement": 36,
+  "statistical_tests": "none added",
+  "source_data_loss": 0,
+  "width_mm": 170
+}

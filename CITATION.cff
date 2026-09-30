@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the RootScope software version used in your work."
+type: software
+title: "RootScope Desktop"
+version: "1.1.0"
+date-released: "2026-09-30"
+license: MIT
+repository-code: "https://github.com/goldriderhszz-hash/root-phenotyping-attunet"
+url: "https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.1.0"
+authors:
+  - family-names: Wang
+    given-names: Zeen
+abstract: "Rhizobag image segmentation and traceable skeleton-derived root descriptors, with a desktop interface, batch analysis and reproducible study records."

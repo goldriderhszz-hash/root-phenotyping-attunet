@@ -1,0 +1,5 @@
+stratum,distinct_images_with_reference_points,images_without_reference_points,total_reference_centerline_points,minimum_points_per_image,maximum_points_per_image
+≤3 pixels,50,0,81272,298,4860
+>3–6 pixels,50,0,196843,461,11839
+>6–12 pixels,50,0,331177,1104,15244
+>12 pixels,50,0,227549,635,21760

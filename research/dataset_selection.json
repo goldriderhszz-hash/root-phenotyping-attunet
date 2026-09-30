@@ -1,0 +1,16 @@
+{
+  "active_images": 50,
+  "manifest": "dataset_manifest.csv",
+  "split": "fold_assignments.json",
+  "biological_conditions": {
+    "genotype": "Wm82",
+    "treatment": "untreated",
+    "approximate_age_days_after_germination": 7,
+    "applies_to_all_images": 50,
+    "confirmation_date": "2026-09-30",
+    "basis": "Direct data-provider confirmation; not inferred from filenames or TIFF tags"
+  },
+  "plant_or_batch_grouping_available": false,
+  "physical_scale_available": false,
+  "description": "Final study corpus; acquisition conditions provider-confirmed, image identity established by manifest hashes"
+}

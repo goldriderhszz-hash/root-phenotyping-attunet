@@ -1,0 +1,133 @@
+[
+  {
+    "package": "numpy",
+    "version": "2.5.2",
+    "license_files": [
+      "numpy/numpy-2.5.2.dist-info/licenses/LICENSE.txt",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/_core/src/highway/LICENSE",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/_core/src/umath/svml/LICENSE",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/fft/pocketfft/LICENSE.md",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/ma/LICENSE",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/random/LICENSE.md",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/random/src/distributions/LICENSE.md",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/random/src/mt19937/LICENSE.md",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/random/src/pcg64/LICENSE.md",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/random/src/philox/LICENSE.md",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/random/src/sfc64/LICENSE.md",
+      "numpy/numpy-2.5.2.dist-info/licenses/numpy/random/src/splitmix64/LICENSE.md",
+      "numpy/numpy/_core/include/numpy/random/LICENSE.txt",
+      "numpy/numpy/ma/LICENSE",
+      "numpy/numpy/random/LICENSE.md"
+    ]
+  },
+  {
+    "package": "scipy",
+    "version": "1.18.1",
+    "license_files": [
+      "scipy/scipy-1.18.1.dist-info/LICENSE.txt",
+      "scipy/scipy/_lib/_uarray/LICENSE",
+      "scipy/scipy/fft/_duccfft/LICENSE.md",
+      "scipy/scipy/integrate/LICENSE_DOP",
+      "scipy/scipy/spatial/qhull_src/COPYING_QHULL.txt"
+    ]
+  },
+  {
+    "package": "scikit-image",
+    "version": "0.26.0",
+    "license_files": [
+      "scikit-image/scikit_image-0.26.0.dist-info/LICENSE.txt"
+    ]
+  },
+  {
+    "package": "Pillow",
+    "version": "12.3.0",
+    "license_files": [
+      "Pillow/pillow-12.3.0.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "package": "onnxruntime",
+    "version": "1.30.0",
+    "license_files": [
+      "onnxruntime/onnxruntime/LICENSE",
+      "onnxruntime/onnxruntime/ThirdPartyNotices.txt"
+    ]
+  },
+  {
+    "package": "opencv-python-headless",
+    "version": "5.0.0.93",
+    "license_files": [
+      "opencv-python-headless/cv2/LICENSE-3RD-PARTY.txt",
+      "opencv-python-headless/cv2/LICENSE.txt",
+      "opencv-python-headless/opencv_python_headless-5.0.0.93.dist-info/LICENSE-3RD-PARTY.txt",
+      "opencv-python-headless/opencv_python_headless-5.0.0.93.dist-info/LICENSE.txt"
+    ]
+  },
+  {
+    "package": "tkinterdnd2",
+    "version": "0.6.3",
+    "license_files": [
+      "tkinterdnd2/tkinterdnd2-0.6.3.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "package": "networkx",
+    "version": "3.7",
+    "license_files": [
+      "networkx/networkx-3.7.dist-info/licenses/LICENSE.txt"
+    ]
+  },
+  {
+    "package": "imageio",
+    "version": "2.37.4",
+    "license_files": [
+      "imageio/imageio-2.37.4.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "package": "tifffile",
+    "version": "2026.9.20",
+    "license_files": [
+      "tifffile/tifffile-2026.9.20.dist-info/licenses/LICENSE"
+    ]
+  },
+  {
+    "package": "lazy-loader",
+    "version": "0.6",
+    "license_files": [
+      "lazy-loader/lazy_loader-0.6.dist-info/licenses/LICENSE.md"
+    ]
+  },
+  {
+    "package": "packaging",
+    "version": "26.3",
+    "license_files": [
+      "packaging/packaging-26.3.dist-info/licenses/LICENSE",
+      "packaging/packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+      "packaging/packaging-26.3.dist-info/licenses/LICENSE.BSD"
+    ]
+  },
+  {
+    "package": "flatbuffers",
+    "version": "25.12.19",
+    "license_files": []
+  },
+  {
+    "package": "protobuf",
+    "version": "7.36.2",
+    "license_files": [
+      "protobuf/protobuf-7.36.2.dist-info/LICENSE"
+    ]
+  },
+  {
+    "package": "pyinstaller",
+    "version": "6.22.3",
+    "license_files": [
+      "pyinstaller/pyinstaller-6.22.3.dist-info/licenses/COPYING.txt"
+    ]
+  }
+]

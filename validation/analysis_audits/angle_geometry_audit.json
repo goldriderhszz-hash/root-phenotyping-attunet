@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "n_cases": 8,
+  "cases": [
+    {
+      "case": "straight_30_degrees",
+      "expected_deg": 30,
+      "measured_deg": 29.999999999999993
+    },
+    {
+      "case": "straight_45_degrees",
+      "expected_deg": 45,
+      "measured_deg": 45.0
+    },
+    {
+      "case": "straight_60_degrees",
+      "expected_deg": 60,
+      "measured_deg": 59.99999999999999
+    },
+    {
+      "case": "straight_90_degrees",
+      "expected_deg": 90,
+      "measured_deg": 90.0
+    },
+    {
+      "case": "curved_original_order",
+      "measured_deg": 35.537677791974374
+    },
+    {
+      "case": "same_geometry_reversed_coordinate_order",
+      "measured_deg": 19.653824058053313
+    },
+    {
+      "case": "horizontal_mirror_with_matching_fixed_axis",
+      "measured_deg": 35.537677791974374
+    },
+    {
+      "case": "zero_length_lateral_vector",
+      "measured_deg": null,
+      "expected": "unavailable"
+    }
+  ],
+  "coordinate_order_difference_deg": 15.883853733921061,
+  "interpretation": "The implementation matches straight geometry and mirror transformation with corresponding axis. The same curved geometry changes angle under coordinate reordering. The deterministic argwhere ordering is part of the frozen definition, not a newly discovered coding mismatch. Local angles should be treated as exploratory operational descriptors. No parameter was retuned."
+}

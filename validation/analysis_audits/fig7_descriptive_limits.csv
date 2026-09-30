@@ -1,0 +1,5 @@
+trait,n_distinct_images,bias_of_seed_mean,difference_sd_across_images,lower_descriptive_limit,upper_descriptive_limit,estimand
+dominant_path_length,50,-1137.2016003439442,795.3274371030303,-2696.0433770658838,421.6401763779952,prediction averaged over three training seeds per source image
+junction_region_count,50,109.85333333333332,92.08842147422503,-70.63997275614773,290.3466394228144,prediction averaged over three training seeds per source image
+mean_local_acute_angle_deg,50,-3.985140444188487,7.434423599396182,-18.556610699005006,10.586329810628031,prediction averaged over three training seeds per source image
+retained_segment_count,50,95.46666666666668,87.78565939528421,-76.59322574809038,267.5265590814237,prediction averaged over three training seeds per source image

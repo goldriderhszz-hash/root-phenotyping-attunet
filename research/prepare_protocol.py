@@ -55,6 +55,7 @@ def write_csv(path: Path, rows: list[dict]) -> None:
 
 
 def main() -> None:
+    (ROOT / "manifests").mkdir(parents=True, exist_ok=True)
     images = {p.stem: p for p in DATA_DIR.glob("*.tif") if not p.stem.lower().endswith("_mask")}
     annotations = {p.stem: p for p in DATA_DIR.glob("*.json")}
     missing_json = sorted(set(images) - set(annotations))
@@ -64,8 +65,6 @@ def main() -> None:
         errors.append(f"expected 50 TIFF and 50 JSON files, found {len(images)} and {len(annotations)}")
     if missing_json or missing_image:
         errors.append(f"unpaired files: missing_json={missing_json}, missing_image={missing_image}")
-    if any(name.startswith("10-1-4") for name in images | annotations):
-        errors.append("excluded sample 10-1-4 remains in the active dataset")
 
     rows: list[dict] = []
     image_byte_groups: dict[str, list[str]] = defaultdict(list)

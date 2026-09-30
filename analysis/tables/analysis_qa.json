@@ -1,0 +1,30 @@
+{
+  "reference_images": 50,
+  "prediction_masks": 600,
+  "configurations": [
+    "attunet_cl_fixed",
+    "attunet_cl_schedule",
+    "attunet_pixel",
+    "unet_pixel"
+  ],
+  "seeds": [
+    42,
+    3407,
+    2026
+  ],
+  "descriptor_pair_rows": 2400,
+  "paired_config_error_rows": 1800,
+  "valid_descriptor_pairs": 2400,
+  "grid_settings": 36,
+  "grid_reference_rows": 1800,
+  "grid_prediction_rows": 5400,
+  "grid_pair_rows": 21600,
+  "default_setting_matches_base_extractor": true,
+  "dominant_path_invariant_across_channel_b_parameters": true,
+  "reference_type": "annotation_mask_same_extractor",
+  "human_reference_available": false,
+  "physical_calibration_available": false,
+  "source_manifest_sha256": "a68f86f79f50bec43effa84d062f184d2929d358caaf82370620e725321a5ccf",
+  "source_fold_assignments_sha256": "6e431f63195e58cd766fb5f2b20b94e993a1cf970c8c0248a56245b0cf54a5cf",
+  "source_extractor_sha256": "5a7fe8931e436a3fb41366bd000a68ed5a030c47d56d9c0485efc3886fe01c63"
+}

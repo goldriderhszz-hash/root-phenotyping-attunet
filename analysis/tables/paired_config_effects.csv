@@ -1,0 +1,4 @@
+﻿comparison,treatment,control,endpoint,mean_paired_difference,bootstrap_ci95_low,bootstrap_ci95_high,bootstrap_p_two_sided,holm_adjusted_p,positive_folds,fold_effects,bootstrap_replicates,bootstrap_seed
+attention_architecture_effect,attunet_pixel,unet_pixel,OOF macro Dice,0.008625012669703785,-0.006751228501486325,0.028534718512404435,0.3322,0.6644,4,0.01537997;0.02837207;0.00088582;-0.00569256;0.00417976,10000,20260920
+fixed_skeleton_loss_effect,attunet_cl_fixed,attunet_pixel,OOF macro Dice,0.025296392052306563,0.01374227030897564,0.034000640297649896,0.0,0.0,5,0.01359018;0.03646457;0.02836870;0.03268201;0.01537650,10000,20260920
+two_stage_schedule_effect,attunet_cl_schedule,attunet_cl_fixed,OOF macro Dice,-0.008904714589958474,-0.03481547239678923,0.015782510942621585,0.52,0.6644,1,-0.01648730;-0.00215881;-0.02687967;-0.00440964;0.00541184,10000,20260920

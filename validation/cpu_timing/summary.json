@@ -1,0 +1,94 @@
+{
+  "status": "complete",
+  "n_distinct_images": 50,
+  "repeats": 3,
+  "n_image_runs": 150,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "processor": "AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD",
+  "provider": "CPUExecutionProvider",
+  "timing_scope": "source ONNX CPU numerical pipeline; model load, tile warm-up, reference evaluation and disk output excluded",
+  "stages": {
+    "read_seconds": {
+      "median": 0.03266819999953441,
+      "q25": 0.02181437499984895,
+      "q75": 0.058447925000109535,
+      "p90": 0.08153133000096204
+    },
+    "clahe_inference_fusion_seconds": {
+      "median": 37.410092399999485,
+      "q25": 36.0923767000001,
+      "q75": 39.63938855000015,
+      "p90": 40.44507309000001
+    },
+    "threshold_seconds": {
+      "median": 0.004665500000214706,
+      "q25": 0.004205625000167856,
+      "q75": 0.005228525000347872,
+      "p90": 0.006099590001304022
+    },
+    "descriptor_seconds": {
+      "median": 14.334077250000519,
+      "q25": 11.047321674999694,
+      "q75": 20.208549875000045,
+      "p90": 28.755903139999823
+    },
+    "total_seconds": {
+      "median": 52.25678330000028,
+      "q25": 49.04552394999928,
+      "q75": 57.40542155000085,
+      "p90": 66.54715990000113
+    }
+  },
+  "candidate_version": "1.1.0",
+  "hardware": {
+    "Name": "AMD Ryzen 7 7840H with Radeon 780M Graphics",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 16
+  },
+  "intra_op_threads": 8,
+  "inter_op_threads": "ONNX Runtime default",
+  "all_150_descriptor_rows_match_existing_own_fold_deployment": true,
+  "runtime_versions": {
+    "numpy": "2.5.2",
+    "opencv": "5.0.0",
+    "onnxruntime": "1.30.0",
+    "scipy": "1.18.1",
+    "skimage": "0.26.0"
+  },
+  "source_hashes": {
+    "scripts/benchmark_cpu.py": "7216d693dd87c92d204c800ad7a910992c5ea127af412438846408fdcb81dd13",
+    "rootscope/engine.py": "4b0806ffedf696afcaaba1168299f5112f0c4a2d50959f5469cd3901b101ee5d",
+    "rootscope/phenotype_extractor.py": "5a7fe8931e436a3fb41366bd000a68ed5a030c47d56d9c0485efc3886fe01c63",
+    "model/catalog.json": "8b13a69efc7969b5aa71e9d7ad16f05f1a3d8652b19407de9084e6e6f49f8aab",
+    "research/dataset_manifest.csv": "a68f86f79f50bec43effa84d062f184d2929d358caaf82370620e725321a5ccf"
+  },
+  "models": [
+    {
+      "id": "fold_0",
+      "sha256": "f81770d5c8e2e710da1b30f3354fef4e69d4641079b291fd7e857d4c647b8892",
+      "threshold": 0.47
+    },
+    {
+      "id": "fold_1",
+      "sha256": "abcfbccab4d37b4696bb27c6474eed9e30bf0eaf722223990b77dcb78b6dc039",
+      "threshold": 0.1
+    },
+    {
+      "id": "fold_2",
+      "sha256": "a070c19c20783b5e6dce7d437ec7e973ff625726f9021638e34276ca9123cc59",
+      "threshold": 0.82
+    },
+    {
+      "id": "fold_3",
+      "sha256": "7b087ce9197ca5463dcfc873e2f0fae935a64317fd25ce0013df44a365bb01fd",
+      "threshold": 0.1
+    },
+    {
+      "id": "fold_4",
+      "sha256": "85fd5f8fbad1b31dde9c3f97855caa8089256c283f852d061579865d734f9603",
+      "threshold": 0.89
+    }
+  ],
+  "replicates_are_timing_runs_not_independent_biological_units": true
+}

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "distinct_images": 50,
+  "oof_segmentation_rows": 600,
+  "descriptor_rows": 2400,
+  "fits": 60,
+  "schedule_selected_before_or_at_transition": 14,
+  "schedule_selected_after_transition": 1,
+  "leave_one_fold_out": "descriptive omission of existing predictions; no retraining",
+  "uncertainty": "conditional on this image collection, split and three seeds; folds share training images; plant independence is unverified"
+}

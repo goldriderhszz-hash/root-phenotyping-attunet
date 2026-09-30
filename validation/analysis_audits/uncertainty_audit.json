@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "matches_recorded_intervals": true,
+  "original_manuscript_resampling_label_incorrect": true,
+  "correction": "Recorded segmentation intervals use seed-and-image resampling, not five-fold bootstrap. Point estimates and intervals are unchanged. No p-values are endorsed. Folds share training data and unknown biological dependence is not represented.",
+  "comparisons": [
+    {
+      "comparison": "attention_architecture_effect",
+      "mean_difference": 0.008625012669703785,
+      "lower_descriptive_percentile": -0.006751228501486325,
+      "upper_descriptive_percentile": 0.028534718512404435,
+      "random_seed": 20260920,
+      "draws": 10000,
+      "resampling": "independent draws of 3 seed indices and 50 image indices; paired treatment/control retained on Cartesian index product; not fold resampling"
+    },
+    {
+      "comparison": "fixed_skeleton_loss_effect",
+      "mean_difference": 0.025296392052306563,
+      "lower_descriptive_percentile": 0.01374227030897564,
+      "upper_descriptive_percentile": 0.034000640297649896,
+      "random_seed": 20260920,
+      "draws": 10000,
+      "resampling": "independent draws of 3 seed indices and 50 image indices; paired treatment/control retained on Cartesian index product; not fold resampling"
+    },
+    {
+      "comparison": "two_stage_schedule_effect",
+      "mean_difference": -0.008904714589958474,
+      "lower_descriptive_percentile": -0.03481547239678923,
+      "upper_descriptive_percentile": 0.015782510942621585,
+      "random_seed": 20260920,
+      "draws": 10000,
+      "resampling": "independent draws of 3 seed indices and 50 image indices; paired treatment/control retained on Cartesian index product; not fold resampling"
+    }
+  ]
+}

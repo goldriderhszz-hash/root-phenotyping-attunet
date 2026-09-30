@@ -1,0 +1,66 @@
+{
+  "source": "assets/rootscope-settings-en.png",
+  "kind": "unaltered actual-interface crops with panel labels",
+  "image": "DN50-235-25-6(3).tif",
+  "model": "fold_1",
+  "threshold": 0.1,
+  "selection_rule": "seed-42 own-fold deployment Dice closest to median",
+  "panel_crops": [
+    [
+      "a",
+      [
+        0.02,
+        0.49,
+        0.43,
+        0.45
+      ],
+      [
+        287,
+        546,
+        635,
+        721
+      ]
+    ],
+    [
+      "b",
+      [
+        0.54,
+        0.78,
+        0.43,
+        0.17
+      ],
+      [
+        704,
+        636,
+        998,
+        704
+      ]
+    ],
+    [
+      "c",
+      [
+        0.02,
+        0.05,
+        0.96,
+        0.35
+      ],
+      [
+        704,
+        327,
+        1670,
+        446
+      ]
+    ]
+  ],
+  "preview_crop": [
+    1129,
+    716,
+    1258,
+    893
+  ],
+  "figure_mm": [
+    170,
+    105
+  ],
+  "dpi": 600
+}

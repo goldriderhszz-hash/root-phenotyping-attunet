@@ -1,119 +1,117 @@
 # RootScope Desktop
 
-**A native desktop application for rhizobag root image segmentation and skeleton-derived image descriptors.** It opens as a normal Windows program; it does not start a web server or require a browser. The source code can also run on macOS or Linux with Python 3.12, Tk, and the listed dependencies.
+RootScope segments rhizobag root images and extracts skeleton-derived image descriptors. This repository accompanies **Automated segmentation and skeleton-derived root descriptors in rhizobag seedling images: a controlled evaluation of Attention U-Net**. It contains a native Tkinter interface, a batch command, five frozen ONNX models and the study's numerical evidence.
 
-**中文速览：** 下载 Windows 发布包后解压整个 `RootScope` 文件夹，双击其中的 `RootScope.exe`。导入一张或多张根系图像，按需加入同名参考掩膜，点击“开始分析”。软件会生成分割掩膜、叠加图、骨架图、描述符 CSV、JSON 和结果压缩包。首次运行和较大图像的分析需要一些时间；所有计算在本机完成。
+**Version 1.1.0** — [Download the Windows application, source and numerical records](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.1.0). [Release information](docs/RELEASE_STATUS.md) describes the assets and verification scope.
 
-![RootScope native desktop interface with five-fold model selection](assets/rootscope-desktop.png)
+[English guide](docs/USER_GUIDE.md) · [中文说明](docs/USER_GUIDE.zh-CN.md) · [Reproduce the paper](docs/REPRODUCIBILITY.md) · [Models](MODEL.md) · [Data availability](DATA_AVAILABILITY.md) · [Citation](CITATION.md)
 
-The screenshot shows the initial empty workspace; no example image or result is implied.
+![Actual English interface and held-out image](assets/rootscope-desktop-en.png)
 
-This repository publishes one fixed research release. Use the `research-release` tag and its commit hash to identify the exact software in a paper or analysis record.
+The example uses the seed-42 out-of-fold image whose deployment Dice is closest to the 50-image median, with its own held-out fold model and validation threshold. It illustrates operation and is not external validation or best-case selection.
 
-## Windows download and launch
+## Availability and requirements
 
-1. Download `RootScope-Desktop-Windows-x64.zip` from the [single research release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/research-release).
-2. Extract the whole archive. Keep `RootScope.exe` and its `_internal` folder together.
-3. Double-click `RootScope.exe`. No Python installation is required for this packaged build.
-4. Click **选择图片** or **导入文件夹**, select one of five fold models if needed, optionally **添加参考掩膜**, choose the result directory, and click **开始分析**.
-5. Select a row to inspect the source, overlay, mask, and skeleton. Click **打开结果** to see exported files.
+| Item | Specification |
+| --- | --- |
+| Project | RootScope Desktop |
+| Home | [root-phenotyping-attunet](https://github.com/goldriderhszz-hash/root-phenotyping-attunet) |
+| Package | Windows x64; extract the entire folder; no Python or GPU installation required |
+| Source | Python 3.12, Tk 8.6 and pinned `requirements.txt` dependencies |
+| Interface | English on first use; Chinese switch; locally retained selection |
+| Computation | Local inference; network unnecessary for image analysis |
+| License | MIT software; research-data permissions are documented separately |
+| Verification | Windows desktop checks; automated source tests are defined for Windows, Linux and macOS |
 
-The Windows ZIP contains the complete executable directory. It is not an installer. If Windows displays a trust prompt for an unsigned download, inspect the source and release provenance before deciding whether to run it.
+The package targets Windows 10/11 x64. Testing on one Windows 11 computer does not establish a measured minimum RAM/CPU requirement. Large TIFFs require more time and memory than the installation example. [Validation](validation/README.md) distinguishes CPU deployment timing from the original GPU experiment.
 
-The packaged EXE can also run unattended without installing Python:
+## Windows quick start
 
-```powershell
-RootScope.exe --batch path\to\image.tif --references path\to\image_mask.png --output path\to\results --model fold_0 --no-zip
-```
+1. Extract `RootScope-Desktop-Windows-x64.zip`, keeping `RootScope.exe` and `_internal` together.
+2. Open the EXE. Choose **Select images** or **Import folder**, or drag in images/folders.
+3. Select `fold_0` through `fold_4`; the corresponding validation-selected threshold loads automatically.
+4. Optionally add matching reference masks, choose an output directory and click **Run analysis**.
+5. Select a result row and inspect **Source**, **Overlay**, **Mask** and **Skeleton**. Choose **Open results** for exports.
 
-The batch command writes the same results and provenance as the GUI; the `--windowed` binary does not show terminal progress. Wait for `results.csv` and `provenance.json` in the new output folder before using its outputs.
+Choose **中文** while idle to switch language. Inputs, settings, selected layers and results are retained. Small windows have scrollbars for settings, results and table columns. Windows file dialogs follow the operating system language.
 
-## Run from source
-
-Python 3.12 and Tk 8.6 are required. On Linux, install your distribution's `python3-tk` package first.
+## Run from source or command line
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
 .venv\Scripts\python desktop.py
+.venv\Scripts\python cli.py image-folder --output result-folder --model fold_0
+.venv\Scripts\python cli.py examples\synthetic_root.png --references examples\synthetic_root_mask.png --output demo-results --no-zip
 ```
 
-macOS and Linux use `.venv/bin/python` instead of `.venv\Scripts\python`.
-
-For batch automation:
+Use `.venv/bin/python` on macOS/Linux and install OS-provided Tk if absent. Source is designed for cross-platform Python/Tk; each native binary must be built on its target OS.
 
 ```powershell
-.venv\Scripts\python cli.py path\to\images --references path\to\masks --output path\to\results --model fold_0
+RootScope.exe --batch image.tif --output result-folder --model fold_2 --no-zip
 ```
 
-The `--model` option accepts `fold_0` through `fold_4`. Each uses its own validation-selected threshold by default; `--threshold` overrides it and is written to provenance. Other options include `--save-probability` and `--no-zip`. A single image path or a directory of images can be supplied. Reference files match the image stem exactly or with `_mask` / `-mask` appended. Supported inputs are TIFF, PNG, JPG, and BMP. The GUI and CLI use the same analysis code.
+Options include `--references`, `--threshold`, `--save-probability`, `--language en|zh` and `--no-zip`. The windowed EXE has no console progress; wait for process completion before reading results. The synthetic example tests installation/output, not biological accuracy.
 
-## Scientific method
+## Methods and interpretation
 
-The release includes **all five seed-42 fold checkpoints** for the manuscript's fixed skeleton-loss Attention U-Net, exported to ONNX. Each checkpoint was trained on 30 images, selected and thresholded using 10 separate validation images, and evaluated only on its 10 held-out test images. The desktop default is `fold_0`; selecting a model is explicit and no ensemble is formed. The locked thresholds are 0.47, 0.10, 0.82, 0.10, and 0.89 for folds 0–4. Images are converted to grayscale, enhanced with CLAHE (clip limit 2.0, 16 × 16 grid), normalized to [0, 1], predicted in 256 × 256 tiles with 128 pixel stride, and fused with a Gaussian weight window (σ = 64). The packaged Windows build uses CPU inference. Model provenance and SHA-256 values are in [MODEL.md](MODEL.md).
+Grayscale images receive CLAHE (clip 2.0; 16 × 16 grid), [0,1] normalization, 256 × 256 tiling with stride 128, reflection padding and Gaussian fusion (sigma 64). The five seed-42 fixed-loss Attention U-Net checkpoints are used individually, with thresholds 0.47, 0.10, 0.82, 0.10 and 0.89. No ensemble is formed. For study reproduction each image must use its own test-fold model, not simply the application's fold-0 default.
 
-Four primary descriptors are exported:
-
-| Column | Meaning |
+| Field | Meaning |
 | --- | --- |
-| `dominant_path_length` | Weighted path length on the raw predicted skeleton, in pixels. |
-| `retained_segment_count` | Count of retained skeleton segments after 5 × 5 closing and 15 pruning iterations; minimum segment size 10 pixels. |
-| `junction_region_count` | Count of candidate junction regions in the processed skeleton. |
-| `mean_local_acute_angle_deg` | Mean local acute angle where a valid angle can be estimated. |
+| `dominant_path_length` | Weighted path on the selected raw-skeleton component, pixels; not total or validated primary-root length |
+| `retained_segment_count` | Components after closing 5, pruning 15 and minimum size 10; not anatomical lateral-root count |
+| `junction_region_count` | Candidate regions in processed skeleton; may include contacts and crossings |
+| `mean_local_acute_angle_deg` | Exploratory local acute angle; coordinate-order-dependent; not validated emergence angle |
 
-Additional fields include image dimensions, foreground fraction, descriptor status, QC flags, threshold, and SHA-256 hashes. If matching reference masks are supplied, RootScope adds Precision, Recall, Dice/F1, IoU, hard clDice, width-stratified centerline recall, reference descriptors, and predicted-minus-reference differences.
+The study contains 50 distinct images, four configurations, five folds and three seeds: 60 fits and 600 out-of-fold prediction records. Fixed skeleton loss improved mean Dice by 2.53 percentage points over pixel-loss Attention U-Net, while segment and junction-region MAEs increased by 35.03 and 50.05. Higher overlap does not establish descriptor reliability. Plant/batch independence and physical scale are unverified; outcomes describe internal image-level performance.
 
-These values are **image-derived descriptors in pixel space**. Dominant path length is not total root length or an independently validated anatomical primary root length. Retained segments, candidate junctions, and local angles must not be interpreted directly as true lateral roots, branch points, or emergence angles. No physical scale is assumed. The study's aggregate cross-validation results estimate the fold-wise pipeline, not the accuracy of any one checkpoint on arbitrary new images. Performance under different species or imaging conditions needs external validation.
+**No flags** means no implemented QC check raised a flag; it does not establish accuracy. **Review required** requests inspection; the software does not automatically repair masks or approve measurements.
 
-## Output
-
-Every run creates `RootScope_<timestamp>_<id>/` under the chosen output directory:
+## Outputs
 
 ```text
-results.csv
-results.json
-errors.csv
-provenance.json
-images/<image-id>/prediction_mask.png
-images/<image-id>/overlay.png
-images/<image-id>/skeleton.png
-images/<image-id>/*_preview.*
-RootScope_<timestamp>_<id>_results.zip
+RootScope_<timestamp>_<id>/
+  results.csv                 stable English scientific columns
+  results.json                nested per-image results
+  errors.csv                  per-image failures
+  provenance.json             hashes, model, threshold, settings and versions
+  images/<image-id>/prediction_mask.png
+  images/<image-id>/overlay.png
+  images/<image-id>/skeleton.png
+  images/<image-id>/*_preview.*
+  RootScope_<timestamp>_<id>_results.zip
 ```
 
-When **同时保存 float32 概率图** is selected, each image directory also contains `probability_float32.npz`. `provenance.json` records the model, threshold, preprocessing, inference settings, library versions, input hashes, result count, and errors. `errors.csv` records per-image failures while the batch continues. Cancellation takes effect after the current image.
+Probability maps are optionally saved as `probability_float32.npz`. References use white roots (255), black background (0), matching dimensions and the image stem with optional `_mask`/`-mask`. References enter evaluation, not inference. File names/paths may contain Chinese; scientific columns, units, model IDs and machine codes remain stable. See [schema](docs/OUTPUT_SCHEMA.md) and [troubleshooting](docs/TROUBLESHOOTING.md).
 
-## Verification and builds
+## Paper reproduction and verification
 
 ```powershell
-.venv\Scripts\python -m unittest discover -s tests -v
-.venv\Scripts\python desktop.py --self-test self-test.json
+python -m pip install -r requirements-analysis.txt
+python analysis/reproduce_tables.py --output analysis/generated
+python analysis/angle_geometry_audit.py
+python analysis/audit_uncertainty.py
+python analysis/source_denominators.py
+python analysis/make_descriptor_figures.py
+python -m unittest discover -s tests -v
+python desktop.py --self-test model-check.json
 ```
 
-The self-test checks all five bundled ONNX hashes, loads each model, and runs a 256 × 256 prediction. To build a Windows ZIP from source, install `requirements-build.txt` and run `scripts/build_windows.ps1`. Native binaries must be built on their target operating system. GitHub Actions runs the tests, packages the Windows application, and attaches the ZIP to the `research-release` tag.
+Included numeric records support audit and table/figure regeneration without training. Recomputing from masks requires access to the original research assets; see [data availability](DATA_AVAILABILITY.md). [Reproducibility](docs/REPRODUCIBILITY.md) states each tier's inputs, outputs and limits. [Limitations](docs/LIMITATIONS.md) documents uncertainty and descriptor interpretation.
 
-The published `model/` directory contains five inference-ready ONNX graphs and `catalog.json`. Training checkpoints are identified by SHA-256 in the catalog and can be re-exported using `scripts/export_fold_models.py` when those original study artifacts are available. They are not required to run the desktop application.
+## Repository map
 
-## Validation and comparison
-
-- [Full-image deployment validation](validation/README.md) runs the released ONNX application pipeline on each fold's ten held-out images, yielding 50 out-of-fold results. It reports image-level and pooled segmentation metrics, descriptor outputs, per-image model hashes, and parity with the original research pipeline. This is internal validation; it is not an independent external cohort.
-- [RhizoVision Explorer comparison audit](benchmark/README.md) documents a polarity and exported-mask interpretation error in the earlier direct comparison. Its reported 12.22 percentage point Dice advantage has been withdrawn pending a corrected run.
-- [Research protocol and training code](research/README.md) include fold assignments, image-hash manifest, architecture, loss, checkpoint selection, and aggregation scripts. Raw images and annotations are not included in this software repository yet; paths to them are supplied locally for validation.
-
-These evidence files report results actually produced by the binaries and scripts. Do not substitute the manuscript's three-seed aggregate scores for this released five-model package.
-
-## Availability and requirements
-
-| Item | Value |
+| Directory | Contents |
 | --- | --- |
-| Project name | RootScope Desktop |
-| Project home page | https://github.com/goldriderhszz-hash/root-phenotyping-attunet |
-| Operating systems | Windows 10/11 x64 binary; Python 3.12 source on Windows, macOS, or Linux with Tk 8.6 |
-| Programming language | Python 3.12; five ONNX model graphs |
-| Other requirements | Windows binary: no Python or internet during use. Source: `requirements.txt` and Tk. |
-| License | MIT for RootScope source and supplied ONNX models; third-party components retain their licenses. |
-| Non-academic restrictions | None under the MIT License. |
+| `rootscope/` | Shared numerical pipeline, model selection and translations |
+| `model/` | Five ONNX graphs, hashes and conversion records |
+| `research/` | Protocol, split metadata and all 60 run records |
+| `analysis/` | Three-seed numeric evidence, portable analysis and figure scripts |
+| `validation/` | Historical deployment and version-specific checks |
+| `examples/` | Synthetic input, reference and expected output |
+| `docs/` | Guides, schema, reproduction, limits and release status |
+| `manuscript/` | Final figure assets, caption/hash manifest and generation scope |
+| `tests/`, `scripts/` | Behavioral checks, validation, timing and packaging |
 
-## License and citation
-
-The RootScope source code and supplied model files are released under the [MIT License](LICENSE). Bundled third-party libraries retain their own licenses. For publications, describe the `research-release` tag or its exact commit, selected model/fold, threshold, and any manual reference masks, and cite the associated manuscript when bibliographic details are available. See [CITATION.md](CITATION.md).
+Report software version, release tag or commit, fold model, hash and threshold. [CITATION.cff](CITATION.cff) describes this software; the manuscript is unpublished. Issue reports should include version, OS, dimensions, model, threshold and a minimal permitted example. See [CONTRIBUTING.md](CONTRIBUTING.md).

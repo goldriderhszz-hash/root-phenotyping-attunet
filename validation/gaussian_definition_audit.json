@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "research_and_deployment_windows_identical": true,
+  "corrected_native_equation_2_matches_code": true,
+  "shape": [
+    256,
+    256
+  ],
+  "minimum": 0.10000000149011612,
+  "maximum": 1.0,
+  "window_sha256": "fb3aaef1632a208cde5ae2827644182d93b56da503c27152eda4fe1bb05dc5e3",
+  "normalization": "0.1 + 0.9 * (Graw - min(Graw)) / (max(Graw) - min(Graw))",
+  "note": "Removed original manuscript extra epsilon from window min-max denominator; frozen code/models unchanged. Fusion denominator retains its separate 1e-8."
+}

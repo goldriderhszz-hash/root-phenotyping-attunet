@@ -1,0 +1,41 @@
+{
+  "application": "RootScope Desktop 1.1.0",
+  "created_utc": "2026-09-30T10:44:18+00:00",
+  "completed_utc": "2026-09-30T10:44:18+00:00",
+  "status": "complete",
+  "requested_images": 1,
+  "successful_images": 1,
+  "failed_images": 0,
+  "errors": [],
+  "model": "Attention U-Net + fixed soft-clDice",
+  "model_id": "fold_0",
+  "study_seed": 42,
+  "study_fold": 0,
+  "model_format": "ONNX opset 17",
+  "onnx_sha256": "f81770d5c8e2e710da1b30f3354fef4e69d4641079b291fd7e857d4c647b8892",
+  "source_checkpoint_sha256": "be9605d801cda3f92fbd10a3bb7fa28392bc93fc048f9c4cefad0a29853ccb50",
+  "default_threshold": 0.47,
+  "used_threshold": 0.47,
+  "image_preprocessing": "grayscale; CLAHE clip=2.0 grid=16x16; intensity / 255",
+  "inference": "256x256 tiles; stride 128; reflect pad; Gaussian sigma 64; fused probabilities",
+  "descriptors": "raw skeleton weighted dominant path; 5x5 closing; 15 pruning; >=10 segment pixels",
+  "measurement_scale": "pixel-space only; no physical calibration",
+  "save_probability": false,
+  "provider": "CPUExecutionProvider",
+  "software": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.2",
+    "opencv": "5.0.0",
+    "scipy": "1.18.1",
+    "scikit_image": "0.26.0",
+    "onnxruntime": "1.30.0"
+  },
+  "images": [
+    {
+      "name": "synthetic_root.png",
+      "sha256": "8c846bdac4f4f87ad0c868cbd2c9ec39ad10e05f74119719f0a0b07cf840c486",
+      "reference_sha256": "e80e300af917d8a96371e2818b95102225d10b883f34155de075fc33db5218bc"
+    }
+  ]
+}

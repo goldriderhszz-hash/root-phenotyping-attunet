@@ -32,18 +32,22 @@ def sha256(path: Path) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("study_root", type=Path, help="Root of the completed five-fold experiment")
+    parser.add_argument("--checkpoint-root", type=Path, help="Optional minimal archive checkpoints/ directory")
+    parser.add_argument("--record-root", type=Path, help="Optional companion research/run_records/ directory")
+    parser.add_argument("--output", type=Path, help="Export into a separate directory to preserve locked release models")
     parser.add_argument("--folds", nargs="+", type=int, default=list(range(5)))
     args = parser.parse_args()
-    model_dir = ROOT / "model"
-    model_dir.mkdir(exist_ok=True)
+    model_dir = args.output or (ROOT / "model")
+    model_dir.mkdir(exist_ok=True, parents=True)
     catalog_path = model_dir / "catalog.json"
-    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    catalog = json.loads((ROOT / "model" / "catalog.json").read_text(encoding="utf-8"))
     by_fold = {item["fold"]: item for item in catalog["models"]}
     for fold in args.folds:
         if fold not in by_fold:
             parser.error(f"Fold {fold} absent from catalog")
-        record_dir = args.study_root / "results" / "runs" / "attunet_cl_fixed" / "seed_42" / f"fold_{fold}"
-        checkpoint = record_dir / "best_model.pth"
+        relative = Path("attunet_cl_fixed") / "seed_42" / f"fold_{fold}"
+        record_dir = (args.record_root or (args.study_root / "results" / "runs")) / relative
+        checkpoint = (args.checkpoint_root / relative / "best_model.pth") if args.checkpoint_root else (record_dir / "best_model.pth")
         record = json.loads((record_dir / "complete.json").read_text(encoding="utf-8"))
         item = by_fold[fold]
         if record["config"] != "attunet_cl_fixed" or record["seed"] != 42 or record["fold"] != fold:

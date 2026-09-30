@@ -1,0 +1,3542 @@
+[
+  {
+    "fold": 0,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4455,
+    "best_epoch": 20,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.57,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5969093916366355,
+      "macro_iou": 0.4268143016386329,
+      "macro_hard_cldice": 0.6891854093541945,
+      "pooled_precision": 0.5402510064544658,
+      "pooled_recall": 0.6697079340903391,
+      "pooled_dice": 0.5980539889393857,
+      "pooled_iou": 0.42658845934226797,
+      "mean_seconds": 1.903350629999477
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5965231426912093,
+      "macro_iou": 0.4259738532859253,
+      "macro_hard_cldice": 0.6812891818240946,
+      "pooled_precision": 0.5565795475489576,
+      "pooled_recall": 0.6512087520224173,
+      "pooled_dice": 0.6001870902196783,
+      "pooled_iou": 0.4287623624744739,
+      "mean_seconds": 1.9349391699986882
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "b0aa68143059ee4b9d4c0ff168cd18c5ef6e6a43bd1c6474453f06309d27d592",
+    "wall_seconds": 4521.653322000006,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4210,
+    "best_epoch": 31,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.17,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.6392521410880726,
+      "macro_iou": 0.4708413356971195,
+      "macro_hard_cldice": 0.7581861971515951,
+      "pooled_precision": 0.5778302587730387,
+      "pooled_recall": 0.6811336072677756,
+      "pooled_dice": 0.6252436931081748,
+      "pooled_iou": 0.4548032912987924,
+      "mean_seconds": 1.9068528200004948
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.6488165960813854,
+      "macro_iou": 0.481095793245918,
+      "macro_hard_cldice": 0.7912748009015649,
+      "pooled_precision": 0.557922343398319,
+      "pooled_recall": 0.7865533058760843,
+      "pooled_dice": 0.6527982323204051,
+      "pooled_iou": 0.4845586221615323,
+      "mean_seconds": 1.9228955200029305
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "aeb978f4077d1cf0e99bd6941d55968cc1f41fa205d0d79ac0abd2b4f2f1e4d1",
+    "wall_seconds": 4505.960991,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4065,
+    "best_epoch": 35,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.36,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5662871777738161,
+      "macro_iou": 0.3969526767457113,
+      "macro_hard_cldice": 0.6522517691914719,
+      "pooled_precision": 0.5289193223004529,
+      "pooled_recall": 0.6438870901598874,
+      "pooled_dice": 0.5807681809156118,
+      "pooled_iou": 0.40921304969775274,
+      "mean_seconds": 1.9296963499999038
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5822130259474061,
+      "macro_iou": 0.4122804654626499,
+      "macro_hard_cldice": 0.6825578219431502,
+      "pooled_precision": 0.5415662039034542,
+      "pooled_recall": 0.6067016624432428,
+      "pooled_dice": 0.5722865297566323,
+      "pooled_iou": 0.4008413044243958,
+      "mean_seconds": 1.9468227999997907
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "64ef6fce9da302e67c96d8f5f30b364b480154f7cfc499660e2b89fccc36b877",
+    "wall_seconds": 4421.740046700001,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4331,
+    "best_epoch": 7,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.61,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.597401875286946,
+      "macro_iou": 0.4266877751485597,
+      "macro_hard_cldice": 0.675239597080217,
+      "pooled_precision": 0.53282981528159,
+      "pooled_recall": 0.6761716515516478,
+      "pooled_dice": 0.5960032739060482,
+      "pooled_iou": 0.4245047462212994,
+      "mean_seconds": 3.25258403000189
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5752919594215579,
+      "macro_iou": 0.4060604538052234,
+      "macro_hard_cldice": 0.6507448731639047,
+      "pooled_precision": 0.5543378647096817,
+      "pooled_recall": 0.6331307294552814,
+      "pooled_dice": 0.591120200353808,
+      "pooled_iou": 0.4195675177557761,
+      "mean_seconds": 3.2775947400019505
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "1a374df0443becbdfac35e6c16023c08436d056a9fe65429d5d9d71da2a4ecba",
+    "wall_seconds": 6315.239332400008,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4575,
+    "best_epoch": 5,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.41,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5399964556190382,
+      "macro_iou": 0.37176384064897694,
+      "macro_hard_cldice": 0.5804700568707357,
+      "pooled_precision": 0.5999867386447882,
+      "pooled_recall": 0.5123495460026913,
+      "pooled_dice": 0.5527158241533305,
+      "pooled_iou": 0.38189861630317945,
+      "mean_seconds": 1.9141535999999177
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5082574714464678,
+      "macro_iou": 0.34235230140344347,
+      "macro_hard_cldice": 0.5459513664230524,
+      "pooled_precision": 0.5687742043312879,
+      "pooled_recall": 0.4657272525919821,
+      "pooled_dice": 0.5121184620004818,
+      "pooled_iou": 0.3441930348090976,
+      "mean_seconds": 1.9349753199996484
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "f2379b1fd73cd1016d9ccccaac3ab6f5525b539e6ebf50fb25837aeec39182fe",
+    "wall_seconds": 4157.264769999998,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4439,
+    "best_epoch": 7,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.12,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5907731022403171,
+      "macro_iou": 0.42239687814081456,
+      "macro_hard_cldice": 0.6989198246034011,
+      "pooled_precision": 0.5636141508395536,
+      "pooled_recall": 0.6341974579664345,
+      "pooled_dice": 0.5968261771860172,
+      "pooled_iou": 0.42534015920359547,
+      "mean_seconds": 3.2975962499855087
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5948952292606762,
+      "macro_iou": 0.42463190575413085,
+      "macro_hard_cldice": 0.695954796406178,
+      "pooled_precision": 0.550573791967661,
+      "pooled_recall": 0.6645371299563532,
+      "pooled_dice": 0.6022112400471954,
+      "pooled_iou": 0.43083136544003164,
+      "mean_seconds": 3.302209170011338
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "13f75978249e3029e87e3ab4418bb05c402e1c91098103f68721cbaad66c944a",
+    "wall_seconds": 6820.691407199949,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4192,
+    "best_epoch": 2,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.64,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5822470188637338,
+      "macro_iou": 0.41200265067643616,
+      "macro_hard_cldice": 0.6478546876251117,
+      "pooled_precision": 0.562073741510757,
+      "pooled_recall": 0.575892922875083,
+      "pooled_dice": 0.5688994238590659,
+      "pooled_iou": 0.39752581568595563,
+      "mean_seconds": 2.192800550001266
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5854245408451153,
+      "macro_iou": 0.4156890379676554,
+      "macro_hard_cldice": 0.6631218927393487,
+      "pooled_precision": 0.5320121481320559,
+      "pooled_recall": 0.6666942588106315,
+      "pooled_dice": 0.5917870176097445,
+      "pooled_iou": 0.4202397116132705,
+      "mean_seconds": 2.1945978399991874
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "a2d20f3510910fa2d22ee3de7b94fba51c9bb354ecd805963997fc58ac494c3b",
+    "wall_seconds": 5631.0447766,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4048,
+    "best_epoch": 6,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.39,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5616558670870697,
+      "macro_iou": 0.3942355555515591,
+      "macro_hard_cldice": 0.6577751618517247,
+      "pooled_precision": 0.5052651794444079,
+      "pooled_recall": 0.6372629656607338,
+      "pooled_dice": 0.5636391332280313,
+      "pooled_iou": 0.39240774812720686,
+      "mean_seconds": 1.8924755499996535
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5965663077950187,
+      "macro_iou": 0.42695950859764054,
+      "macro_hard_cldice": 0.6975038986570425,
+      "pooled_precision": 0.5479860544809829,
+      "pooled_recall": 0.6073063626546086,
+      "pooled_dice": 0.5761232612560933,
+      "pooled_iou": 0.4046159653990335,
+      "mean_seconds": 1.926028639998549
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "58d5836f557d2cf9b5a84c431da6285922333b732d0e059980da0b11e4a845e1",
+    "wall_seconds": 4609.8340665,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4314,
+    "best_epoch": 5,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.7,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.6015491748400865,
+      "macro_iou": 0.4309741259137139,
+      "macro_hard_cldice": 0.6839242368873665,
+      "pooled_precision": 0.558838104302666,
+      "pooled_recall": 0.6484724217183282,
+      "pooled_dice": 0.6003279041059696,
+      "pooled_iou": 0.4289061029844382,
+      "mean_seconds": 2.2064693000014812
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5780306406703364,
+      "macro_iou": 0.4091653970191181,
+      "macro_hard_cldice": 0.6564704353945887,
+      "pooled_precision": 0.5743414673168664,
+      "pooled_recall": 0.6172145916614099,
+      "pooled_dice": 0.5950067251190195,
+      "pooled_iou": 0.4234943581273893,
+      "mean_seconds": 2.203685590000532
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "0b5be32e7816c5a0151fc2b854e4ba95de07397c47ae59df8167bd79faafe12a",
+    "wall_seconds": 5699.959184200001,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4557,
+    "best_epoch": 10,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.26,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.6088898282007832,
+      "macro_iou": 0.4389221752656846,
+      "macro_hard_cldice": 0.7129453560519097,
+      "pooled_precision": 0.560072030680026,
+      "pooled_recall": 0.6849317708967064,
+      "pooled_dice": 0.6162408939114261,
+      "pooled_iou": 0.4453382754266629,
+      "mean_seconds": 2.1028945499999283
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5930806587758763,
+      "macro_iou": 0.42213459783265594,
+      "macro_hard_cldice": 0.696991827668062,
+      "pooled_precision": 0.5513250002069827,
+      "pooled_recall": 0.6395252589581171,
+      "pooled_dice": 0.5921588559331572,
+      "pooled_iou": 0.42061482464035876,
+      "mean_seconds": 2.0832391900000404
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "f6a3a2853c0ebd655ed474f0f42749bc8b1222bae922eea270665384dd7af8e1",
+    "wall_seconds": 5589.5720605,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4448,
+    "best_epoch": 4,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.47,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5900120421237546,
+      "macro_iou": 0.4200689467454145,
+      "macro_hard_cldice": 0.7184497946512514,
+      "pooled_precision": 0.5101607430336218,
+      "pooled_recall": 0.7142680202759337,
+      "pooled_dice": 0.595202456636508,
+      "pooled_iou": 0.4236926946863966,
+      "mean_seconds": 1.8973861299920827
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5984856167537749,
+      "macro_iou": 0.4277934345818655,
+      "macro_hard_cldice": 0.7129592615855999,
+      "pooled_precision": 0.517151505176697,
+      "pooled_recall": 0.7267998761551723,
+      "pooled_dice": 0.6043092287311966,
+      "pooled_iou": 0.43298217712067216,
+      "mean_seconds": 1.9452864299993962
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "be9605d801cda3f92fbd10a3bb7fa28392bc93fc048f9c4cefad0a29853ccb50",
+    "wall_seconds": 4617.648654699908,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4201,
+    "best_epoch": 3,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.1,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5661409937694295,
+      "macro_iou": 0.3967815767160673,
+      "macro_hard_cldice": 0.635828267177853,
+      "pooled_precision": 0.5771434792945689,
+      "pooled_recall": 0.527513859617145,
+      "pooled_dice": 0.5512137992320496,
+      "pooled_iou": 0.3804659368924626,
+      "mean_seconds": 1.9016608199977783
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5888854060854767,
+      "macro_iou": 0.41975288840611136,
+      "macro_hard_cldice": 0.6713818366105289,
+      "pooled_precision": 0.5736141987227763,
+      "pooled_recall": 0.6211377896485313,
+      "pooled_dice": 0.5964308224192701,
+      "pooled_iou": 0.4249386720270615,
+      "mean_seconds": 1.9293469399985042
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "485a70d52d484f296e38c1eb90b414fbf0419e9d93f0d97fe273c6bb7401b35f",
+    "wall_seconds": 4855.4708196000065,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4057,
+    "best_epoch": 3,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.82,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5492549905210619,
+      "macro_iou": 0.3809153450165364,
+      "macro_hard_cldice": 0.6183100089758866,
+      "pooled_precision": 0.5044550762317015,
+      "pooled_recall": 0.6559405106686509,
+      "pooled_dice": 0.5703098564804012,
+      "pooled_iou": 0.3989045172238632,
+      "mean_seconds": 1.9066115700006776
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5893143039212795,
+      "macro_iou": 0.4189394294726673,
+      "macro_hard_cldice": 0.6648018533375601,
+      "pooled_precision": 0.5405712621883855,
+      "pooled_recall": 0.627781379803013,
+      "pooled_dice": 0.5809214798026353,
+      "pooled_iou": 0.409365282846957,
+      "mean_seconds": 1.9517552899993462
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "877ff0a7bb1c581f2a7f74a171b8a70bd9fe74e399d9425f8c14d195e333913b",
+    "wall_seconds": 4531.869762800001,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4321,
+    "best_epoch": 3,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.1,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5867984993852474,
+      "macro_iou": 0.41572596629688496,
+      "macro_hard_cldice": 0.6806217983667052,
+      "pooled_precision": 0.5563538109388281,
+      "pooled_recall": 0.6145006941764211,
+      "pooled_dice": 0.5839834096140841,
+      "pooled_iou": 0.4124128301737817,
+      "mean_seconds": 2.1622329999998326
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5508610571084394,
+      "macro_iou": 0.38325913612678586,
+      "macro_hard_cldice": 0.6338162193403806,
+      "pooled_precision": 0.5700353789575807,
+      "pooled_recall": 0.5689317873170437,
+      "pooled_dice": 0.5694830484798853,
+      "pooled_iou": 0.3980959805297894,
+      "mean_seconds": 2.199183239999911
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "7667596688e702abbd6394f29b80a3bd29c1e179f5851521b9c08283bf8a96b9",
+    "wall_seconds": 5680.0131033,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "attunet_cl_fixed",
+    "config_values": {
+      "name": "attunet_cl_fixed",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4562,
+    "best_epoch": 1,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.89,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5966971640463485,
+      "macro_iou": 0.4264546664544713,
+      "macro_hard_cldice": 0.694352898293513,
+      "pooled_precision": 0.5460968186058105,
+      "pooled_recall": 0.6756771408710821,
+      "pooled_dice": 0.6040153895444792,
+      "pooled_iou": 0.43268055035892133,
+      "mean_seconds": 3.3685636399983196
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.577747248062697,
+      "macro_iou": 0.4068686241378095,
+      "macro_hard_cldice": 0.6697012155998879,
+      "pooled_precision": 0.5267218932805093,
+      "pooled_recall": 0.639531861587284,
+      "pooled_dice": 0.5776709083121432,
+      "pooled_iou": 0.40614433866822597,
+      "mean_seconds": 3.4155659300027765
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "5d42a481d6628dddc07d9f2b3ea7565b72526070e0934354b1116e68aa92f3e2",
+    "wall_seconds": 9043.034700599994,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4455,
+    "best_epoch": 27,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.48,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5784770433464991,
+      "macro_iou": 0.4088468789153465,
+      "macro_hard_cldice": 0.6774234634684027,
+      "pooled_precision": 0.5298089716093826,
+      "pooled_recall": 0.6487501678522091,
+      "pooled_dice": 0.583277746109905,
+      "pooled_iou": 0.41170931317575954,
+      "mean_seconds": 1.8943314899988764
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5922139750284755,
+      "macro_iou": 0.4218616895395438,
+      "macro_hard_cldice": 0.6830551217897515,
+      "pooled_precision": 0.5482088063515971,
+      "pooled_recall": 0.659479731251905,
+      "pooled_dice": 0.5987182705237767,
+      "pooled_iou": 0.4272647376538392,
+      "mean_seconds": 1.92361605999904
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "709e57b668f0596d78f0b9a6883cffecf918dbe506a2b82d394efd8d6d2df616",
+    "wall_seconds": 4717.0161266,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4210,
+    "best_epoch": 7,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.35,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.6146216187410112,
+      "macro_iou": 0.4456802663745826,
+      "macro_hard_cldice": 0.6907860341529517,
+      "pooled_precision": 0.5739877136602337,
+      "pooled_recall": 0.6235423856261084,
+      "pooled_dice": 0.5977397453459726,
+      "pooled_iou": 0.42626876384901174,
+      "mean_seconds": 1.9047005199987326
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.6249209395791813,
+      "macro_iou": 0.4562038255130193,
+      "macro_hard_cldice": 0.7110617023083347,
+      "pooled_precision": 0.5520737050458577,
+      "pooled_recall": 0.732819138401581,
+      "pooled_dice": 0.6297337228221924,
+      "pooled_iou": 0.45957032827166144,
+      "mean_seconds": 1.925839169997198
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "5249e60204be0e50d7a3950e27c8e4957396353e030f3ff4994ffda8fa32f00f",
+    "wall_seconds": 4751.542018799999,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4065,
+    "best_epoch": 13,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.33,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5970783595777458,
+      "macro_iou": 0.42795880543852327,
+      "macro_hard_cldice": 0.6612102210414472,
+      "pooled_precision": 0.5678130159005995,
+      "pooled_recall": 0.6642816565655157,
+      "pooled_dice": 0.612270760114475,
+      "pooled_iou": 0.4412033288028015,
+      "mean_seconds": 1.9278899300006742
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.6163770548394175,
+      "macro_iou": 0.44754463801689714,
+      "macro_hard_cldice": 0.6883756398386918,
+      "pooled_precision": 0.5783685393300564,
+      "pooled_recall": 0.6264343859652686,
+      "pooled_dice": 0.6014426645055541,
+      "pooled_iou": 0.43004505374312746,
+      "mean_seconds": 1.9612913299992214
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "e843298d61ed6d8d2e4056f0a86846f514eda9a8aaf82cc9aec207ff4dd81dbc",
+    "wall_seconds": 12753.267340299999,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4331,
+    "best_epoch": 7,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.32,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.6061184211778032,
+      "macro_iou": 0.4353337522752804,
+      "macro_hard_cldice": 0.7014665005778692,
+      "pooled_precision": 0.5361777586591377,
+      "pooled_recall": 0.6912982749730943,
+      "pooled_dice": 0.6039364508701377,
+      "pooled_iou": 0.43259954122185834,
+      "mean_seconds": 3.2330108199996177
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5824706705461813,
+      "macro_iou": 0.41360652638430695,
+      "macro_hard_cldice": 0.6625607418483636,
+      "pooled_precision": 0.5590075760746724,
+      "pooled_recall": 0.6516322739613356,
+      "pooled_dice": 0.6017766191131387,
+      "pooled_iou": 0.43038660870586043,
+      "mean_seconds": 3.2774543099978475
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "56efb8dc4c33aa97238dd879170f511e82a24d7819adb960621fcd15fe678e66",
+    "wall_seconds": 6165.123442100012,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4575,
+    "best_epoch": 10,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.35,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.6018610889796491,
+      "macro_iou": 0.43166100420630854,
+      "macro_hard_cldice": 0.6869597294611738,
+      "pooled_precision": 0.5595737932049503,
+      "pooled_recall": 0.6641522231230822,
+      "pooled_dice": 0.6073944229340648,
+      "pooled_iou": 0.43615682210161555,
+      "mean_seconds": 1.9088846200007539
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5810179650362464,
+      "macro_iou": 0.4100669165746885,
+      "macro_hard_cldice": 0.6509740016543499,
+      "pooled_precision": 0.5409052923053896,
+      "pooled_recall": 0.6247191631707746,
+      "pooled_dice": 0.5797989223306514,
+      "pooled_iou": 0.4082512902202151,
+      "mean_seconds": 1.9323799699996016
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "c3de3792539a1c8f07d3461ffb86b5b79eb4c3aca6a31f83ba18aa83347e6986",
+    "wall_seconds": 4158.889883399999,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4439,
+    "best_epoch": 23,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.35,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.6314726759662133,
+      "macro_iou": 0.4623956307235996,
+      "macro_hard_cldice": 0.7423770541259642,
+      "pooled_precision": 0.5560119861116242,
+      "pooled_recall": 0.7383860067361621,
+      "pooled_dice": 0.6343512156089739,
+      "pooled_iou": 0.46450538590846074,
+      "mean_seconds": 2.216326700000354
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.6236773596744231,
+      "macro_iou": 0.4537642952019253,
+      "macro_hard_cldice": 0.7282282663202044,
+      "pooled_precision": 0.5426061651551912,
+      "pooled_recall": 0.7383555141668604,
+      "pooled_dice": 0.6255241831673,
+      "pooled_iou": 0.4551001738311692,
+      "mean_seconds": 2.226815920000445
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "4ac5f02ed2f96a945f64bb91f0415596ed0bb22506866e83f750324ac411db8b",
+    "wall_seconds": 3711.8837329999988,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4192,
+    "best_epoch": 1,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.77,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5902575196103039,
+      "macro_iou": 0.4207646043724316,
+      "macro_hard_cldice": 0.6870557878327682,
+      "pooled_precision": 0.5648809671199981,
+      "pooled_recall": 0.5907134091637214,
+      "pooled_dice": 0.5775084557476747,
+      "pooled_iou": 0.40598375300094913,
+      "mean_seconds": 1.913381549998303
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.6018699504434086,
+      "macro_iou": 0.43272723839755833,
+      "macro_hard_cldice": 0.7184248875090034,
+      "pooled_precision": 0.548289866077049,
+      "pooled_recall": 0.6836088562197904,
+      "pooled_dice": 0.6085172448705853,
+      "pooled_iou": 0.4373156926504564,
+      "mean_seconds": 1.9330487899991566
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "9127486931065afbd091fcbc5d4e87a68d5dc9c0783b7532f44ee66fb0c6be13",
+    "wall_seconds": 4677.803882399996,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4048,
+    "best_epoch": 4,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.63,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.4834654360428904,
+      "macro_iou": 0.3230993732238786,
+      "macro_hard_cldice": 0.5308935222471899,
+      "pooled_precision": 0.6039360017202949,
+      "pooled_recall": 0.42415307745299974,
+      "pooled_dice": 0.49832513330519423,
+      "pooled_iou": 0.33184622341186976,
+      "mean_seconds": 1.9040270999998028
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5194732373172711,
+      "macro_iou": 0.35300168573833907,
+      "macro_hard_cldice": 0.5854503464867655,
+      "pooled_precision": 0.6291313466714427,
+      "pooled_recall": 0.41288534406731214,
+      "pooled_dice": 0.49856996503541523,
+      "pooled_iou": 0.3320634018402165,
+      "mean_seconds": 1.9478551600011997
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "6505d8088c7363e9ded21b644d40fe308ecafeffb8c6253862666d2af9136474",
+    "wall_seconds": 4553.9511146,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4314,
+    "best_epoch": 20,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.62,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5845896907043724,
+      "macro_iou": 0.413607873467342,
+      "macro_hard_cldice": 0.66373276739747,
+      "pooled_precision": 0.5251060266927997,
+      "pooled_recall": 0.6625480266242018,
+      "pooled_dice": 0.5858742464307969,
+      "pooled_iou": 0.4143013766293918,
+      "mean_seconds": 3.233832529999927
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5616667853209838,
+      "macro_iou": 0.393111860827588,
+      "macro_hard_cldice": 0.6354494648240078,
+      "pooled_precision": 0.5416068145470556,
+      "pooled_recall": 0.6259315538114274,
+      "pooled_dice": 0.5807240330113181,
+      "pooled_iou": 0.4091692148098983,
+      "mean_seconds": 3.293474139999307
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "be12a7ef12435a07a29f821449fb8d324eaed8e8bd9ad42e283e0be3475a9534",
+    "wall_seconds": 6377.724058800006,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4557,
+    "best_epoch": 7,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.2,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.620593631241097,
+      "macro_iou": 0.4508791645131359,
+      "macro_hard_cldice": 0.7311205011237746,
+      "pooled_precision": 0.5539175951495803,
+      "pooled_recall": 0.7223972407179626,
+      "pooled_dice": 0.6270373595543068,
+      "pooled_iou": 0.4567038760433839,
+      "mean_seconds": 1.9325151600000026
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.6045159789906871,
+      "macro_iou": 0.43377163884041164,
+      "macro_hard_cldice": 0.7120678716383987,
+      "pooled_precision": 0.5458066290770882,
+      "pooled_recall": 0.6717376859465439,
+      "pooled_dice": 0.6022596097184529,
+      "pooled_iou": 0.43088088024496424,
+      "mean_seconds": 1.940789550000045
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "6fa9a270f01130676cbbf18cf0e59b94c523e76288283f6910290d67db2a3f85",
+    "wall_seconds": 1598.3952268000012,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4448,
+    "best_epoch": 18,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.51,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.514107749536761,
+      "macro_iou": 0.3473391353181039,
+      "macro_hard_cldice": 0.6152528165444304,
+      "pooled_precision": 0.4673606403110964,
+      "pooled_recall": 0.5795135075807882,
+      "pooled_dice": 0.5174295391996969,
+      "pooled_iou": 0.34900839648483517,
+      "mean_seconds": 3.241925799974706
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5245507678869648,
+      "macro_iou": 0.3561641426491601,
+      "macro_hard_cldice": 0.6062074367396424,
+      "pooled_precision": 0.47720472755784643,
+      "pooled_recall": 0.6074673130370776,
+      "pooled_dice": 0.5345141439419014,
+      "pooled_iou": 0.364735109337494,
+      "mean_seconds": 3.25779595002532
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "ff4a27d2bad3c54fd7945b7368ccadb7f7426d57e542d0094be8e682457a4049",
+    "wall_seconds": 4809.182522300049,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4201,
+    "best_epoch": 5,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.38,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5745354459897223,
+      "macro_iou": 0.4048603784206842,
+      "macro_hard_cldice": 0.6547568704033949,
+      "pooled_precision": 0.5537017542741403,
+      "pooled_recall": 0.5733700384499975,
+      "pooled_dice": 0.5633642828921375,
+      "pooled_iou": 0.3921413592767025,
+      "mean_seconds": 2.1629354800024885
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5898592259173323,
+      "macro_iou": 0.42049616408023727,
+      "macro_hard_cldice": 0.6835926093308387,
+      "pooled_precision": 0.5414587977346984,
+      "pooled_recall": 0.6626222715201862,
+      "pooled_dice": 0.5959443556596709,
+      "pooled_iou": 0.424444969871308,
+      "mean_seconds": 2.209609149998869
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "925ad5c62e96e1dd9b9d697d1aa97d8ecdfdc247865c445d8a2449e670e844bb",
+    "wall_seconds": 8372.699940999999,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4057,
+    "best_epoch": 5,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.49,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5195783488151744,
+      "macro_iou": 0.35383109148150593,
+      "macro_hard_cldice": 0.5801540279694031,
+      "pooled_precision": 0.5498733921594985,
+      "pooled_recall": 0.5251094049324286,
+      "pooled_dice": 0.5372061590681592,
+      "pooled_iou": 0.3672466645921504,
+      "mean_seconds": 1.9444166200002655
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5516043341628989,
+      "macro_iou": 0.38286147219110883,
+      "macro_hard_cldice": 0.6154297877134428,
+      "pooled_precision": 0.5802046765342552,
+      "pooled_recall": 0.4946762518335211,
+      "pooled_dice": 0.5340377098700232,
+      "pooled_iou": 0.36429157384578686,
+      "mean_seconds": 1.9489690000009432
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "b4888fd5963d1b9ba3719202be642501b9ce2fb0c4150378933549885c4c62c1",
+    "wall_seconds": 7659.964382300001,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4321,
+    "best_epoch": 6,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.69,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5737972850320008,
+      "macro_iou": 0.40302248999598617,
+      "macro_hard_cldice": 0.6510972197153088,
+      "pooled_precision": 0.5558055762659473,
+      "pooled_recall": 0.5946772004612236,
+      "pooled_dice": 0.5745847061436755,
+      "pooled_iou": 0.4030998605249924,
+      "mean_seconds": 2.1717167699996933
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5468172745502277,
+      "macro_iou": 0.3792817889040608,
+      "macro_hard_cldice": 0.6169670866505499,
+      "pooled_precision": 0.5705663567402475,
+      "pooled_recall": 0.5590548482620096,
+      "pooled_dice": 0.5647519479597399,
+      "pooled_iou": 0.39348734677390673,
+      "mean_seconds": 2.2038424000002124
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "dd6fa07abc7e18d7dfb98be33bc26cc30bb671a1bfe0ce030b4adabe27d47630",
+    "wall_seconds": 5660.518582299999,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "attunet_cl_schedule",
+    "config_values": {
+      "name": "attunet_cl_schedule",
+      "attention": true,
+      "skeleton_weight": 0.3,
+      "bce_mode": "schedule",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4562,
+    "best_epoch": 11,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.1,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5242563298576187,
+      "macro_iou": 0.3562539987458728,
+      "macro_hard_cldice": 0.5953190064305771,
+      "pooled_precision": 0.5750125889080596,
+      "pooled_recall": 0.4904261201752621,
+      "pooled_dice": 0.5293616434731188,
+      "pooled_iou": 0.3599536494636795,
+      "mean_seconds": 3.3086133200005863
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5097869667236401,
+      "macro_iou": 0.34265347111780875,
+      "macro_hard_cldice": 0.581833519511494,
+      "pooled_precision": 0.5509281105504668,
+      "pooled_recall": 0.4702308459228465,
+      "pooled_dice": 0.5073909205311696,
+      "pooled_iou": 0.3399355715508129,
+      "mean_seconds": 3.38590696999745
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "200801fa239ad9c4e2c8bf6c4f7f2af368767aa5a59f40b84712e3c236f74eb4",
+    "wall_seconds": 6956.771379099999,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4455,
+    "best_epoch": 1,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.51,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.585408122004669,
+      "macro_iou": 0.41550066440758415,
+      "macro_hard_cldice": 0.7157600518378967,
+      "pooled_precision": 0.5252907111771302,
+      "pooled_recall": 0.6795466794694215,
+      "pooled_dice": 0.5925439587245788,
+      "pooled_iou": 0.4210035278882472,
+      "mean_seconds": 1.9012463300008675
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5927107495337707,
+      "macro_iou": 0.42190649469724245,
+      "macro_hard_cldice": 0.7171433993985654,
+      "pooled_precision": 0.510360735774542,
+      "pooled_recall": 0.7226080660569999,
+      "pooled_dice": 0.5982159219627302,
+      "pooled_iou": 0.42675325774874806,
+      "mean_seconds": 1.9309150100001715
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "6cdf7762c2177ab409369e1bd301fa6b8a31b6c043a3c2911d3107c0d614fd5d",
+    "wall_seconds": 5103.430695000003,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4210,
+    "best_epoch": 37,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.54,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5912713867244903,
+      "macro_iou": 0.4211180349122016,
+      "macro_hard_cldice": 0.6183550885134225,
+      "pooled_precision": 0.5874789763086667,
+      "pooled_recall": 0.5623645961480952,
+      "pooled_dice": 0.5746475175774278,
+      "pooled_iou": 0.4031616913458063,
+      "mean_seconds": 1.9008876199979567
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.6030298291659418,
+      "macro_iou": 0.4339865526916863,
+      "macro_hard_cldice": 0.6384606809661905,
+      "pooled_precision": 0.5668006225317342,
+      "pooled_recall": 0.6605412107064876,
+      "pooled_dice": 0.6100911079491155,
+      "pooled_iou": 0.43894323681093483,
+      "mean_seconds": 1.923864440000034
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "4f8cb1688cc32d98a286d66f1a370e3d344152f6ce9af3d1d740b69fce3ecc69",
+    "wall_seconds": 4414.2985873,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4065,
+    "best_epoch": 22,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.55,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5154626883280915,
+      "macro_iou": 0.35102925114527145,
+      "macro_hard_cldice": 0.5888418799213958,
+      "pooled_precision": 0.5730272288964804,
+      "pooled_recall": 0.4808345328087008,
+      "pooled_dice": 0.5228983343076902,
+      "pooled_iou": 0.35400294133620824,
+      "mean_seconds": 1.9191661099999693
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5467106343881303,
+      "macro_iou": 0.37886177334444293,
+      "macro_hard_cldice": 0.6353648085245275,
+      "pooled_precision": 0.599899824857185,
+      "pooled_recall": 0.46519876663496773,
+      "pooled_dice": 0.5240315983089002,
+      "pooled_iou": 0.3550425589792355,
+      "mean_seconds": 1.9363045199997941
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "c84755f783e1a48867c11ca555e342e376136d34981ab54f1d0dd9d48eaa85cb",
+    "wall_seconds": 4092.3109497,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4331,
+    "best_epoch": 8,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.5,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.556336836157801,
+      "macro_iou": 0.3856743972743205,
+      "macro_hard_cldice": 0.6620303153027752,
+      "pooled_precision": 0.4934709478840319,
+      "pooled_recall": 0.6359028165015309,
+      "pooled_dice": 0.5557054281172524,
+      "pooled_iou": 0.3847590643457506,
+      "mean_seconds": 3.2398957099983816
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5353406259886937,
+      "macro_iou": 0.3683215205062619,
+      "macro_hard_cldice": 0.6196543703872545,
+      "pooled_precision": 0.528636999432293,
+      "pooled_recall": 0.5911868474766871,
+      "pooled_dice": 0.5581650042844901,
+      "pooled_iou": 0.38712127666696083,
+      "mean_seconds": 3.2917091800009075
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "9c290a783d2d63df2286ec44e16de4df2fd687360e14860da6e94be4465ceb12",
+    "wall_seconds": 6169.588705399998,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4575,
+    "best_epoch": 13,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.54,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5687233690779103,
+      "macro_iou": 0.39844353358652296,
+      "macro_hard_cldice": 0.6678588552737115,
+      "pooled_precision": 0.5288533988207481,
+      "pooled_recall": 0.6392513411503353,
+      "pooled_dice": 0.5788354980503638,
+      "pooled_iou": 0.407296619959395,
+      "mean_seconds": 1.912826199999472
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5511225664209277,
+      "macro_iou": 0.3808338188416033,
+      "macro_hard_cldice": 0.654816425511,
+      "pooled_precision": 0.5266158684255708,
+      "pooled_recall": 0.5762510631733556,
+      "pooled_dice": 0.5503165347867259,
+      "pooled_iou": 0.3796115138181318,
+      "mean_seconds": 1.9432196800004022
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "fc4dcfbda8038d54c7bdf4f58394bc0909ef3b73a7de2e604711c79d1b79eb04",
+    "wall_seconds": 3908.007529200002,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4439,
+    "best_epoch": 14,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.58,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5645114201685796,
+      "macro_iou": 0.3952466370924402,
+      "macro_hard_cldice": 0.6962445014912639,
+      "pooled_precision": 0.5208553632342764,
+      "pooled_recall": 0.6363570031007438,
+      "pooled_dice": 0.5728420601768036,
+      "pooled_iou": 0.4013865909247369,
+      "mean_seconds": 3.275308539974503
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5765478377095125,
+      "macro_iou": 0.405990143311009,
+      "macro_hard_cldice": 0.6979098113184746,
+      "pooled_precision": 0.5132825038303986,
+      "pooled_recall": 0.6800442371797112,
+      "pooled_dice": 0.5850112911734011,
+      "pooled_iou": 0.4134388405533856,
+      "mean_seconds": 3.299787979980465
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "74a0f37fad9ba70605b6b9c642c0eb40443c10920970f9e379c19bdd24aafa00",
+    "wall_seconds": 6545.786856499966,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4192,
+    "best_epoch": 2,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.6,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5810813913191445,
+      "macro_iou": 0.410854162599525,
+      "macro_hard_cldice": 0.6740401915828953,
+      "pooled_precision": 0.5649527130076376,
+      "pooled_recall": 0.5772053914278795,
+      "pooled_dice": 0.5710133309625808,
+      "pooled_iou": 0.3995931825922641,
+      "mean_seconds": 2.179693470003258
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5754536956526441,
+      "macro_iou": 0.40577897329345836,
+      "macro_hard_cldice": 0.6824961272754833,
+      "pooled_precision": 0.5258163724931615,
+      "pooled_recall": 0.6484926411752046,
+      "pooled_dice": 0.5807467101117784,
+      "pooled_iou": 0.40919173078507864,
+      "mean_seconds": 2.192340840001998
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "8d97a6e44c407610aa9958ea6350c8bae6a592aee135b441086c6c9d02b7d481",
+    "wall_seconds": 9679.053859599997,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4048,
+    "best_epoch": 25,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.52,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5200048905370867,
+      "macro_iou": 0.3545239614197962,
+      "macro_hard_cldice": 0.522291919255348,
+      "pooled_precision": 0.5045697824124544,
+      "pooled_recall": 0.5941492321615068,
+      "pooled_dice": 0.5457077647982723,
+      "pooled_iou": 0.37523941308988434,
+      "mean_seconds": 1.931592330001149
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5552937056723047,
+      "macro_iou": 0.3854612464005481,
+      "macro_hard_cldice": 0.5576497013366983,
+      "pooled_precision": 0.5290438496234944,
+      "pooled_recall": 0.5710969546160052,
+      "pooled_dice": 0.5492666578932398,
+      "pooled_iou": 0.37861310686882865,
+      "mean_seconds": 1.9538083999999798
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "c4a0fcec005034b65b97fe31df35f8bc3769364e1f9c28bd00105c7f88b89465",
+    "wall_seconds": 9502.2652828,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4314,
+    "best_epoch": 18,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.54,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5416881472549469,
+      "macro_iou": 0.3717977100570327,
+      "macro_hard_cldice": 0.5877805770241907,
+      "pooled_precision": 0.4944316936521606,
+      "pooled_recall": 0.5968794774079038,
+      "pooled_dice": 0.5408468982029023,
+      "pooled_iou": 0.3706580875829915,
+      "mean_seconds": 2.1551807199983157
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5169273086987516,
+      "macro_iou": 0.3511627092664148,
+      "macro_hard_cldice": 0.5366494664249807,
+      "pooled_precision": 0.5262761420801307,
+      "pooled_recall": 0.550676527341649,
+      "pooled_dice": 0.5381999164346669,
+      "pooled_iou": 0.36817614288405043,
+      "mean_seconds": 2.2147975900006713
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "451d22720d950fc57b6c0fcba729783d195add32878f239be9e1415d61ea585b",
+    "wall_seconds": 5244.442506799998,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4557,
+    "best_epoch": 36,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.56,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5780700014594207,
+      "macro_iou": 0.40757069716076255,
+      "macro_hard_cldice": 0.6830158653944821,
+      "pooled_precision": 0.5444531508996112,
+      "pooled_recall": 0.6311502269083006,
+      "pooled_dice": 0.584604869666131,
+      "pooled_iou": 0.41303298078200407,
+      "mean_seconds": 2.144545470000003
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5612110357700314,
+      "macro_iou": 0.3905703494899358,
+      "macro_hard_cldice": 0.6694275230201405,
+      "pooled_precision": 0.5237461905777651,
+      "pooled_recall": 0.5954184956449659,
+      "pooled_dice": 0.557287363928729,
+      "pooled_iou": 0.3862774540093504,
+      "mean_seconds": 2.2792118500000016
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "7a22731eca4c89257c3691c08012b7f5b21c3d13a8bcfe6bbbe315d9f4176874",
+    "wall_seconds": 526.7593691,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4448,
+    "best_epoch": 13,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.51,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5664569785403057,
+      "macro_iou": 0.3977510044550757,
+      "macro_hard_cldice": 0.6702583707237182,
+      "pooled_precision": 0.5465550342471032,
+      "pooled_recall": 0.6088537671554155,
+      "pooled_dice": 0.5760248513862161,
+      "pooled_iou": 0.40451889342799735,
+      "mean_seconds": 1.933024140005
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5798748643156167,
+      "macro_iou": 0.4096090984224836,
+      "macro_hard_cldice": 0.6826789754581243,
+      "pooled_precision": 0.5303192972772238,
+      "pooled_recall": 0.663210737394753,
+      "pooled_dice": 0.5893667389753754,
+      "pooled_iou": 0.41780295081606406,
+      "mean_seconds": 1.943511719990056
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "13a702560538a4e4428ea3455b1008a3c27c0d8bd8a9860ce83ded01d8496919",
+    "wall_seconds": 287.1699001999805,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4201,
+    "best_epoch": 4,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.43,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5369725946709599,
+      "macro_iou": 0.36814724662898207,
+      "macro_hard_cldice": 0.6047990099121849,
+      "pooled_precision": 0.5270949385555784,
+      "pooled_recall": 0.5420596668005367,
+      "pooled_dice": 0.5344725736284311,
+      "pooled_iou": 0.3646963980412887,
+      "mean_seconds": 1.9342999199994666
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.535249308623821,
+      "macro_iou": 0.3673134300802638,
+      "macro_hard_cldice": 0.6163504831106221,
+      "pooled_precision": 0.49678984574859564,
+      "pooled_recall": 0.6017914046179439,
+      "pooled_dice": 0.5442726406867591,
+      "pooled_iou": 0.3738836377599766,
+      "mean_seconds": 1.9475292099996295
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "0e7284a386c208a39bdcfa5261d5a7ea61082bdc6cf926e61d0af17ce074ac61",
+    "wall_seconds": 10267.577036499999,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4057,
+    "best_epoch": 1,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.61,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5548770150336899,
+      "macro_iou": 0.3863267199155259,
+      "macro_hard_cldice": 0.6504036786021313,
+      "pooled_precision": 0.5191443783584843,
+      "pooled_recall": 0.6480977424305263,
+      "pooled_dice": 0.5764978724074851,
+      "pooled_iou": 0.4049856064370496,
+      "mean_seconds": 1.90326685
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5809831946493016,
+      "macro_iou": 0.41071305223251003,
+      "macro_hard_cldice": 0.6864024203420435,
+      "pooled_precision": 0.5355463008962019,
+      "pooled_recall": 0.631623840927796,
+      "pooled_dice": 0.5796306801305071,
+      "pooled_iou": 0.40808448339602627,
+      "mean_seconds": 1.9367336299997988
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "0499e10bc8c095a876ac04227a95f99aaf8981532e6cb2119bf8b4a3cb37b131",
+    "wall_seconds": 5314.754455899998,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4321,
+    "best_epoch": 1,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.58,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5773847834387235,
+      "macro_iou": 0.406286618542658,
+      "macro_hard_cldice": 0.6906319247428077,
+      "pooled_precision": 0.5175703504921604,
+      "pooled_recall": 0.6519964249764256,
+      "pooled_dice": 0.5770581471237219,
+      "pooled_iou": 0.405538810990259,
+      "mean_seconds": 2.1834303700001327
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5538696903591537,
+      "macro_iou": 0.38597031318106784,
+      "macro_hard_cldice": 0.6480843049728227,
+      "pooled_precision": 0.5473965426324,
+      "pooled_recall": 0.6096064907591023,
+      "pooled_dice": 0.5768290588308039,
+      "pooled_iou": 0.40531256094711576,
+      "mean_seconds": 2.183466080000289
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "950450f767ecf2eea3a29257c8f691b05100ed6b1ac9b8bd3fa97d3ed3a6c4db",
+    "wall_seconds": 10191.164806699999,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "attunet_pixel",
+    "config_values": {
+      "name": "attunet_pixel",
+      "attention": true,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4562,
+    "best_epoch": 9,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.26,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5253327895603283,
+      "macro_iou": 0.35672975614081215,
+      "macro_hard_cldice": 0.6676972317203637,
+      "pooled_precision": 0.439320201664084,
+      "pooled_recall": 0.6777890084101239,
+      "pooled_dice": 0.5331016899245777,
+      "pooled_iou": 0.36342102670850285,
+      "mean_seconds": 3.4060492900011012
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.520622277133517,
+      "macro_iou": 0.35221331601584316,
+      "macro_hard_cldice": 0.6508926386513167,
+      "pooled_precision": 0.44180666031094534,
+      "pooled_recall": 0.6269808637799572,
+      "pooled_dice": 0.518352460637321,
+      "pooled_iou": 0.3498486967152032,
+      "mean_seconds": 3.406434170001012
+    },
+    "complexity": {
+      "parameters": 7981277,
+      "model_size_mib_float32": 30.446155548095703,
+      "macs_per_256_tile": 14317125632,
+      "approx_flops_per_256_tile": 28634251264
+    },
+    "best_model_sha256": "563dffae829889ccbb69badd83adc049f378a04b1b7f7bd945d7ccfc1f03ff6d",
+    "wall_seconds": 12538.719596199997,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4455,
+    "best_epoch": 2,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.51,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5377394404119394,
+      "macro_iou": 0.37109516897119676,
+      "macro_hard_cldice": 0.5407653809679204,
+      "pooled_precision": 0.5462646209934681,
+      "pooled_recall": 0.5512389179219559,
+      "pooled_dice": 0.548740496769718,
+      "pooled_iou": 0.37811328404624095,
+      "mean_seconds": 1.663708680000127
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.55005833782368,
+      "macro_iou": 0.3811021098231037,
+      "macro_hard_cldice": 0.5551233863649179,
+      "pooled_precision": 0.5357678080758391,
+      "pooled_recall": 0.5937106584858404,
+      "pooled_dice": 0.5632529836474774,
+      "pooled_iou": 0.3920335154600918,
+      "mean_seconds": 1.6543076300004032
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "e0c80b331abe8ef51a5411005274c1569ba81510a81f6a2fa604fce7cf1e7bba",
+    "wall_seconds": 7411.376342399999,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4210,
+    "best_epoch": 28,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.53,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.4719497623063143,
+      "macro_iou": 0.3107821078563594,
+      "macro_hard_cldice": 0.5743454484249788,
+      "pooled_precision": 0.42127812822051847,
+      "pooled_recall": 0.47217490509354576,
+      "pooled_dice": 0.44527681432267774,
+      "pooled_iou": 0.2864026332306165,
+      "mean_seconds": 1.630313259997638
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.48789018431417597,
+      "macro_iou": 0.3286626611792798,
+      "macro_hard_cldice": 0.6057683253112208,
+      "pooled_precision": 0.4449609207566053,
+      "pooled_recall": 0.5321298253294655,
+      "pooled_dice": 0.48465708633329563,
+      "pooled_iou": 0.31983327467481376,
+      "mean_seconds": 1.6624541800003498
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "e36a8fb15c626a126271c4648a5a9724cc7abbad2028860de1c733e3b70d61b9",
+    "wall_seconds": 3625.5952670000115,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4065,
+    "best_epoch": 17,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.5,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5554739418700944,
+      "macro_iou": 0.3870399516988591,
+      "macro_hard_cldice": 0.565600083208652,
+      "pooled_precision": 0.521777065151398,
+      "pooled_recall": 0.6464544902200645,
+      "pooled_dice": 0.5774627899923752,
+      "pooled_iou": 0.40593861863851,
+      "mean_seconds": 1.6316910499999948
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5874201184762854,
+      "macro_iou": 0.417269529952985,
+      "macro_hard_cldice": 0.6078690285110231,
+      "pooled_precision": 0.5449673559065302,
+      "pooled_recall": 0.6199817117534732,
+      "pooled_dice": 0.5800593408660574,
+      "pooled_iou": 0.4085095649136846,
+      "mean_seconds": 1.6629765799999858
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "8a1ee3d5a0e846126f684a7efbbc260d1a13f0663db51a35f1305996b599724c",
+    "wall_seconds": 1012.3079239,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4331,
+    "best_epoch": 2,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.54,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5612515771649803,
+      "macro_iou": 0.3904361149962508,
+      "macro_hard_cldice": 0.5649151539646493,
+      "pooled_precision": 0.5024814270660618,
+      "pooled_recall": 0.6388487895880139,
+      "pooled_dice": 0.5625184487144896,
+      "pooled_iou": 0.3913222038998976,
+      "mean_seconds": 2.930692199999612
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5352176640206423,
+      "macro_iou": 0.36841681538992965,
+      "macro_hard_cldice": 0.5243492989788849,
+      "pooled_precision": 0.5263417640261908,
+      "pooled_recall": 0.5953341860354348,
+      "pooled_dice": 0.558716170469326,
+      "pooled_iou": 0.38765173036823775,
+      "mean_seconds": 2.9682630900017104
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "b63d4b7af8c19e074da3f10a59fa0667cd9ef5559e16ffd1ff8de5e68255fd52",
+    "wall_seconds": 5943.790504799996,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 2026,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4575,
+    "best_epoch": 4,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.49,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.540534537573997,
+      "macro_iou": 0.37116777062819595,
+      "macro_hard_cldice": 0.5688146884243152,
+      "pooled_precision": 0.45792676602746485,
+      "pooled_recall": 0.6888254137296689,
+      "pooled_dice": 0.5501303588253249,
+      "pooled_iou": 0.3794343596156775,
+      "mean_seconds": 1.6370461800004705
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5326399677948439,
+      "macro_iou": 0.36322759724445486,
+      "macro_hard_cldice": 0.5507836962550243,
+      "pooled_precision": 0.46043844648209964,
+      "pooled_recall": 0.6349730462670236,
+      "pooled_dice": 0.5338012334478106,
+      "pooled_iou": 0.3640715335636656,
+      "mean_seconds": 1.665761790000397
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "2a18f7f245bce336bd45a121c73b4cf6d482bc6f14c9bd110e34233ce97586fb",
+    "wall_seconds": 3329.027063200001,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4439,
+    "best_epoch": 50,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.57,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5924442475785051,
+      "macro_iou": 0.42312257496794203,
+      "macro_hard_cldice": 0.7046331675944434,
+      "pooled_precision": 0.5525925119687204,
+      "pooled_recall": 0.6475060687387754,
+      "pooled_dice": 0.5962960223291196,
+      "pooled_iou": 0.42480183273294836,
+      "mean_seconds": 2.9408672499936075
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.6045527197893963,
+      "macro_iou": 0.43434981087450925,
+      "macro_hard_cldice": 0.7070861884183696,
+      "pooled_precision": 0.5694083286029117,
+      "pooled_recall": 0.6573949698278821,
+      "pooled_dice": 0.6102464371924288,
+      "pooled_iou": 0.4391040638597917,
+      "mean_seconds": 2.9695992599939927
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "61c3115761bdfec9b376587be26eb23510aaa02bffb6bb16541c6416a322b8ed",
+    "wall_seconds": 6063.982671599952,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4192,
+    "best_epoch": 7,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.49,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.556917313848782,
+      "macro_iou": 0.38696037409052214,
+      "macro_hard_cldice": 0.6758913648804905,
+      "pooled_precision": 0.5119526199241318,
+      "pooled_recall": 0.612378533193269,
+      "pooled_dice": 0.5576805260342277,
+      "pooled_iou": 0.38665533961130033,
+      "mean_seconds": 1.8667254399973898
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5528098215142269,
+      "macro_iou": 0.38348318087533795,
+      "macro_hard_cldice": 0.690434150121358,
+      "pooled_precision": 0.4725703787445764,
+      "pooled_recall": 0.6863925969664584,
+      "pooled_dice": 0.5597569832926014,
+      "pooled_iou": 0.38865453732404537,
+      "mean_seconds": 1.881742409997969
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "25abf1b3cfe5a452cd6306f0df691bb36d064421167f9e4030c71ebf77b570b9",
+    "wall_seconds": 7633.262623000002,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4048,
+    "best_epoch": 13,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.59,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.4850776589013382,
+      "macro_iou": 0.32501790032900096,
+      "macro_hard_cldice": 0.5438145669304193,
+      "pooled_precision": 0.4225311154523899,
+      "pooled_recall": 0.538458142666123,
+      "pooled_dice": 0.47350231591679454,
+      "pooled_iou": 0.31018868934686517,
+      "mean_seconds": 1.6581370699997933
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.517890579068715,
+      "macro_iou": 0.3518102919656311,
+      "macro_hard_cldice": 0.5840914119071712,
+      "pooled_precision": 0.4803610075275816,
+      "pooled_recall": 0.5118500424711777,
+      "pooled_dice": 0.4956058534216038,
+      "pooled_iou": 0.32943883393112966,
+      "mean_seconds": 1.65412346999874
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "70ebfffdfd111b5e1c2d015de9f88daf805728039ddcbdac45704106c0675535",
+    "wall_seconds": 8691.380520400002,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4314,
+    "best_epoch": 40,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.49,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5626230221168504,
+      "macro_iou": 0.3917485507836068,
+      "macro_hard_cldice": 0.6801116857626612,
+      "pooled_precision": 0.5020079975674544,
+      "pooled_recall": 0.6302617702369083,
+      "pooled_dice": 0.5588711422252111,
+      "pooled_iou": 0.387800951462557,
+      "mean_seconds": 1.8639180800004396
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5357807905884905,
+      "macro_iou": 0.36783033433935064,
+      "macro_hard_cldice": 0.6343962259525779,
+      "pooled_precision": 0.5230971505942688,
+      "pooled_recall": 0.5812134857044609,
+      "pooled_dice": 0.5506260797740286,
+      "pooled_iou": 0.37990615954244616,
+      "mean_seconds": 1.8818852399999741
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "093d228e0ad4eefa96e8a5da82dd76d641264ebe476e8e23f152315e964603f6",
+    "wall_seconds": 4479.4660185999965,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 3407,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4557,
+    "best_epoch": 46,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.52,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5697321790853918,
+      "macro_iou": 0.3994668794531502,
+      "macro_hard_cldice": 0.6685417820510955,
+      "pooled_precision": 0.5219434977456837,
+      "pooled_recall": 0.6490673689359103,
+      "pooled_dice": 0.5786052076101064,
+      "pooled_iou": 0.4070686136659159,
+      "mean_seconds": 3.0173295200031136
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5513213199185824,
+      "macro_iou": 0.3810500165318783,
+      "macro_hard_cldice": 0.6504319816785366,
+      "pooled_precision": 0.5129391646802778,
+      "pooled_recall": 0.5941585939521117,
+      "pooled_dice": 0.5505696502283356,
+      "pooled_iou": 0.3798524367280356,
+      "mean_seconds": 3.0221881500037853
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "dabb7a6d62cb3fd6972665c3362478488cf4ae669650dc43cc2c3a59539ed2f1",
+    "wall_seconds": 6272.2717347,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 0,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4448,
+    "best_epoch": 39,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.54,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.529599621043567,
+      "macro_iou": 0.36195306619709566,
+      "macro_hard_cldice": 0.6422769734675213,
+      "pooled_precision": 0.4765594226970709,
+      "pooled_recall": 0.6090499779569427,
+      "pooled_dice": 0.5347199567615523,
+      "pooled_iou": 0.3649267996442208,
+      "mean_seconds": 1.6613876300049015
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5483824730125282,
+      "macro_iou": 0.3786300269044981,
+      "macro_hard_cldice": 0.6532554008057552,
+      "pooled_precision": 0.48060985260745226,
+      "pooled_recall": 0.6628571531832819,
+      "pooled_dice": 0.5572100936500743,
+      "pooled_iou": 0.3862032103203056,
+      "mean_seconds": 1.6883562300237827
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "88519db61768ef4dd3cd374647ed4173cf8e7051117da0f6be5792287ca6501d",
+    "wall_seconds": 3826.265182800009,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 1,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4201,
+    "best_epoch": 3,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.59,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.56914733441052,
+      "macro_iou": 0.3998903794079015,
+      "macro_hard_cldice": 0.6018144711517074,
+      "pooled_precision": 0.5594098590369739,
+      "pooled_recall": 0.5561926937388904,
+      "pooled_dice": 0.5577966375707614,
+      "pooled_iou": 0.3867669789863838,
+      "mean_seconds": 1.6743261600015102
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5879166249323794,
+      "macro_iou": 0.4190446562609974,
+      "macro_hard_cldice": 0.6290826540024709,
+      "pooled_precision": 0.5495785390073626,
+      "pooled_recall": 0.653991448888006,
+      "pooled_dice": 0.597255944594764,
+      "pooled_iou": 0.4257768495210083,
+      "mean_seconds": 1.692063780000899
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "723aab6e922544b7c74266a552e1f6125ab1eb2de08a08a8bcef81ff8c450571",
+    "wall_seconds": 9617.532378800002,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 2,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4057,
+    "best_epoch": 1,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.58,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5450829126970621,
+      "macro_iou": 0.37769210381965335,
+      "macro_hard_cldice": 0.627903702915291,
+      "pooled_precision": 0.5590519382443331,
+      "pooled_recall": 0.5628710967677478,
+      "pooled_dice": 0.56095501707269,
+      "pooled_iou": 0.3898106200485779,
+      "mean_seconds": 1.6602456700002222
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.575019372949613,
+      "macro_iou": 0.4053156811707576,
+      "macro_hard_cldice": 0.6683466569626642,
+      "pooled_precision": 0.5810007995403995,
+      "pooled_recall": 0.545304535860855,
+      "pooled_dice": 0.5625870026004857,
+      "pooled_iou": 0.39138855959858854,
+      "mean_seconds": 1.6477602300001308
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "e0280bece522b1a9a138ae0c23e16bced68d56f21cbb0c14310233d88253ff2d",
+    "wall_seconds": 3287.137707600001,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 3,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4321,
+    "best_epoch": 2,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.54,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5733716023981599,
+      "macro_iou": 0.40225075272218946,
+      "macro_hard_cldice": 0.6794711005619655,
+      "pooled_precision": 0.48856642270612255,
+      "pooled_recall": 0.6807298666328933,
+      "pooled_dice": 0.568857968339319,
+      "pooled_iou": 0.39748533391841107,
+      "mean_seconds": 1.6605042900002445
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5522168630686671,
+      "macro_iou": 0.3839648834988742,
+      "macro_hard_cldice": 0.6442208708441642,
+      "pooled_precision": 0.5216423717853104,
+      "pooled_recall": 0.6358334698353727,
+      "pooled_dice": 0.5731051436909413,
+      "pooled_iou": 0.4016449713564666,
+      "mean_seconds": 1.6496819200001482
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "1aff19c7e65a39984d6157a5fd57adb1934026fbe8e4bd88fce6d584d05add38",
+    "wall_seconds": 9185.0829505,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  },
+  {
+    "fold": 4,
+    "config": "unet_pixel",
+    "config_values": {
+      "name": "unet_pixel",
+      "attention": false,
+      "skeleton_weight": 0.0,
+      "bce_mode": "fixed02",
+      "normalize_weights": false,
+      "transition_epoch": 25
+    },
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 12,
+    "training_tiles": 4562,
+    "best_epoch": 1,
+    "checkpoint_selection": "highest validation macro Dice at threshold 0.5 evaluated every 1 epoch(s); test fold not accessed",
+    "threshold_selection": "highest validation macro Dice among thresholds 0.10 to 0.90 in increments of 0.01; lower threshold resolves exact ties",
+    "selected_threshold": 0.59,
+    "validation": {
+      "n_images": 10,
+      "macro_dice": 0.5527932946472089,
+      "macro_iou": 0.3830869555709254,
+      "macro_hard_cldice": 0.6257491804403222,
+      "pooled_precision": 0.5110003626817218,
+      "pooled_recall": 0.6263349761646895,
+      "pooled_dice": 0.5628197578122125,
+      "pooled_iou": 0.3916138987239655,
+      "mean_seconds": 2.951795879997371
+    },
+    "test": {
+      "n_images": 10,
+      "macro_dice": 0.5364552967643352,
+      "macro_iou": 0.36690212796584676,
+      "macro_hard_cldice": 0.6052650636922745,
+      "pooled_precision": 0.5076513885714224,
+      "pooled_recall": 0.567896336321123,
+      "pooled_dice": 0.5360866041101878,
+      "pooled_iou": 0.36620103731227743,
+      "mean_seconds": 2.998213459998078
+    },
+    "complexity": {
+      "parameters": 7849025,
+      "model_size_mib_float32": 29.941654205322266,
+      "macs_per_256_tile": 13912506368,
+      "approx_flops_per_256_tile": 27825012736
+    },
+    "best_model_sha256": "3eb5c955696fbd24062916f71cc3445cb0621b84c76a4f0964b7801a46755695",
+    "wall_seconds": 11823.856383699997,
+    "software": {
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "torch": "2.7.1+cu126",
+      "numpy": "2.5.2",
+      "opencv": "5.0.0",
+      "device": "cuda",
+      "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU"
+    }
+  }
+]

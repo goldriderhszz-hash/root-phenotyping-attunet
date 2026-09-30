@@ -10,12 +10,14 @@ try {
     if (-not $SkipBuild) {
         & $Python -m PyInstaller --noconfirm --clean --windowed --onedir `
             --name RootScope --collect-all tkinterdnd2 `
-            --add-data "model;model" desktop.py
+            --add-data "model;model" --add-data "rootscope/translations.json;rootscope" desktop.py
         if ($LASTEXITCODE -ne 0) { throw "PyInstaller failed with exit code $LASTEXITCODE" }
     }
     if (-not (Test-Path (Join-Path $repo "dist\RootScope\RootScope.exe"))) {
         throw "RootScope.exe not found; build before packaging"
     }
+    & $Python scripts/package_runtime_docs.py
+    if ($LASTEXITCODE -ne 0) { throw "Packaging guides/notices failed" }
 
     $release = Join-Path $repo "release"
     New-Item -ItemType Directory -Path $release -Force | Out-Null

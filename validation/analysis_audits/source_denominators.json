@@ -1,0 +1,743 @@
+{
+  "status": "passed",
+  "distinct_images": 50,
+  "width_strata": [
+    {
+      "stratum": "≤3 pixels",
+      "distinct_images_with_reference_points": 50,
+      "images_without_reference_points": 0,
+      "total_reference_centerline_points": 81272,
+      "minimum_points_per_image": 298,
+      "maximum_points_per_image": 4860
+    },
+    {
+      "stratum": ">3–6 pixels",
+      "distinct_images_with_reference_points": 50,
+      "images_without_reference_points": 0,
+      "total_reference_centerline_points": 196843,
+      "minimum_points_per_image": 461,
+      "maximum_points_per_image": 11839
+    },
+    {
+      "stratum": ">6–12 pixels",
+      "distinct_images_with_reference_points": 50,
+      "images_without_reference_points": 0,
+      "total_reference_centerline_points": 331177,
+      "minimum_points_per_image": 1104,
+      "maximum_points_per_image": 15244
+    },
+    {
+      "stratum": ">12 pixels",
+      "distinct_images_with_reference_points": 50,
+      "images_without_reference_points": 0,
+      "total_reference_centerline_points": 227549,
+      "minimum_points_per_image": 635,
+      "maximum_points_per_image": 21760
+    }
+  ],
+  "unit": "annotation-centerline points on 50 distinct source images; repeated configurations/seeds do not add images",
+  "filename_suffixes_do_not_establish_plant_identity": true,
+  "existing_metadata": [
+    {
+      "sample_name": "10-1-1",
+      "filename_without_parenthetical_suffix": "10-1-1",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 75,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-1(1)",
+      "filename_without_parenthetical_suffix": "10-1-1",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 18,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-1(2)",
+      "filename_without_parenthetical_suffix": "10-1-1",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 17,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-1(3)",
+      "filename_without_parenthetical_suffix": "10-1-1",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 16,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-2",
+      "filename_without_parenthetical_suffix": "10-1-2",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 90,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-2(1)",
+      "filename_without_parenthetical_suffix": "10-1-2",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 73,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-2(2)",
+      "filename_without_parenthetical_suffix": "10-1-2",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 94,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-2(3)",
+      "filename_without_parenthetical_suffix": "10-1-2",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 62,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-3",
+      "filename_without_parenthetical_suffix": "10-1-3",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 96,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-9(1)",
+      "filename_without_parenthetical_suffix": "10-1-9",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 52,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-9(2)",
+      "filename_without_parenthetical_suffix": "10-1-9",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 61,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-1-9(3)",
+      "filename_without_parenthetical_suffix": "10-1-9",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 33,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-2-1",
+      "filename_without_parenthetical_suffix": "10-2-1",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 122,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-2-2",
+      "filename_without_parenthetical_suffix": "10-2-2",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 120,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-2-3",
+      "filename_without_parenthetical_suffix": "10-2-3",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 14,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-2-4",
+      "filename_without_parenthetical_suffix": "10-2-4",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 60,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-9-1",
+      "filename_without_parenthetical_suffix": "10-9-1",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 20,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-9-2",
+      "filename_without_parenthetical_suffix": "10-9-2",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 90,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-9-3",
+      "filename_without_parenthetical_suffix": "10-9-3",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 52,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "10-9-4",
+      "filename_without_parenthetical_suffix": "10-9-4",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 37,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-10-11(1)",
+      "filename_without_parenthetical_suffix": "235-10-11",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 18,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-10-11(2)",
+      "filename_without_parenthetical_suffix": "235-10-11",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 19,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-10-11(3)",
+      "filename_without_parenthetical_suffix": "235-10-11",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 79,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-10-12(1)",
+      "filename_without_parenthetical_suffix": "235-10-12",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 54,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-10-12(2)",
+      "filename_without_parenthetical_suffix": "235-10-12",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 59,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-10-12(3)",
+      "filename_without_parenthetical_suffix": "235-10-12",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 89,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-25-6(1)",
+      "filename_without_parenthetical_suffix": "235-25-6",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 18,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-25-6(2)",
+      "filename_without_parenthetical_suffix": "235-25-6",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 34,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-25-7(1)",
+      "filename_without_parenthetical_suffix": "235-25-7",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 130,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-25-7(2)",
+      "filename_without_parenthetical_suffix": "235-25-7",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 26,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-25-7(3)",
+      "filename_without_parenthetical_suffix": "235-25-7",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 31,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-25-9(1)",
+      "filename_without_parenthetical_suffix": "235-25-9",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 49,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-25-9(2)",
+      "filename_without_parenthetical_suffix": "235-25-9",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 29,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "235-25-9(3)",
+      "filename_without_parenthetical_suffix": "235-25-9",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 98,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "447-1-1",
+      "filename_without_parenthetical_suffix": "447-1-1",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "5.6.1",
+      "shape_count": 143,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "447-1-1(1)",
+      "filename_without_parenthetical_suffix": "447-1-1",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 86,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "7-1-3(1)",
+      "filename_without_parenthetical_suffix": "7-1-3",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 147,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "7-1-3(2)",
+      "filename_without_parenthetical_suffix": "7-1-3",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 97,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "7-1-3(3)",
+      "filename_without_parenthetical_suffix": "7-1-3",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 128,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "7-1-6(1)",
+      "filename_without_parenthetical_suffix": "7-1-6",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 110,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "7-1-6(2)",
+      "filename_without_parenthetical_suffix": "7-1-6",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 187,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "7-1-6(3)",
+      "filename_without_parenthetical_suffix": "7-1-6",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 53,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "7-1-6(4)",
+      "filename_without_parenthetical_suffix": "7-1-6",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 144,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "DN50-235-25-6(2)",
+      "filename_without_parenthetical_suffix": "DN50-235-25-6",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 40,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "DN50-235-25-6(3)",
+      "filename_without_parenthetical_suffix": "DN50-235-25-6",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 33,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "DN50-235-25-7(1)",
+      "filename_without_parenthetical_suffix": "DN50-235-25-7",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 32,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "W82-447-1-13-3(1)",
+      "filename_without_parenthetical_suffix": "W82-447-1-13-3",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.3.0",
+      "shape_count": 24,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "W82-447-1-13-7(1)",
+      "filename_without_parenthetical_suffix": "W82-447-1-13-7",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 70,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "W82-447-1-13-7(2)",
+      "filename_without_parenthetical_suffix": "W82-447-1-13-7",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 18,
+      "shape_types": [
+        "polygon"
+      ]
+    },
+    {
+      "sample_name": "W82-447-1-13-7(3)",
+      "filename_without_parenthetical_suffix": "W82-447-1-13-7",
+      "TIFF_tags": {
+        "XResolution": "300.0",
+        "YResolution": "300.0",
+        "ResolutionUnit": "2"
+      },
+      "annotation_version": "6.0.0",
+      "shape_count": 43,
+      "shape_types": [
+        "polygon"
+      ]
+    }
+  ],
+  "metadata_interpretation": "File suffixes, image/software tags and file times are not validated plant/batch IDs. Resolution tags describe file display density and do not establish botanical pixel-to-length calibration. No camera, annotator identity, acquisition batch or biological grouping is inferred without supporting records."
+}

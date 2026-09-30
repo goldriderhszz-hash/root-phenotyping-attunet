@@ -1,0 +1,458 @@
+{
+  "text_87a32e9b0a9a": {
+    "en": "Image files",
+    "zh": "图像文件"
+  },
+  "text_46ba809193bd": {
+    "en": "All files",
+    "zh": "所有文件"
+  },
+  "text_cd0f3ad8ddd8": {
+    "en": "Source",
+    "zh": "原图"
+  },
+  "text_072afa8c3d7b": {
+    "en": "Overlay",
+    "zh": "叠加"
+  },
+  "text_98cb32da93e9": {
+    "en": "Mask",
+    "zh": "掩膜"
+  },
+  "text_6314d4d17442": {
+    "en": "Skeleton",
+    "zh": "骨架"
+  },
+  "text_ade46984c67e": {
+    "en": "RootScope | Rhizobag image analysis",
+    "zh": "RootScope | 根系图像表型分析"
+  },
+  "text_1bf3defde730": {
+    "en": "WORKSPACE",
+    "zh": "工作空间"
+  },
+  "text_c59591205d33": {
+    "en": "Image analysis",
+    "zh": "▦   图像分析"
+  },
+  "text_376085a4d383": {
+    "en": "Methods and evidence",
+    "zh": "◇   方法与证据"
+  },
+  "text_5af4c063583e": {
+    "en": "Research model",
+    "zh": "研究模型"
+  },
+  "text_2e1d307d321f": {
+    "en": "Fixed skeleton loss · Seed 42 · Fold 0",
+    "zh": "固定骨架损失 · Seed 42 · Fold 0"
+  },
+  "text_75a14730934c": {
+    "en": "Local desktop analysis",
+    "zh": "本地桌面分析 · 无需浏览器"
+  },
+  "text_ea69ab24bbaa": {
+    "en": "RootScope  /  Image analysis",
+    "zh": "RootScope  /  图像分析"
+  },
+  "text_dd02c56cd370": {
+    "en": "ONNX local inference",
+    "zh": "研究发布版   ·   ONNX 本地推理"
+  },
+  "text_26bf8c801559": {
+    "en": "Ready. Import images to begin.",
+    "zh": "就绪。导入原图后即可开始分析。"
+  },
+  "text_189046f73761": {
+    "en": "Open results",
+    "zh": "打开结果"
+  },
+  "text_049d50a4d293": {
+    "en": "Rhizobag image analysis",
+    "zh": "根系图像表型分析"
+  },
+  "text_70b87918773e": {
+    "en": "Import images to extract masks, skeletons and traceable image descriptors.",
+    "zh": "导入根系图像，自动获得分割、骨架与可追溯的图像描述符。"
+  },
+  "text_85abcd952e82": {
+    "en": "01   Import images",
+    "zh": "01   导入图像"
+  },
+  "text_022f2f166b65": {
+    "en": "Drop images here or click to select",
+    "zh": "↥   拖放图片或点击选择"
+  },
+  "text_28d6c941a1f8": {
+    "en": "TIFF, PNG, JPG and BMP; multiple images supported",
+    "zh": "支持 TIFF、PNG、JPG、BMP，可一次导入多张"
+  },
+  "text_18104edf8911": {
+    "en": "Select images",
+    "zh": "选择图片"
+  },
+  "text_4d2d93e528f9": {
+    "en": "Import folder",
+    "zh": "导入文件夹"
+  },
+  "text_84fcd70d4280": {
+    "en": "Clear",
+    "zh": "清空"
+  },
+  "text_85f2adcfb9db": {
+    "en": "No images selected",
+    "zh": "尚未选择原图"
+  },
+  "text_95065ef282d8": {
+    "en": "Reference masks (optional)",
+    "zh": "参考掩膜（可选）"
+  },
+  "text_4374cdaa6a9b": {
+    "en": "Match image stems, optionally with _mask or -mask; used for evaluation.",
+    "zh": "同名或带 _mask 后缀；用于 Dice、IoU 等评估。"
+  },
+  "text_b589cfb36b8c": {
+    "en": "Add masks",
+    "zh": "添加参考掩膜"
+  },
+  "text_10db60b2bf2a": {
+    "en": "0 masks",
+    "zh": "0 张"
+  },
+  "text_9a81b8b31c39": {
+    "en": "02   Analysis settings",
+    "zh": "02   分析设置"
+  },
+  "text_bd4262205c03": {
+    "en": "Probability threshold",
+    "zh": "分割阈值"
+  },
+  "text_985837893288": {
+    "en": "Validation threshold: 0.47. Overrides are recorded in provenance.",
+    "zh": "当前折验证集阈值 0.47；调整后会写入来源记录。"
+  },
+  "text_cd9224e3fd63": {
+    "en": "Output directory",
+    "zh": "结果保存位置"
+  },
+  "text_ef23ea67b002": {
+    "en": "Browse",
+    "zh": "浏览"
+  },
+  "text_9af5a38132a1": {
+    "en": "Save float32 probability maps",
+    "zh": "同时保存 float32 概率图"
+  },
+  "text_5e0477856430": {
+    "en": "Exports: CSV, masks, overlays, skeletons and provenance.",
+    "zh": "结果包含 CSV、掩膜、叠加图、骨架图及来源记录。"
+  },
+  "text_67c45ac47d3b": {
+    "en": "Run analysis",
+    "zh": "开始分析  →"
+  },
+  "text_4d0b4688c787": {
+    "en": "Cancel",
+    "zh": "取消"
+  },
+  "text_38d69c8d2007": {
+    "en": "Analyzed",
+    "zh": "已分析"
+  },
+  "text_9273cc90ea18": {
+    "en": "",
+    "zh": "张"
+  },
+  "text_3071b58c6332": {
+    "en": "Median foreground",
+    "zh": "前景比例中位数"
+  },
+  "text_6e90ea04152c": {
+    "en": "Valid paths",
+    "zh": "有效路径"
+  },
+  "text_7252b1f25cff": {
+    "en": "Review required",
+    "zh": "需要复核"
+  },
+  "text_a9ee0f8b9c9b": {
+    "en": "03   Image descriptors",
+    "zh": "03   图像与表型描述符"
+  },
+  "text_0a0ce84ddefc": {
+    "en": "Image",
+    "zh": "图像"
+  },
+  "text_a6ec3bcf9764": {
+    "en": "Dominant path (px)",
+    "zh": "优势路径 / px"
+  },
+  "text_2655cdf66ea8": {
+    "en": "Retained segments",
+    "zh": "保留线段"
+  },
+  "text_11ecc3977538": {
+    "en": "Candidate junctions",
+    "zh": "候选连接"
+  },
+  "text_ea4d5246424e": {
+    "en": "Local angle* (°)",
+    "zh": "局部锐角* / °"
+  },
+  "text_b38c92c32df6": {
+    "en": "QC status",
+    "zh": "复核"
+  },
+  "text_c54f3ef4812c": {
+    "en": "04   Inspect results",
+    "zh": "04   图像复核"
+  },
+  "text_c3d73772b600": {
+    "en": "Select an image in the table",
+    "zh": "选择表格中的图像"
+  },
+  "text_0928aae75643": {
+    "en": "Select an analyzed image to inspect its output",
+    "zh": "选择一张已分析图像查看结果"
+  },
+  "text_45064ca8c50e": {
+    "en": "Lengths are in pixels. Segments and junction regions are image descriptors; angles are exploratory.",
+    "zh": "长度单位：像素。候选连接区域与保留线段均为图像指标。 *局部锐角为探索性结果。"
+  },
+  "text_ca7bef237655": {
+    "en": "Methods and evidence",
+    "zh": "方法与研究证据"
+  },
+  "text_d11150b45b0f": {
+    "en": "Model provenance, descriptor definitions and internal cross-validation results.",
+    "zh": "明确模型来源、指标定义与论文交叉验证结果。"
+  },
+  "text_435181f7240d": {
+    "en": "01   Segmentation and inference",
+    "zh": "01   分割模型与推理"
+  },
+  "text_12876f9dbca9": {
+    "en": "Five seed-42 fixed-loss Attention U-Net checkpoints are included (folds 0–4). Each uses its own validation-selected threshold; fold 0 is the default. Grayscale images receive CLAHE (clip 2.0; 16 × 16 grid) and [0,1] normalization. Prediction uses 256 × 256 tiles, stride 128 and Gaussian fusion (sigma 64). Model selection does not form an ensemble.",
+    "zh": "发布包包含论文固定骨架损失 Attention U-Net 的 seed 42 / fold 0–4 五个独立检查点。每个模型使用自身验证集选定的阈值；默认 fold 0。灰度图经 CLAHE（clip 2.0，16×16 网格）和 [0,1] 归一化后，进行 256×256 窗口、128 像素步长预测，采用 σ=64 的高斯权重融合。选择其他折不会自动形成集成模型。"
+  },
+  "text_fb982e528d64": {
+    "en": "02   Two descriptor branches",
+    "zh": "02   双通道图像描述符"
+  },
+  "text_ba8a9d129592": {
+    "en": "Branch A skeletonizes the raw mask, selects the component with greatest vertical span and computes a weighted shortest path with eight-neighbor adjacency. Branch B uses 5 × 5 elliptical closing and 15 pruning iterations to extract candidate junction regions, retained segments of at least 10 pixels and exploratory local acute angles. Unavailable values and reasons are recorded.",
+    "zh": "通道 A 对原始掩膜骨架化，选取垂直跨度最大的分量，再以八邻接加权最短路径计算优势路径长度。通道 B 用 5×5 椭圆闭合、15 轮末端修剪，计算候选连接区域、至少 10 像素的保留线段和局部锐角均值。无有效路径或角度时记录空值及原因。"
+  },
+  "text_546eb27619da": {
+    "en": "03   References and quality review",
+    "zh": "03   参考掩膜与复核"
+  },
+  "text_127ecaed4a0c": {
+    "en": "Matching reference masks enable precision, recall, Dice/F1, IoU, hard clDice and reference-centerline recall stratified by local width. Both masks enter the same descriptor extractor. Agreement measures the image-processing chain and does not establish anatomical accuracy. No flags means that the implemented checks raised no flag; it does not validate a measurement.",
+    "zh": "若提供同名或带 _mask 后缀的参考掩膜，将计算 Precision、Recall、Dice/F1、IoU、hard clDice 及按参考骨架局部宽度分层的中心线召回率。两种掩膜使用相同的描述符算法，所得误差是图像处理链的误差，不是独立解剖学真值。 未触发标记仅表示内置检查没有发出标记，不代表测量准确。"
+  },
+  "text_ae1b7597035f": {
+    "en": "04   Controlled manuscript comparison",
+    "zh": "04   论文受控比较"
+  },
+  "text_d7d7ce790b9a": {
+    "en": "Configuration",
+    "zh": "配置"
+  },
+  "text_87a6d54d5aaf": {
+    "en": "Recall ≤3 px",
+    "zh": "≤3 px 召回"
+  },
+  "text_4b604be4f560": {
+    "en": "U-Net · pixel loss",
+    "zh": "U-Net · 像素损失"
+  },
+  "text_fdd5429cb311": {
+    "en": "Attention U-Net · pixel loss",
+    "zh": "Attention U-Net · 像素损失"
+  },
+  "text_de47abdc7362": {
+    "en": "Attention U-Net · fixed skeleton loss",
+    "zh": "Attention U-Net · 固定骨架损失（五折）"
+  },
+  "text_9190cf526558": {
+    "en": "Attention U-Net · two-stage candidate",
+    "zh": "Attention U-Net · 两阶段候选"
+  },
+  "text_ba05c6039832": {
+    "en": "Means summarize 50 out-of-fold images and three training seeds. They do not estimate a single checkpoint’s accuracy on arbitrary new images. Frozen study: split seed 20260920.",
+    "zh": "表中为 50 张留出图像在三个种子上的汇总均值；该数值不同于任一折模型在新图像上的预期精度。"
+  },
+  "text_0a6bad6aac69": {
+    "en": "05   Interpretation limits",
+    "zh": "05   解释边界"
+  },
+  "text_07ff08ebf446": {
+    "en": "The dominant path is an image descriptor in pixels. It does not measure total root length or independently validated primary-root length. Segments, candidate junctions and angles do not identify true lateral roots, branch points or emergence angles. The local-angle endpoint depends on coordinate ordering and is exploratory. Physical calibration, biological validity and transfer to other imaging conditions or species require independent validation.",
+    "zh": "优势路径是像素空间图像指标，不等于总根长或独立验证的解剖学主根长度。保留线段、候选连接区域和局部角度不能直接解释为真实侧根、分枝点和萌发角。软件未使用物理标尺，长度单位仅为像素。跨拍摄条件和跨物种性能仍需外部验证。 局部锐角按坐标顺序选点，受此规则影响，只作为探索性描述符。"
+  },
+  "text_f27f162f13bf": {
+    "en": "RootScope  /  Methods and evidence",
+    "zh": "RootScope  /  方法与证据"
+  },
+  "text_9f934685f984": {
+    "en": "Images selected: {p0}",
+    "zh": "已选择 {p0} 张原图"
+  },
+  "text_020df0a8c65c": {
+    "en": "Select root images",
+    "zh": "选择根系图像"
+  },
+  "text_230d8e3e1d62": {
+    "en": "Select image folder",
+    "zh": "选择根系图像文件夹"
+  },
+  "text_51cff1ae322a": {
+    "en": "Select reference masks",
+    "zh": "选择参考掩膜"
+  },
+  "text_30a97706c37b": {
+    "en": "Masks: {p0}",
+    "zh": "{p0} 张"
+  },
+  "text_07fbe85a4a18": {
+    "en": "Select output directory",
+    "zh": "选择结果保存目录"
+  },
+  "text_4711faca156d": {
+    "en": "Validation threshold: {p0}. Overrides are recorded in provenance.",
+    "zh": "当前折验证集阈值 {p0}；调整后会写入来源记录。"
+  },
+  "text_fd91828ca4a3": {
+    "en": "Fixed loss · Seed 42 · Fold {p0}",
+    "zh": "固定骨架损失 · Seed 42 · Fold {p0}"
+  },
+  "text_cece54fefa88": {
+    "en": "Import images",
+    "zh": "请导入图片"
+  },
+  "text_081eeccc2643": {
+    "en": "Add at least one root image.",
+    "zh": "请先添加至少一张根系图像。"
+  },
+  "text_305c965ad310": {
+    "en": "Output directory",
+    "zh": "输出目录"
+  },
+  "text_a636bb8ab1ae": {
+    "en": "Choose an output directory.",
+    "zh": "请选择结果保存目录。"
+  },
+  "text_754cc0e9ad27": {
+    "en": "Loading ONNX model…",
+    "zh": "正在加载 ONNX 模型…"
+  },
+  "text_d95f4d791673": {
+    "en": "Cancellation requested; stopping after the current image.",
+    "zh": "已请求取消；当前图片完成后停止。"
+  },
+  "text_127db1eb5e5a": {
+    "en": "Analysis failed",
+    "zh": "分析失败"
+  },
+  "text_eaae1132582f": {
+    "en": "Review required",
+    "zh": "需复核"
+  },
+  "text_f78d037abccd": {
+    "en": "No flags",
+    "zh": "未触发标记"
+  },
+  "text_2c1999919413": {
+    "en": "; {p0} failed (see errors.csv)",
+    "zh": "；{p0} 张失败，详见 errors.csv"
+  },
+  "text_d1065c1e96d3": {
+    "en": "; task cancelled",
+    "zh": "；任务已取消"
+  },
+  "text_f59a941c28ce": {
+    "en": "Completed images: {p0}{p1}. Results: {p2}",
+    "zh": "完成：{p0} 张图像{p1}。结果：{p2}"
+  },
+  "text_77c563bc7f76": {
+    "en": "No successful results",
+    "zh": "没有成功结果"
+  },
+  "text_1bc4abde15a9": {
+    "en": "All {p0} images failed. See errors.csv in the output directory.",
+    "zh": "全部 {p0} 张图像分析失败。请查看结果目录中的 errors.csv。"
+  },
+  "text_72077749f794": {
+    "en": "none",
+    "zh": "无"
+  },
+  "text_6412c273aa04": {
+    "en": "Size {p0} × {p1} px · Path {p2} · Valid angles {p3} · QC {p4}",
+    "zh": "尺寸 {p0}×{p1} px   ·   路径状态 {p2}   ·   有效角度 {p3} 个   ·   质控 {p4}"
+  },
+  "text_eaa8f62504bf": {
+    "en": "\nReference: Dice {p0} · IoU {p1} · hard clDice {p2}",
+    "zh": "\n参考掩膜：Dice {p0}   ·   IoU {p1}   ·   hard clDice {p2}"
+  },
+  "text_f598321d61d0": {
+    "en": "Image file unavailable",
+    "zh": "图像文件不可用"
+  },
+  "text_f96145384a34": {
+    "en": "Preview failed: {p0}",
+    "zh": "预览失败：{p0}"
+  },
+  "text_4e26e96c5481": {
+    "en": "Analysis running",
+    "zh": "正在分析"
+  },
+  "text_2381ab93f546": {
+    "en": "Analysis is running. Exit after the current image finishes?",
+    "zh": "当前任务正在运行。处理完当前图片后退出吗？"
+  },
+  "text_1de29b7bc60c": {
+    "en": "Import at least one root image.",
+    "zh": "请先导入至少一张根系图片"
+  },
+  "text_c320f83ba049": {
+    "en": "Threshold must be between 0.10 and 0.90.",
+    "zh": "阈值必须在 0.10 到 0.90 之间"
+  },
+  "text_509369626c83": {
+    "en": "Image missing or unsupported: {p0}",
+    "zh": "图片不存在或格式不支持：{p0}"
+  },
+  "text_6a180337fa3f": {
+    "en": "Analyzing: {p0}",
+    "zh": "正在分析：{p0}"
+  },
+  "text_a2904e5f319f": {
+    "en": "Completed {p0}/{p1} images",
+    "zh": "已完成 {p0}/{p1} 张"
+  },
+  "text_57a6a75cf650": {
+    "en": "Saving outputs and provenance…",
+    "zh": "正在保存结果与来源记录…"
+  },
+  "text_3c29aff56bc3": {
+    "en": "Creating output archive…",
+    "zh": "正在生成结果压缩包…"
+  },
+  "text_49455ec73056": {
+    "en": "Cannot read grayscale image: {p0}",
+    "zh": "无法读取灰度图像：{p0}"
+  },
+  "text_aea4724ff417": {
+    "en": "Cannot save image: {p0}",
+    "zh": "无法保存图像：{p0}"
+  },
+  "text_a077e4be5cb8": {
+    "en": "Model integrity check failed: ONNX SHA-256 differs from the catalog.",
+    "zh": "模型校验失败：ONNX 文件 SHA-256 与发布记录不一致"
+  },
+  "text_29d4c4647805": {
+    "en": "Reference mask and image dimensions differ.",
+    "zh": "参考掩膜与原图尺寸不一致"
+  }
+}
