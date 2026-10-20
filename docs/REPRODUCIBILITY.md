@@ -1,6 +1,6 @@
 # Reproduce the reported records
 
-Download from the [versioned research release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/paper-revision-20261020); check SHA256SUMS before extraction. Use an empty local directory. No private photographs are required for the first two tiers.
+Download from the [versioned research release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/submission-en-20261020); check SHA256SUMS before extraction. Use an empty local directory. No private photographs are required for the first two tiers.
 
 ## 1. Frozen numerical evidence
 

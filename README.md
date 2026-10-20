@@ -1,10 +1,10 @@
 # Soybean rhizobag segmentation and contour-guided root reconstruction
 
-This repository accompanies **Segmentation and contour-guided root reconstruction in soybean rhizobag images**. The [versioned research release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/paper-revision-20261020) provides the editable English manuscript and Chinese translation, eight figures and two pseudocode panels, numerical/synthetic replays, the original 50-image dataset, fixed intermediate records, source snapshots and selected models. The manuscript is an author-review research version, not an accepted journal article.
+This repository accompanies **Segmentation and contour-guided root reconstruction in soybean rhizobag images**. The [versioned research release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/submission-en-20261020) provides the editable English manuscript and supplementary information, eight figures and two pseudocode panels, numerical/synthetic replays, the original 50-image dataset, fixed intermediate records, source snapshots and selected models. The manuscript is an author-review research version, not an accepted journal article.
 
 ## Read and reproduce
 
-- [English manuscript](manuscript/Manuscript_EN.md) · [中文对照](manuscript/Manuscript_ZH.md)
+- [English manuscript](manuscript/Manuscript_EN.md) · [Submission file index](SUBMISSION_FILES.md)
 - [Manuscript/figure downloads](manuscript/README.md) · [Data and materials](DATA_AVAILABILITY.md)
 - [Reproduction instructions](docs/REPRODUCIBILITY.md) · [Dataset manifest](data/dataset_manifest.csv)
 - [Whole-root50-image paired records](analysis/reconstruction/whole_root_all250_image_method_rows.csv)

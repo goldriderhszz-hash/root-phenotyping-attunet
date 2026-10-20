@@ -1,6 +1,6 @@
 # Data and materials availability
 
-The datasets supporting the manuscript are available in the [fixed research release `paper-revision-20261020`](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/paper-revision-20261020). No login or contact request is required to download the public release. SHA256 checksums and dataset/figure manifests identify the exact files.
+The datasets supporting the manuscript are available in the [fixed research release `submission-en-20261020`](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/submission-en-20261020). No login or contact request is required to download the public release. SHA256 checksums and dataset/figure manifests identify the exact files.
 
 |Resource|Contents|
 |---|---|

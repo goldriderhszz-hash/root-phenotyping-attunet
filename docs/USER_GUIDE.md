@@ -32,7 +32,7 @@ Settings and results have vertical scrollbars; the table has a horizontal scroll
 
 ## Language and export
 
-Choose **English** or **中文** while idle. First use defaults to English; later runs retain the selected language where profile writing is available. Inputs, references, output setting, model, threshold, probability option, selected layer and current results are preserved. OS file dialogs retain their OS language.
+Choose **English** or **Chinese** while idle. First use defaults to English; later runs retain the selected language where profile writing is available. Inputs, references, output setting, model, threshold, probability option, selected layer and current results are preserved. OS file dialogs retain their OS language.
 
 Scientific columns, model identifiers, units and QC codes remain stable. Diagnostic text may differ by language. Numeric results do not.
 
@@ -47,3 +47,4 @@ RootScope.exe --batch image.tif --output results --model fold_2 --no-zip
 ```
 
 The command/GUI share the numerical pipeline. CLI exit codes are 0 for completion without image errors, 1 for logged image errors and 2 for argument/input validation errors. The windowed executable has no terminal progress; wait for its process to end.
+
