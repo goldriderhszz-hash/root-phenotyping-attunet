@@ -1,4 +1,6 @@
-# Limitations
+# Historical desktop limitations
+
+This page describes the original grayscale desktop implementation and its controlled-study records. The current manuscript separately describes the later contour-guided reconstruction prototype, its internal comparisons and remaining failure cases. The current data-download arrangements are in [DATA_AVAILABILITY.md](../DATA_AVAILABILITY.md).
 
 The 50 untreated Wm82 seedling images describe an internal image collection. Plant identity, acquisition-batch grouping and physical scale are insufficient. External species/batch/developmental-stage transfer is untested.
 

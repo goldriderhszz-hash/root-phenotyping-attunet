@@ -46,4 +46,4 @@ After obtaining original images and reference masks:
 python scripts/validate_deployment.py research path\to\image-and-mask-directory
 ```
 
-Original assets are absent from this repository. See [data availability](../DATA_AVAILABILITY.md).
+Original images and reference masks are public research-release assets rather than files stored in this Git tree. See [data availability](../DATA_AVAILABILITY.md) for the exact image archive, checksums and access terms.
