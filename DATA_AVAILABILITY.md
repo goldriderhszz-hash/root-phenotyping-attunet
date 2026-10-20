@@ -1,31 +1,15 @@
 # Data and materials availability
 
-The [RootScope Desktop download page](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop) provides the source, Windows application
-and a separate numerical-record archive. The repository includes the evidence
-needed to regenerate the reported numerical summaries without training.
+The datasets supporting the manuscript are available in the [fixed research release `paper-revision-20261020`](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/paper-revision-20261020). No login or contact request is required to download the public release. SHA256 checksums and dataset/figure manifests identify the exact files.
 
-| Material | Location and access |
-| --- | --- |
-| Application source, MIT license, pinned dependencies | This repository and source archive |
-| Five seed-42 fixed-loss ONNX models, thresholds and SHA-256 | `model/`; also in the Windows application |
-| Image hash manifest and locked folds | `research/dataset_manifest.csv`, `research/fold_assignments.json` |
-| All 60 fit histories and selected-checkpoint summaries | `research/run_records/` |
-| 600 segmentation and 2,400 descriptor records | `analysis/tables/` and numerical-record archive |
-| Complete sensitivity records and analysis programs | `analysis/` and numerical-record archive |
-| Deployment, CPU timing, executable and geometry checks | `validation/` |
-| Manuscript figure assets and caption/hash mapping | `manuscript/` |
-| 50 original TIFFs, annotations and reference masks | Retained by the authors; absent from this public repository |
-| 600 out-of-fold prediction masks and 60 selected PyTorch checkpoints | Retained by the authors; absent from this public repository |
+|Resource|Contents|
+|---|---|
+|Soybean_rhizobag_50_images_LabelMe_v20261020.zip|50 original TIFFs,50 LabelMe annotation JSONs and 50 merged masks;3290 whole-root polygons|
+|Study_sources_and_frozen_records_v20261020.zip|Actual study-source snapshots, all 600 original prediction masks, frozen D3 masks, protected axes, candidates, features, targets and decoder records|
+|D3_and_reconstruction_models_v20261020.zip|5 selected D3 PyTorch checkpoints and 15 whole-root forests (5 folds ×3 forest types)|
+|Additional_file_2_numerical.zip|600 segmentation/2400 descriptor rows,60 training histories,150 CPU timing rows,250 reconstruction rows and numerical replays|
+|Additional_file_3_legacy_geometry.zip|All 7 synthetic full masks, exact legacy extractor and original/reflection replay, including known failures|
 
-For access to original images, annotations, masks or research checkpoints, contact
-the corresponding author at **rshzhu@126.com**. Access requests require a separate
-data-owner decision; the repository does not grant image-data permissions.
-The software MIT license covers software and associated documentation and does
-not automatically license original research images. No dataset DOI or permanent
-third-party archive identifier is claimed.
+The data provider's permission to publicly distribute the original photographs and annotations was confirmed on 20 October 2026. Data copyright and reuse terms are separate from MIT software licensing; see [DATA_LICENSE.md](DATA_LICENSE.md). The public image archive contains the same 50 study photographs, not the separate 49 unannotated images. Existing plant/bag/batch identities and physical scale were not recoverable; do not infer them from filenames or treat source images as verified independent plants. Polygons are whole-root regions, not exact manual centerlines or parent-child annotations.
 
-Included records support arithmetic replay, model inspection and installation
-checks. Repeating image-level evaluations, annotation processing or training
-requires the original assets. Filenames and hashes identify images; they do not
-establish plant-level independence, acquisition batches or physical length scale.
-See [reproducibility](docs/REPRODUCIBILITY.md) for inputs and limits at each level.
+Raw-image access, numerical replay and full training are distinct reproduction tiers. The selected D3 checkpoints and forests support the stated reconstruction version; the original 60 controlled-training checkpoints and intermediate D1 weights are not bundled as duplicate binaries. All 600 frozen controlled prediction masks and the corresponding training protocols/logs are provided. Replaying frozen measurements does not require retraining. The original desktop software/fiveONNXmodels are preserved under [their historical release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop). No new biological validation is implied by public availability.

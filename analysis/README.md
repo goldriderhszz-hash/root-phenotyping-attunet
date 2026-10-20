@@ -1,17 +1,5 @@
-# Manuscript analysis
+# Analysis sources and versioned numerical evidence
 
-Frozen numerical evidence is in `tables/`. `reproduce_tables.py` checks all
-pairings/counts and regenerates statistics, fold robustness and difference limits.
-`angle_geometry_audit.py` executes the frozen angle rule on constructed geometry.
-`make_descriptor_figures.py` exports figures with source records.
+The original scripts/tables document the controlled four-configuration, three-seed experiment and retain their historical file numbering. Original Fig 7/8 descriptor agreement and sensitivity correspond to Supplementary FigsS3/S4 in the revised manuscript; current main Fig 7/8 concern whole-root reconstruction and returning axes. Superseded publication drawings are removed from the default branch; their source history remains at92e18aa 37 fece 8 f 747548 a 38 f73e382904814085.
 
-`audit_uncertainty.py` replays the recorded seed-and-image segmentation resampling.
-Recorded tail-fraction/Holm columns are retained as computational output;
-they are not calibrated hypothesis-test p-values and support no significance claim.
-`source_denominators.py` audits width-stratum contributions and optionally reads
-existing image metadata. Verification records are in `validation/analysis_audits/`.
-
-Mask-analysis scripts use `ROOTSCOPE_DATA_DIR`, `ROOTSCOPE_STUDY_DIR` and
-`ROOTSCOPE_ANALYSIS_OUT` for portable execution. External masks/predictions are
-needed for recomputation; included-record summaries run without them.
-See [reproducibility](../docs/REPRODUCIBILITY.md).
+Use ../docs/REPRODUCIBILITY.md and the versioned Additional_file_2_numerical.zip for the current portable replay. The reconstruction/ directory adds the 250 fixed-input image/method rows and aggregate script. Full frozen masks, candidates, target matrices, selected paths, source snapshots and model files are separate research-release assets. The study-specific numerical package was replayed after extraction into a new directory; no model refitting is needed for its checks. Research-data public authorization is described in ../DATA_AVAILABILITY.md.

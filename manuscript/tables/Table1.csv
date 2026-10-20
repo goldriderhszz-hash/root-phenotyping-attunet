@@ -1,0 +1,10 @@
+Configuration,Dice (%),IoU (%),Hard clDice (%),≤3-pixel centerline recall (%)
+
+"U-Net, pixel loss",55.04 ± 1.08,38.21 ± 0.96,62.07 ± 4.55,58.83 ± 1.37
+
+"Attention U-Net, pixel loss",55.90 ± 0.61,38.99 ± 0.61,64.63 ± 1.52,59.03 ± 0.41
+
+"Attention U-Net, fixed skeleton loss",58.43 ± 0.46,41.49 ± 0.43,67.43 ± 0.67,65.64 ± 1.17
+
+"Attention U-Net, two-stage loss",57.54 ± 2.81,40.65 ± 2.74,65.86 ± 3.28,63.48 ± 8.80
+

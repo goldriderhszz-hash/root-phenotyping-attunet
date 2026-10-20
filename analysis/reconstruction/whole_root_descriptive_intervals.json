@@ -1,0 +1,16 @@
+{
+  "scope": "Post-evaluation descriptive intervals conditional on frozen predictions and fixed image folds; not a preregistered promotion gate, independent plant inference, or new-cohort generalization",
+  "seed": 20261019,
+  "draws": 10000,
+  "method": "Paired image resampling separately within five fixed folds",
+  "mean_match_difference_per_image": 1.92,
+  "match_interval95": [
+    0.96,
+    2.94
+  ],
+  "mean_count_error_difference": -41.64,
+  "count_error_interval95": [
+    -53.92,
+    -30.539000000000012
+  ]
+}

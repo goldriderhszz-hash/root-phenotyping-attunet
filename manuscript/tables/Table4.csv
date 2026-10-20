@@ -1,0 +1,12 @@
+Method,Output objects,"Matched references, n (%)",Count MAE,"Fragmented references, n (%)","Mixed outputs, n (%)"
+
+Fixed pairing,6440,586 (17.81),63.00,258 (7.84),674 (10.47)
+
+Geometric score + count prior,3453,518 (15.74),22.74,185 (5.62),666 (19.29)
+
+Whole-root geometric learning,3334,675 (20.52),21.20,152 (4.62),572 (17.16)
+
+Image learning without count penalty,1571,365 (11.09),35.22,55 (1.67),424 (26.99)
+
+Whole-root image learning (primary),3342,682 (20.73),21.36,154 (4.68),562 (16.82)
+

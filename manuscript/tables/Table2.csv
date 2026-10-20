@@ -1,0 +1,10 @@
+Descriptor,Unit,MAE ± SD,Mean bias,CCC ± SD,MAPE (%)
+
+Dominant path length,pixel,1210.52 ± 56.26,−1137.20,0.321 ± 0.047,41.2
+
+Retained segment count,count,97.43 ± 3.98,+95.47,0.575 ± 0.023,100.5
+
+Candidate junction-region count,count,111.71 ± 5.32,+109.85,0.430 ± 0.034,147.8
+
+Mean local acute angle,degree,6.84 ± 0.42,−3.99,0.261 ± 0.097,12.1
+

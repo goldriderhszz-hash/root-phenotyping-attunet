@@ -1,0 +1,10 @@
+Configuration,Path (pixel),Segments (count),Junctions (count),Angle (degree)
+
+"U-Net, pixel loss",1258.8 ± 243.2,68.2 ± 26.7,62.1 ± 28.0,8.0 ± 1.5
+
+"Attention U-Net, pixel loss",1243.5 ± 152.1,62.4 ± 16.1,61.7 ± 23.8,8.0 ± 0.9
+
+"Attention U-Net, fixed skeleton loss",1210.5 ± 56.3,97.4 ± 4.0,111.7 ± 5.3,6.8 ± 0.4
+
+"Attention U-Net, two-stage loss",1200.2 ± 130.6,107.4 ± 12.1,126.1 ± 19.1,7.3 ± 0.3
+

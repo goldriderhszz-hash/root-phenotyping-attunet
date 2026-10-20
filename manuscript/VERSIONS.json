@@ -1,0 +1,15 @@
+{
+  "manuscript_title": "Segmentation and contour-guided root reconstruction in soybean rhizobag images",
+  "manuscript_version": "2026-10-20",
+  "paper_data_tag": "paper-revision-20261020",
+  "historical_software_commit": "92e18aa37fece8f747548a38f73e382904814085",
+  "historical_software_tag": "rootscope-desktop",
+  "legacy_extractor_sha256": "5a7fe8931e436a3fb41366bd000a68ed5a030c47d56d9c0485efc3886fe01c63",
+  "controlled_image_seed_config_rows": 600,
+  "descriptor_rows": 2400,
+  "reconstruction_image_method_rows": 250,
+  "source_images": 50,
+  "reference_polygons": 3290,
+  "new_fits_this_revision": 0,
+  "new_inference_this_revision": 0
+}

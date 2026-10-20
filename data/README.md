@@ -1,0 +1,5 @@
+# Original 50-image study dataset
+
+[Download the versioned dataset](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/paper-revision-20261020/Soybean_rhizobag_50_images_LabelMe_v20261020.zip). It contains exactly 50 TIFF photographs, their 50 original LabelMe JSONs and 50 merged reference masks (3290 root polygons). ZIP compression is lossless and original file bytes/names are preserved. Image dimensions are 3209(height) ×2311(width). Masks use 255 foreground and 0 background; masks have the `_mask.png` suffix.
+
+The [manifest](dataset_manifest.csv) gives source-image ID, fixed fold, object count, dimensions, byte size andSHA256 for each file. All 3 file rows for an image refer to the same object count; do not sum the count three times. Each polygon's identity is its within-image shape identity. The dataset does not establish biological root order, exact manual centerlines, physical calibration or verified plant/batch groups. Read [data terms](../DATA_LICENSE.md) and the manuscript before using the geometric diagnostics as biological measurements.

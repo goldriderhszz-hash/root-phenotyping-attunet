@@ -1,0 +1,5 @@
+# Fixed-input whole-root reconstruction records
+
+All 250 rows contain 50 images ×5 methods, with 3290 reference polygons per method. Replay the aggregate with `python replay_reconstruction.py`. Fixed pairing and the four candidate-selection arms use the same frozen D3 masks/protected axes. Candidate targets, decoded outputs and source scripts are in the versioned full-study archive. Source weights:5 geometry-quality forests,5 image-plus-geometry quality forests and 5 image-count forests; no pixel-wise root-instance network was newly trained for this stage.
+
+The all-label candidate-pool oracle reached 1158 matches before conflicts/count constraints and screened feasibility before held-fold fits. All outcomes are conditional development diagnostics. Matching/fragmentation use 3290 reference roots as denominator; mixing uses each arm's retained output count. High-support incomplete outputs, per-image regressions and the rejected bounded rollback remain in the numerical attachment. These data must not be labeled independent anatomical primary-root accuracy.
