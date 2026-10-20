@@ -47,3 +47,4 @@ python scripts/validate_deployment.py research path\to\image-and-mask-directory
 ```
 
 Original images and reference masks are public research-release assets rather than files stored in this Git tree. See [data availability](../DATA_AVAILABILITY.md) for the exact image archive, checksums and access terms.
+

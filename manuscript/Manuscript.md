@@ -34,7 +34,7 @@ Here, we connect pixel recovery with root-object measurement through a contour-s
 
 Figure 1 summarizes image preparation, segmentation, root-path reconstruction and evaluation. The controlled segmentation analysis used complete-image folds before tile generation. Its outputs entered a common reference extractor to assess the propagation of mask differences. The subsequent reconstruction analysis used a separately developed, fixed three-channel segmentation pipeline and compared candidate-selection methods on identical inputs. The original root polygons supplied object-level supervision and computational path references. These analyses address different stages of the workflow and were evaluated separately.
 
-![FIG1](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG1.png)
+![FIG1](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG1.png)
 
 **Fig. 1.** Workflow for segmentation and root-object reconstruction. The upper stages show image preparation and the four-configuration segmentation comparison. A separate fixed three-channel input supplies the reconstruction analysis. Ordered axes, candidate quality prediction and global selection lead to curve and object-level outputs. Quality and count forests are fitted within their designated training folds. A development-stage oracle using all 50 annotations screened candidate-pool feasibility before these fits.
 
@@ -44,7 +44,7 @@ The dataset comprised 50 TIFF images of untreated Wm82 soybean seedlings photogr
 
 Two representations were derived from the same annotations. For semantic segmentation, all root polygons were combined into one foreground mask, with root and background intensities of 255 and 0. For object-level reconstruction, the polygons retained their separate within-image identities. An isolated computational centerline was derived from each polygon for path comparison. All 3290 objects remained in the evaluation denominator, including two for which a usable reference curve could not be exported. The polygon references describe whole-root regions; branching order and parent–child attachment labels were not supplied. Figure 2 illustrates the distinction between the merged mask and the separate root objects.
 
-![FIG2](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG2.png)
+![FIG2](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG2.png)
 
 **Fig. 2.** Image and annotation representations for 10-1-9(3), which contains 33 root polygons and also appears in Figs. 4 and 8a, d. (a) Source photograph. (b) Merged root mask used for segmentation. (c) Separate computational centerlines derived from the root polygons; colors distinguish objects. Panels share image coordinates and scale (bar, 500 pixels).
 
@@ -85,7 +85,7 @@ $$\hat{x}=x\odot\alpha\tag{5}$$
 
 where Wg, Wx and Wψ denote learned projections, BN denotes batch normalization, σ denotes the sigmoid, and ⊙ denotes element-wise multiplication. Intermediate gate widths were 128, 64, 32 and 16 channels from the deepest to the shallowest gate. Figure 3 shows the shared architecture and identifies the input-channel change used in the subsequent three-channel reconstruction pipeline.
 
-![FIG3](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG3.png)
+![FIG3](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG3.png)
 
 **Fig. 3.** Attention U-Net architecture. Encoder features pass through attention gates before concatenation with the corresponding decoder features. The controlled comparison uses a grayscale input; the later reconstruction input has three channels with the same encoder–decoder topology. Checkpoint and threshold selection are performed separately from the network architecture.
 
@@ -159,7 +159,7 @@ $$L_{curve}=\sum_{k=1}^{K-1}\|\widetilde{x}_{k+1}-\widetilde{x}_k\|_2\tag{13}$$
 
 where x̃k is the kth ordered resampled position and K is the number of positions. The 8-neighbor raster arc was retained separately. This procedure includes upward-returning portions of a selected path because its endpoint is determined by path order rather than minimum image height. Algorithm 1 summarizes the procedure.
 
-![ALG1](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/ALG1.png)
+![ALG1](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/ALG1.png)
 
 **Algorithm 1.** Ordered-axis continuation and curve measurement. A supported tail is appended to the existing axis without replacing its earlier pixels. The final ordered curve supplies a pixel-space length estimate.
 
@@ -171,7 +171,7 @@ Before quality learning, an annotation-informed oracle assessed the complete can
 
 Each candidate was described by 18 geometric and 12 image-derived features. Geometric features summarized length, displacement, spatial extent, radius distributions, curvature, edge coverage and contact gaps. Image features summarized grayscale and Lab values along the path, local contrasts between the path and its sides, and changes along the ordered curve. Full feature definitions and candidate-generation settings are provided with the numerical package. Figure 4 illustrates the relationship between the image, graph candidates and jointly selected paths.
 
-![FIG4](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG4.png)
+![FIG4](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG4.png)
 
 **Fig. 4.** Root-path reconstruction for image 10-1-9(3) (fold 4; 33 reference polygons) from the fixed D3 mask. (a) All 229 saved complete-path candidates. (b) The 49 objects selected by the primary method; colors distinguish objects, and 11 references were matched at 75% reciprocal support. (c) The protected axis (blue) and remaining selected paths (gray); graph edges assigned to the protected axis cannot be owned by another path. Saved image and path coordinates are shown without redrawing.
 
@@ -191,7 +191,7 @@ The constraints required each graph edge to occur in at most one selected candid
 
 The primary method combined image-plus-geometric quality with the count penalty. Comparators were the previous fixed-pairing output, an unlearned geometric candidate score using the same learned count prior, geometric quality learning, and image-plus-geometric learning without the explicit count-deviation penalty. Removing that penalty retained the predicted count in coverage normalization. The unlearned geometric score set q̂j = ℓj/(ℓj + s), where ℓj was candidate path length and s = max(10 pixels, median candidate length in that image), with f̂j = m̂j = 0. All methods used the same fixed inputs within their designated comparison. Algorithm 2 gives the training and selection sequence.
 
-![ALG2](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/ALG2.png)
+![ALG2](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/ALG2.png)
 
 **Algorithm 2.** Contour-supervised whole-root candidate quality and global selection after candidate-pool screening. Training images supply target values and count supervision. Within this fold-wise fitting and decoding procedure, the held-out image supplies features and fixed candidate paths only; its reference identities and count enter evaluation after decoding. The preceding oracle screen used the full development collection.
 
@@ -251,13 +251,13 @@ All 60 controlled model fits completed, producing 600 held-out image predictions
 
 Attention gates alone changed paired mean Dice by 0.86 percentage points relative to U-Net, with a descriptive interval of −0.68 to 2.85 percentage points. Fixed skeleton loss increased paired mean Dice by 2.53 percentage points relative to pixel-loss Attention U-Net, with an interval of 1.37–3.40 percentage points and positive fold means in all five folds. The two-stage configuration differed from fixed weighting by −0.89 percentage points (interval −3.48 to 1.58), with a positive fold mean in one fold. Figure 5 presents the seed-specific complete-image averages and paired contrasts.
 
-![FIG5](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG5.png)
+![FIG5](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG5.png)
 
 **Fig. 5.** Controlled segmentation results. (a) Out-of-fold macro Dice; symbols indicate training seeds (circle, 42; square, 3407; triangle, 2026), with mean ± SD of the three seed values. (b) Paired image-level Dice differences in percentage points (pp): Attention, Attention U-Net minus U-Net (pixel loss); +fixed clDice, fixed skeleton loss minus pixel loss; +two-stage, two-stage minus fixed skeleton loss. Points are three-seed image means, vertical lines span seed values and black bars are 50-image means. (c) Fold-by-seed means (open symbols); short bars are fold means, long bars overall means, and labels give folds with a positive mean. Fixed clDice denotes the fixed skeleton-loss configuration (Eq. 7).
 
 Exact centerline recall for fixed skeleton loss was 65.64% for roots ≤3 pixels wide, 72.44% at >3–6 pixels, 74.89% at >6–12 pixels and 75.77% above 12 pixels. Matched source and error-map crops illustrate the variation in narrow-root recovery (Fig. 6). Fourteen of 15 two-stage runs selected checkpoints at or before epoch 25, and one selected epoch 27. Thus, most selected two-stage predictions originated before the coefficient change.
 
-![FIG6](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG6.png)
+![FIG6](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG6.png)
 
 **Fig. 6.** Root-width-dependent centerline recovery. (a) Exact centerline recall by reference width, defined as twice the distance-transform value at the reference skeleton pixel. Lines are means of three seed-specific 50-image means; bands show ±1 SD across seeds. (b, c) Seed-42 fixed-skeleton-loss predictions for the lowest and highest whole-image ≤3-pixel recall among images with at least 750 such reference skeleton pixels; percentages are whole-image values. Each 384 × 384-pixel crop maximized missed (b) or recovered (c) narrow reference pixels, illustrating contrasting cases rather than typical performance. Left, grayscale source (1st–99th percentile display stretch); middle, reference thin centerline; right, prediction errors. Scale bars, 100 pixels.
 
@@ -307,7 +307,7 @@ Fragmented references decreased from 258 to 154, equivalent to 7.84% and 4.68% o
 
 Count error improved in 45 images and worsened in five. Path matching increased in 35 images, was unchanged in five and decreased in ten. Count MAE decreased in all five folds. Matches increased in folds 1–4 (129 to 171, 79 to 111, 111 to 123 and 100 to 117), whereas fold 0 matches decreased from 167 to 160 while count MAE fell from 63.70 to 17.30. Mean paired changes per image were +1.92 matches (descriptive interval 0.96–2.94) and −41.64 absolute count error (−53.92 to −30.54). Figure 7 displays all image-level changes, including regressions.
 
-![FIG7](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG7.png)
+![FIG7](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG7.png)
 
 **Fig. 7.** Whole-root reconstruction on identical fixed D3 inputs. A, fixed pairing; B, unlearned geometric score with the learned count prior; C, whole-root geometric learning; D, image-plus-geometric learning without the count-deviation penalty; E, image-plus-geometric learning with the penalty (primary). (a) References matched one-to-one at 75% reciprocal support. (b) Root-count MAE. (c) Fragmented references (% of 3290). (d) Mixed outputs (% of each method’s outputs: A, 6440; B, 3453; C, 3334; D, 1571; E, 3342). (e, f) Per-image changes, E minus A, for all 50 images in alphabetical order; shapes distinguish image folds, and negative values in (e) are regressions.
 
@@ -319,7 +319,7 @@ Ordered continuation recovered a visible upward-returning segment in image 10-1-
 
 Continuation remained incomplete in image 235-25-9(1), where the route ended in a short branch near the bottom and a visible return remained untraced; its curve estimate remained 3134.07 pixels. Figure 8 contrasts the recovered return, the complete U and the unresolved case using saved paths. A fixed terminal-rollback comparison on all 50 images added path arc but introduced local detours and was not adopted; the complete results are given in Additional file 1.
 
-![FIG8](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG8.png)
+![FIG8](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG8.png)
 
 **Fig. 8.** Returning-root examples from saved paths. The upper row shows the input ordered axis and the lower row shows the retained or extended axis on the same photograph. Columns show the recovered return in 10-1-9(3), the retained U in 235-25-7(1) and the unresolved return in 235-25-9(1). Blue marks the retained input path and orange marks an appended tail; circles and squares mark path starts and ends. The panels share source-image scale (bar, 500 pixels). Curve estimates are in pixels. The examples illustrate the reconstruction behavior and do not estimate an independent success rate.
 
@@ -479,6 +479,6 @@ OpenAI Codex and Notion AI assisted with manuscript drafting, numerical verifica
 
 37. Li P, Zhu T, Wang Y, Zhang X, Yang X, Fang S, et al. Natural variation in a cortex/epidermis-specific transcription factor bZIP89 determines lateral root development and drought resilience in maize. Sci Adv. 2025;11(15):eadt1113. https://doi.org/10.1126/sciadv.adt1113
 
-38. Soybean rhizobag image dataset, study code and frozen reconstruction records. Version submission-en-20261020. root-phenotyping-attunet, GitHub. 2026. https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/submission-en-20261020. Accessed 20 Oct 2026.
+38. Soybean rhizobag image dataset, study code and frozen reconstruction records. Version v1.0.0. root-phenotyping-attunet, GitHub. 2026. https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.0.0. Accessed 20 Oct 2026.
 
 39. Kassis T, Agarwal V, He Y, Patel D, Brueckner AM. Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents. arXiv. 2026;2609.00065. https://doi.org/10.48550/arXiv.2609.00065

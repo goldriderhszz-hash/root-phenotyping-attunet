@@ -1,7 +1,11 @@
 # Citation
 
-For the revised author-review manuscript, cite its displayed authors and title: *Segmentation and contour-guided root reconstruction in soybean rhizobag images*. It is not identified as accepted or assigned a journal DOI.
+## Manuscript
 
-For the data and study snapshots, cite: *Soybean rhizobag image dataset, study code and frozen reconstruction records*. Version `submission-en-20261020` (2026), [https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/submission-en-20261020](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/submission-en-20261020), accessed 20 October 2026. Include the file SHA256 or exact Git commit when relevant. A GitHub release is not called a minted DOI.
+Wang Z, Tian J, Zhang H, Li F, Song T, Zhang Z, Li Y, Chen Q, Zhu R. *Segmentation and contour-guided root reconstruction in soybean rhizobag images*. [Manuscript files](manuscript/README.md).
 
-`CITATION.cff` continues to identify the historical software package. Its version is distinct from the new paper/data version. Original source history and models are preserved; using a later manuscript does not change the old executable's measured behavior.
+## Data and study code
+
+*Soybean rhizobag image dataset, study code and frozen reconstruction records*. Version v1.0.0. root-phenotyping-attunet, GitHub, 2026. https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.0.0. Accessed 20 October 2026.
+
+For computational reproduction, report the release version and relevant file hashes. `CITATION.cff` provides the software citation for RootScope Desktop.

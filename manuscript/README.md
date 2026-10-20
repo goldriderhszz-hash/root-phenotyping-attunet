@@ -1,22 +1,30 @@
-# Current manuscript and figures — submission-en-20261020
+# Manuscript and figures
 
-[English DOCX](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/Manuscript_EN_final.docx) · [English PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/Manuscript_EN_final.pdf)
+**Segmentation and contour-guided root reconstruction in soybean rhizobag images**
 
-[Supplement DOCX](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/Additional_file_1_supplement.docx) · [Supplement PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/Additional_file_1_supplement.pdf) · [Numerical replay](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/Additional_file_2_numerical.zip) · [Legacy geometry replay](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/Additional_file_3_legacy_geometry.zip)
+[Manuscript DOCX](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/Manuscript.docx) · [Manuscript PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/Manuscript.pdf) · [Read online](Manuscript.md)
 
-The source Word document controls typefaces, spacing, margins and page footer. No body line numbering was added at the author's request. Both pseudocode panels retain the supplied black-and-white serif format. Main Word equations are editable native OMML. The Markdown files are reading copies; the DOCX and vector figure files are the typesetting masters.
+## Supplementary information
 
-|Current figure|Subject|Files|
+- Additional file 1: [DOCX](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/Additional_file_1_supplement.docx) / [PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/Additional_file_1_supplement.pdf) — supplementary figures, tables and methods.
+- Additional file 2: [Numerical records and analysis code](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/Additional_file_2_numerical.zip).
+- Additional file 3: [Synthetic geometry audit](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/Additional_file_3_geometry.zip).
+
+The DOCX files are editable; PDFs are reading copies of the same documents. Tables are also provided as [CSV files](tables/).
+
+## Figures
+
+|Figure|Subject|Files|
 |---|---|---|
-|Fig.1|Workflow|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG1.pdf), [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG1.png), [editable PPTX](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG1.pptx)|
-|Fig.2|Annotation representations|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG2.pdf), [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG2.png)|
-|Fig.3|Attention U-Net architecture|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG3.pdf), [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG3.png), [editable PPTX](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG3.pptx)|
-|Fig.4|Candidates and selection|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG4.pdf), [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG4.png)|
-|Fig.5|Controlled segmentation|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG5.pdf), [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG5.png)|
-|Fig.6|Width-dependent recovery|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG6.pdf), [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG6.png)|
-|Fig.7|Whole-root comparison|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG7.pdf), [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG7.png)|
-|Fig.8|Returning-root examples|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG8.pdf), [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/FIG8.png)|
+|1|Study workflow|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG1.pdf) · [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG1.png) · [PPTX](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG1.pptx)|
+|2|Annotation representations|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG2.pdf) · [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG2.png)|
+|3|Attention U-Net architecture|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG3.pdf) · [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG3.png) · [PPTX](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG3.pptx)|
+|4|Path candidates and selection|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG4.pdf) · [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG4.png)|
+|5|Segmentation comparison|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG5.pdf) · [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG5.png)|
+|6|Width-dependent recovery|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG6.pdf) · [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG6.png)|
+|7|Root reconstruction comparison|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG7.pdf) · [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG7.png)|
+|8|Returning-root examples|[PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG8.pdf) · [PNG](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/FIG8.png)|
 
-[Algorithm1 vector PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/ALG1.pdf) · [Algorithm2 vector PDF](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/submission-en-20261020/ALG2.pdf) · [Full figure manifest](figures/manifest.json)
+[Algorithm 1](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/ALG1.pdf) · [Algorithm 2](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/ALG2.pdf) · [Figure PDFs](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/Figures.zip) · [Editable figure sources](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/v1.0.0/Figure_sources.zip)
 
-Original Word Fig.2 (network) is current Fig.3, matching the supplied editable Fig 3 PPTX. Original descriptor agreement/sensitivity Fig.7/8 now appear as Supplementary Figs.S3/S4; current Fig.7/8 concern whole-root selection and returning routes. Old raw/pruned-skeleton schematics document the unchanged historical extractor, described in Methods 2.4 and Supplementary geometry tests. Superseded main-branch drawings are removed; the exact earlier tree remains at commit `92e18aa37fece8f747548a38f73e382904814085`. Numerical source records retain their historical numbering and meanings.
+Legends are included in the manuscript. Individual files and their hashes are listed in the [figure manifest](figures/manifest.json).

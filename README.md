@@ -1,19 +1,49 @@
-# Soybean rhizobag segmentation and contour-guided root reconstruction
+# Soybean rhizobag segmentation and root reconstruction
 
-This repository accompanies **Segmentation and contour-guided root reconstruction in soybean rhizobag images**. The [versioned research release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/submission-en-20261020) provides the editable English manuscript and supplementary information, eight figures and two pseudocode panels, numerical/synthetic replays, the original 50-image dataset, fixed intermediate records, source snapshots and selected models. The manuscript is an author-review research version, not an accepted journal article.
+Code, data and analysis for **Segmentation and contour-guided root reconstruction in soybean rhizobag images**.
 
-## Read and reproduce
+The study combines an Attention U-Net segmentation comparison with contour-guided reconstruction of individual root paths in soybean rhizobag photographs. The dataset contains 50 images and 3290 whole-root polygon annotations. Segmentation quality and the resulting root measurements are evaluated separately.
 
-- [English manuscript](manuscript/Manuscript_EN.md) · [Submission file index](SUBMISSION_FILES.md)
-- [Manuscript/figure downloads](manuscript/README.md) · [Data and materials](DATA_AVAILABILITY.md)
-- [Reproduction instructions](docs/REPRODUCIBILITY.md) · [Dataset manifest](data/dataset_manifest.csv)
-- [Whole-root50-image paired records](analysis/reconstruction/whole_root_all250_image_method_rows.csv)
-- [Version and evidence map](manuscript/VERSIONS.json) · [Research-data terms](DATA_LICENSE.md)
+[Manuscript](manuscript/README.md) · [Data and models](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.0.0) · [Reproduce the analysis](docs/REPRODUCIBILITY.md) · [Desktop application](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop)
 
-The original controlled comparison is 50 images ×4 configurations ×3 seeds (600 segmentation records,2400 descriptor records and 60 fits). Fixed skeleton loss increased Dice by 2.53 percentage points relative to pixel-loss Attention U-Net, but increased retained-segment and junction-region MAEs by 35.03 and 50.05. In a separate fixed-input reconstruction analysis,75%reciprocal-support one-to-one matches increased 586→682 of 3290 references and count MAE decreased 63.00→21.36. Mixed outputs decreased 674→562 but their output proportion increased 10.47%→16.82%. All 50 development images and regressions remain in the records. These are conditional internal results, not validated anatomical primary-root accuracy or external-cohort performance.
+## Repository structure
 
-## Historical desktop application
+|Directory|Contents|
+|---|---|
+|`manuscript/`|Manuscript, figure index and machine-readable tables|
+|`data/`|Dataset description and image/annotation manifest|
+|`research/`|Segmentation protocol, fold assignments, training source and run records|
+|`analysis/`|Segmentation and descriptor analyses; root reconstruction records|
+|`rootscope/`|Desktop segmentation and skeleton-measurement package|
+|`model/`|Five ONNX segmentation models and their metadata|
+|`validation/`|Application checks, source/model comparisons and recorded CPU timing|
+|`docs/`|Installation, usage, analysis reproduction and file descriptions|
 
-The [RootScope Desktop release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop) remains the original grayscale segmentation/reference-descriptor implementation. Its software, five ONNX models, application interfaces and Git history are preserved. The newer whole-root research code is separate; publishing its records does not turn the old executable into an instance-reconstruction application. [Desktop guide](docs/USER_GUIDE.md), [model documentation](MODEL.md) and the original code remain available. Historical figure/table numbering is documented in the manuscript map, not silently reused for new figures.
+## Data and model downloads
 
-Software retains MIT licensing. Original research images and annotations have provider-authorized public access; their separate terms are in DATA_LICENSE.md. The 50 images,3290 whole-root polygons and three training seeds are different statistical units; the three seeds do not create 150 independent plants. Length is in pixels, and root order, attachment identities and physical calibration are not independently established.
+Download the dataset, study sources and selected reconstruction models from [release v1.0.0](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/v1.0.0). The [file index](docs/FILES.md) describes each archive; [DATA_AVAILABILITY.md](DATA_AVAILABILITY.md) gives the dataset and model contents. Check `SHA256SUMS.txt` after downloading.
+
+The image annotations identify whole-root regions. Lengths are reported in pixels; the dataset does not supply physical calibration or exact manually traced centerlines. The manuscript defines the evaluation units and the scope of the reported measurements.
+
+## Reproduce the analysis
+
+Extract `Additional_file_2_numerical.zip` into an empty directory, install the included analysis requirements, and run:
+
+```text
+python revision/replay_revision.py
+python reconstruction/replay_reconstruction.py
+```
+
+For the synthetic geometry audit, extract `Additional_file_3_geometry.zip` and run `python replay_geometry.py`. Full instructions, dependencies and the relationship between the segmentation and reconstruction experiments are in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
+
+## Desktop application
+
+[RootScope Desktop](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop) provides a Windows application for segmentation and skeleton-derived measurements. Extract the complete Windows package and run `RootScope.exe`. Source installation and batch commands are in the [user guide](docs/USER_GUIDE.md). The desktop package and the contour-guided reconstruction study have distinct implementations, documented in [the version map](docs/VERSIONS.json).
+
+## Citation and contact
+
+See [CITATION.md](CITATION.md) for the manuscript and dataset citation, and `CITATION.cff` for the desktop software. Correspondence: Rongsheng Zhu, rshzhu@126.com. Software issues can be reported through [GitHub Issues](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/issues).
+
+## License
+
+Software is distributed under the [MIT license](LICENSE), with third-party notices retained. Research images and annotations have separate [data terms](DATA_LICENSE.md).
