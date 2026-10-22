@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "image": "10-1-2(3).tif",
+  "source_and_binary_descriptors_exact": true,
+  "source_and_binary_selected_paths_exact": true,
+  "svg_bytes": 2667578,
+  "source_fingerprint": "d79f72fc437ed3da9949fc703af09e9b8f67413359b893b9741d2a6eb31c8e9f",
+  "binary_sha256": "a729cc8263981f8aaf2c3458e5b60454fc5dd87741d39fc329f62537ba1e31c1",
+  "backend": "ONNX CPU; internal smoke/parity check, not external biological validation"
+}

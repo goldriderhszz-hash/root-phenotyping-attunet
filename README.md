@@ -14,8 +14,8 @@ The study combines an Attention U-Net segmentation comparison with contour-guide
 |`data/`|Dataset description and image/annotation manifest|
 |`research/`|Segmentation protocol, fold assignments, training source and run records|
 |`analysis/`|Segmentation and descriptor analyses; root reconstruction records|
-|`rootscope/`|Desktop segmentation and skeleton-measurement package|
-|`model/`|Five ONNX segmentation models and their metadata|
+|`rootscope/`|Application and paper reconstruction runtime|
+|`model/`|Historical and D3 ONNX models; numeric reconstruction forests and metadata|
 |`validation/`|Application checks, source/model comparisons and recorded CPU timing|
 |`docs/`|Installation, usage, analysis reproduction and file descriptions|
 
@@ -36,9 +36,19 @@ python reconstruction/replay_reconstruction.py
 
 For the synthetic geometry audit, extract `Additional_file_3_geometry.zip` and run `python replay_geometry.py`. Full instructions, dependencies and the relationship between the segmentation and reconstruction experiments are in [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
 
-## Desktop application
+## RootScope application
 
-[RootScope Desktop](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop) provides a Windows application for segmentation and skeleton-derived measurements. Extract the complete Windows package and run `RootScope.exe`. Source installation and batch commands are in the [user guide](docs/USER_GUIDE.md). The desktop package and the contour-guided reconstruction study have distinct implementations, documented in [the version map](docs/VERSIONS.json).
+**RootScope** now runs the manuscript's primary contour-guided whole-root reconstruction: five D3 segmentation models, frozen quality/count forests, protected-axis continuation and edge-exclusive global decoding. [Install and use](docs/USER_GUIDE.md) · [Implementation alignment and limits](docs/PAPER_ALIGNMENT.md) · [Research figure/report templates](docs/JOURNAL_DESIGN.md).
+
+```text
+python -m pip install -r requirements.txt
+python desktop.py
+python cli.py images --output results
+```
+
+The UI and exports report pixel units, missing values, model hashes and review flags. The name has no version suffix; archived tags and commit IDs remain for reproducibility. The previous [desktop release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop) contains the historical skeleton pipeline, which remains available with `--pipeline legacy`. Current Windows builds are available from this repository's Actions artifacts.
+
+The paper's primary reconstruction matched 682/3290 roots (20.73%) at the declared 75% reciprocal path-support threshold on reused development images. This is a research prototype requiring review, not independently validated anatomical phenotyping. Journal-oriented presentation does not establish acceptance by Plant Methods.
 
 ## Citation and contact
 

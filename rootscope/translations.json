@@ -24,8 +24,8 @@
     "zh": "骨架"
   },
   "text_ade46984c67e": {
-    "en": "RootScope Desktop | Rhizobag image analysis",
-    "zh": "RootScope Desktop | 根系图像表型分析"
+    "en": "RootScope",
+    "zh": "RootScope"
   },
   "text_1bf3defde730": {
     "en": "WORKSPACE",
@@ -44,12 +44,12 @@
     "zh": "研究模型"
   },
   "text_2e1d307d321f": {
-    "en": "Fixed skeleton loss · Seed 42 · Fold 0",
-    "zh": "固定骨架损失 · Seed 42 · Fold 0"
+    "en": "D3 + whole-root reconstruction",
+    "zh": "D3 分割 + 整根重建"
   },
   "text_75a14730934c": {
-    "en": "Local desktop analysis",
-    "zh": "本地桌面分析 · 无需浏览器"
+    "en": "Local analysis · pixel units",
+    "zh": "本地分析 · 像素单位"
   },
   "text_ea69ab24bbaa": {
     "en": "RootScope Desktop  /  Image analysis",
@@ -72,8 +72,8 @@
     "zh": "根系图像表型分析"
   },
   "text_70b87918773e": {
-    "en": "Import images to extract masks, skeletons and traceable image descriptors.",
-    "zh": "导入根系图像，自动获得分割、骨架与可追溯的图像描述符。"
+    "en": "Contour-guided reconstruction · reproducible exports · human review",
+    "zh": "轮廓引导重建 · 可追溯导出 · 人工复核"
   },
   "text_85abcd952e82": {
     "en": "01   Import images",
@@ -144,8 +144,8 @@
     "zh": "同时保存 float32 概率图"
   },
   "text_5e0477856430": {
-    "en": "Exports: CSV, masks, overlays, skeletons and provenance.",
-    "zh": "结果包含 CSV、掩膜、叠加图、骨架图及来源记录。"
+    "en": "Automatic results require review. Report.md explains units and scope.",
+    "zh": "自动结果需复核；Report.md 记录单位与适用范围。"
   },
   "text_67c45ac47d3b": {
     "en": "Run analysis",
@@ -224,8 +224,8 @@
     "zh": "方法与研究证据"
   },
   "text_d11150b45b0f": {
-    "en": "Model provenance, descriptor definitions and internal cross-validation results.",
-    "zh": "明确模型来源、指标定义与论文交叉验证结果。"
+    "en": "Contour-guided reconstruction · reproducible exports · human review",
+    "zh": "轮廓引导重建 · 可追溯导出 · 人工复核"
   },
   "text_435181f7240d": {
     "en": "01   Segmentation and inference",
@@ -454,5 +454,73 @@
   "text_29d4c4647805": {
     "en": "Reference mask and image dimensions differ.",
     "zh": "参考掩膜与原图尺寸不一致"
+  },
+  "paper_image": {
+    "en": "Image",
+    "zh": "图像"
+  },
+  "paper_length": {
+    "en": "Axis length (px)",
+    "zh": "轴线长度 (px)"
+  },
+  "paper_paths": {
+    "en": "Retained paths",
+    "zh": "保留路径数"
+  },
+  "paper_laterals": {
+    "en": "Y attachments",
+    "zh": "Y 形连接数"
+  },
+  "paper_junctions": {
+    "en": "Degree-3 junctions",
+    "zh": "三度连接点数"
+  },
+  "paper_angle": {
+    "en": "Parent-child angle (deg)",
+    "zh": "父子路径夹角 (deg)"
+  },
+  "paper_sidebar": {
+    "en": "D3 + whole-root reconstruction",
+    "zh": "D3 分割 + 整根重建"
+  },
+  "paper_auto_threshold": {
+    "en": "Validation threshold follows the verified image fold. New images use fold 0.",
+    "zh": "按图像哈希匹配研究折并使用验证阈值；新图像使用第 0 折。"
+  },
+  "paper_detail": {
+    "en": "Fold {fold} · {count} retained paths · pixel units · review required",
+    "zh": "第 {fold} 折 · 保留 {count} 条路径 · 像素单位 · 需人工复核"
+  },
+  "paper_method_title": {
+    "en": "Contour-guided reconstruction",
+    "zh": "轮廓引导的整根重建"
+  },
+  "paper_method_body": {
+    "en": "D3 segmentation uses CLAHE grayscale, Lab-b and local contrast. The protected operational axis retains its baseline points and permits the frozen terminal continuation. Whole-path candidates receive geometry and image features; an ExtraTrees quality model and a count model guide edge-exclusive global selection (paper primary arm E).",
+    "zh": "D3 分割使用 CLAHE 灰度、Lab-b 与局部对比。受保护的操作性轴线保留基线路径，并使用冻结的末端延伸规则。整根候选的几何和图像特征进入质量评分模型，配合计数模型进行边互斥全局选择（论文主要方案 E）。"
+  },
+  "paper_model_title": {
+    "en": "Models and reproducibility",
+    "zh": "模型与可复现性"
+  },
+  "paper_model_body": {
+    "en": "Five D3 ONNX models and five corresponding sets of frozen quality/count forests and axis policies are shipped. Known study images select their own fold by SHA-256. New images use fold 0 and carry a review flag; no all-data production model was trained. The historical segmentation models remain accessible with --pipeline legacy.",
+    "zh": "程序包含五折 D3 ONNX 模型、对应的冻结质量/计数森林及轴线策略。研究图像按 SHA-256 选择本折；新图像使用第 0 折并加复核标记。尚未训练全数据生产模型。历史分割模型可通过 --pipeline legacy 调用。"
+  },
+  "paper_evidence_title": {
+    "en": "Evidence and interpretation",
+    "zh": "证据与解释"
+  },
+  "paper_evidence_body": {
+    "en": "The paper reports 682/3290 matched roots at 75% reciprocal path support (20.73%) and count MAE 21.36 across 50 reused images. These are conditional internal development results, not independent anatomical validation. Image-feature benefit over geometry alone remains uncertain. Axis identity, counts and angles require visual review.",
+    "zh": "论文在反复使用的 50 张图像上报告：75% 双向路径支持下匹配 682/3290（20.73%），计数 MAE 为 21.36。这是条件性内部开发结果；图像特征相对纯几何的额外收益仍不确定。轴线身份、数量和角度均需人工复核。"
+  },
+  "paper_export_title": {
+    "en": "Export for research reporting",
+    "zh": "科研报告导出"
+  },
+  "paper_export_body": {
+    "en": "Each run exports CSV, JSON, a report and complete model provenance. SVG figures preserve editable orange/blue curves and embed the original photograph. Lengths remain in pixels; missing angles are NA. Journal-inspired formatting does not certify journal acceptance or biological accuracy.",
+    "zh": "每次分析导出 CSV、JSON、报告和完整模型来源。SVG 保留可编辑的橙/蓝路径并嵌入原图。长度使用像素，缺失角度记为 NA。参考期刊的排版不代表期刊认可或生物学准确性。"
   }
 }

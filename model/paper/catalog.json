@@ -1,0 +1,262 @@
+{
+  "application": "RootScope",
+  "algorithm": "contour-guided-whole-root",
+  "primary_arm": "whole_RGB_joint",
+  "segmentation_models": [
+    {
+      "id": "paper_fold_0",
+      "group": "D3_color",
+      "fold": 0,
+      "sha256": "215b1ce515282d1b6be310b0165d3531dfe891456f7b78859871f793bd4ba148",
+      "source_checkpoint_sha256": "2b4700c6e1acf33cebfd10ddd126fe7dad707130fdd4fa3612baa8c57d9401e3",
+      "threshold": 0.6499999761581421,
+      "input_channels": 3,
+      "conversion_max_abs": 5.125999450683594e-06,
+      "conversion_mean_abs": 6.740323499343503e-08,
+      "threshold_pixel_mismatches": 0,
+      "filename": "paper/color_seed42_fold0.onnx"
+    },
+    {
+      "id": "paper_fold_1",
+      "group": "D3_color",
+      "fold": 1,
+      "sha256": "5cd495ee71af5fdcd36d49e0cee5e7a2fead5f0886a8367a89e99df32e3ccb25",
+      "source_checkpoint_sha256": "b31d77a8d1ae2081a0713b1be01bc594641659cb196ca792e6e0b0b5a55d4913",
+      "threshold": 0.6299999952316284,
+      "input_channels": 3,
+      "conversion_max_abs": 1.6093254089355469e-06,
+      "conversion_mean_abs": 2.6652376305946746e-08,
+      "threshold_pixel_mismatches": 0,
+      "filename": "paper/color_seed42_fold1.onnx"
+    },
+    {
+      "id": "paper_fold_2",
+      "group": "D3_color",
+      "fold": 2,
+      "sha256": "f35ad78d5a2c1a7fe6c0465e0a9bbdf0416389a48468b840c0fdee5d63c94b46",
+      "source_checkpoint_sha256": "d007e48db5d6dc57ea216bc37fc61e58ad47f154a76f87d86464aa14152d6a5d",
+      "threshold": 0.23000000417232513,
+      "input_channels": 3,
+      "conversion_max_abs": 6.198883056640625e-06,
+      "conversion_mean_abs": 7.851178907003487e-08,
+      "threshold_pixel_mismatches": 0,
+      "filename": "paper/color_seed42_fold2.onnx"
+    },
+    {
+      "id": "paper_fold_3",
+      "group": "D3_color",
+      "fold": 3,
+      "sha256": "fab1f0afc5b5336518783a2dee25b64af3c3d499a676e4933b14a4a9ad0bad6f",
+      "source_checkpoint_sha256": "b17fc06ca04bf5e4fb75c8de887685866486e7ed0e6115d0d6b976ef95b8266e",
+      "threshold": 0.5600000023841858,
+      "input_channels": 3,
+      "conversion_max_abs": 7.510185241699219e-06,
+      "conversion_mean_abs": 7.669800794474213e-08,
+      "threshold_pixel_mismatches": 0,
+      "filename": "paper/color_seed42_fold3.onnx"
+    },
+    {
+      "id": "paper_fold_4",
+      "group": "D3_color",
+      "fold": 4,
+      "sha256": "8d7f6e985344e0e3a4a3acc3ed334c89b3bc70fa84fc091012bff2a0ba504df0",
+      "source_checkpoint_sha256": "ff9005e4cbf3d2b24b762d8c5ddaf18fc5d35cfa773e3cf59fe92612f1110af2",
+      "threshold": 0.6800000071525574,
+      "input_channels": 3,
+      "conversion_max_abs": 4.589557647705078e-06,
+      "conversion_mean_abs": 4.739495551575601e-08,
+      "threshold_pixel_mismatches": 0,
+      "filename": "paper/color_seed42_fold4.onnx"
+    }
+  ],
+  "reconstruction_models": [
+    {
+      "fold": 0,
+      "kind": "count",
+      "path": "model/paper/fold_0/count.npz",
+      "sha256": "b84d17f967e16866a3a39a86a9ad4157296a5222f0f112e8e52e26c76d23ddb7",
+      "source_sha256": "40d721d3ddab44ebcf5913d9bb28acd5f2b5d47381eea5b838df6a61ffd2d061",
+      "features": 14,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 0,
+      "kind": "geometry",
+      "path": "model/paper/fold_0/geometry.npz",
+      "sha256": "407c815d31d05c7d512e48549e367b7358471ec700a5d77d65738b495a6975fb",
+      "source_sha256": "cc73e316f0e77b98863b05c43d6cf28e9cca1ad9ebd5df68e1885b5af609d7da",
+      "features": 18,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 0,
+      "kind": "RGB",
+      "path": "model/paper/fold_0/RGB.npz",
+      "sha256": "59db836fc96eb2d9ce0370f82949c1547c3a6d0225c48165042c7d810d8eea36",
+      "source_sha256": "cc5c278219871187ca70ccdab8e3550646ae11bb2db165de16b8a1c9470cf056",
+      "features": 30,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 0,
+      "kind": "axis_policy",
+      "path": "model/paper/fold_0/axis_policy.json",
+      "sha256": "e89a045e2e301f7c269515b51d60a5a89f00451649ded9d964615029a5c43e5a",
+      "source_sha256": "e89a045e2e301f7c269515b51d60a5a89f00451649ded9d964615029a5c43e5a"
+    },
+    {
+      "fold": 1,
+      "kind": "count",
+      "path": "model/paper/fold_1/count.npz",
+      "sha256": "e9cd37f3dcd607a1d7e3ebc8052f6b915208d6450b222d44d5d5a4713a59187d",
+      "source_sha256": "5643d2c9605bb30435d31e4e3b0551241f6f4c44aebf0d78cc1df9c88bf6d754",
+      "features": 14,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 1,
+      "kind": "geometry",
+      "path": "model/paper/fold_1/geometry.npz",
+      "sha256": "6805a3032c3f05dabfcf4a6cead30afb3582bd912473b751faa7a4dc10c11a77",
+      "source_sha256": "41cfb7555658ab68ff8cc1f6c508b6c1022bff171b2f31d235d20d9d91b781ed",
+      "features": 18,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 1,
+      "kind": "RGB",
+      "path": "model/paper/fold_1/RGB.npz",
+      "sha256": "279c853bc388100c66e1928c0332b9a19f3b81c884b776225d806daa8b026ae6",
+      "source_sha256": "de3b71f963aea704e10435204b08d361e4823c1e379c934796b080c7da9b35e6",
+      "features": 30,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 1,
+      "kind": "axis_policy",
+      "path": "model/paper/fold_1/axis_policy.json",
+      "sha256": "c3c87ce78448127dbd389f57cb691e50189053aaf1d0c8dfab0054e0099fc48e",
+      "source_sha256": "c3c87ce78448127dbd389f57cb691e50189053aaf1d0c8dfab0054e0099fc48e"
+    },
+    {
+      "fold": 2,
+      "kind": "count",
+      "path": "model/paper/fold_2/count.npz",
+      "sha256": "bc428ee79c10f447b55e9096a7088a2acc6eb4c8c1d6203204e34452f822020a",
+      "source_sha256": "81e617a9ee4076708a2b800c5a9030ecc28076fb488369a9c345127dc30f72f8",
+      "features": 14,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 2,
+      "kind": "geometry",
+      "path": "model/paper/fold_2/geometry.npz",
+      "sha256": "b07305e4e9fd08678f55dc2984c02595885fc1a736760d5938a3f0f759cc7577",
+      "source_sha256": "b4c66641c40f9ad57a931ecf2151bf2571539cf68a0549e9743e067471a416f1",
+      "features": 18,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 2,
+      "kind": "RGB",
+      "path": "model/paper/fold_2/RGB.npz",
+      "sha256": "1b37b0e79fdae102222e97685fc02f9e0bcf92ea313ec5e211aab5736cd08c49",
+      "source_sha256": "e0d02214bea29465714f4dd00cd7426d5f5161758e3adc93111579b749f0bac9",
+      "features": 30,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 2,
+      "kind": "axis_policy",
+      "path": "model/paper/fold_2/axis_policy.json",
+      "sha256": "301876cce6b044cbeddcb4aa9e0ce9c3cfe22bfb0895615e5f6a6b50a13af123",
+      "source_sha256": "301876cce6b044cbeddcb4aa9e0ce9c3cfe22bfb0895615e5f6a6b50a13af123"
+    },
+    {
+      "fold": 3,
+      "kind": "count",
+      "path": "model/paper/fold_3/count.npz",
+      "sha256": "b555bf78c2af7fdf23cee6d228f250592ac22345b28959f6f4b5612bbd9061d4",
+      "source_sha256": "41efe02a02b53db3dd37d0948321d4d2b68764f47139c69eb8a92119092ec2fc",
+      "features": 14,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 3,
+      "kind": "geometry",
+      "path": "model/paper/fold_3/geometry.npz",
+      "sha256": "d463f31b815e95c8c90781af30d8f0c9c21df9a01b7a86057be2da7da56951ea",
+      "source_sha256": "4e35b61798684a365ba4d61149da177c6bccd9c5bf34f4ba9c4a7742fa12edd2",
+      "features": 18,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 3,
+      "kind": "RGB",
+      "path": "model/paper/fold_3/RGB.npz",
+      "sha256": "09ddc6f55d37ff72103ffbf205098ff3ee806bce7fc0e5819d982131f150de6d",
+      "source_sha256": "b6ffdad0ab9e0c0c1e14fa6a5468e9651d11a224791ce0290ea6beb0f500d6a9",
+      "features": 30,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 3,
+      "kind": "axis_policy",
+      "path": "model/paper/fold_3/axis_policy.json",
+      "sha256": "c47c89a809d9126fb71d27ba4531d9954a21b4f50c5a8baa5aa900c79f00a373",
+      "source_sha256": "c47c89a809d9126fb71d27ba4531d9954a21b4f50c5a8baa5aa900c79f00a373"
+    },
+    {
+      "fold": 4,
+      "kind": "count",
+      "path": "model/paper/fold_4/count.npz",
+      "sha256": "4103c5ce9796f3dfd19e9f2090d510cfa5a8c078bb9a179d12b6ebd0cc52bd5a",
+      "source_sha256": "21ef532222dc9fee8866244032bcbc432c7b98dc6e41e055490b89375a51c95d",
+      "features": 14,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 4,
+      "kind": "geometry",
+      "path": "model/paper/fold_4/geometry.npz",
+      "sha256": "05c156fe9f48d2b34113de9355131910de7c5c23c8d01b0d3274c3f2f6ad4c8e",
+      "source_sha256": "2ee4bb327144a95059ca3ad070f44f742a1bf7cda4e81903e6e687febc472c9f",
+      "features": 18,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 4,
+      "kind": "RGB",
+      "path": "model/paper/fold_4/RGB.npz",
+      "sha256": "fbc5998e99817c0f9e0a69ad0389794d9274fa494c8661838a16837b132c27dc",
+      "source_sha256": "2a41b13dc7b0e9a83bf19a8082f203deb7cacc72a13d75421e4d9b91d1c04587",
+      "features": 30,
+      "trees": 128,
+      "format": "numeric NPZ; allow_pickle=False"
+    },
+    {
+      "fold": 4,
+      "kind": "axis_policy",
+      "path": "model/paper/fold_4/axis_policy.json",
+      "sha256": "f382725d38d639228edf5cfa8ee9b23ecb93a8e5fc7b177ed3c2c5d404b03d28",
+      "source_sha256": "f382725d38d639228edf5cfa8ee9b23ecb93a8e5fc7b177ed3c2c5d404b03d28"
+    }
+  ],
+  "sklearn_export_version": "1.9.1",
+  "no_new_fits": true,
+  "all_data_production_model": false
+}

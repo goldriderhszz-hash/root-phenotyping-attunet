@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-message: "Please cite RootScope Desktop and report the source commit or executable hash used."
+message: "Please cite RootScope and report the source commit or executable hash used."
 type: software
-title: "RootScope Desktop"
+title: "RootScope"
 license: MIT
 repository-code: "https://github.com/goldriderhszz-hash/root-phenotyping-attunet"
-url: "https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop"
+url: "https://github.com/goldriderhszz-hash/root-phenotyping-attunet"
 authors:
   - family-names: Wang
     given-names: Zeen
-abstract: "Rhizobag image segmentation and traceable skeleton-derived root descriptors, with a desktop interface, batch analysis and reproducible study records."
+abstract: "Rhizobag image segmentation and contour-guided whole-root reconstruction, with a desktop interface, batch analysis and reproducible model provenance."

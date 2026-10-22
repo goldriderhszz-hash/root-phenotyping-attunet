@@ -1,3 +1,7 @@
+# Current RootScope application
+
+The application now defaults to the paper reconstruction pipeline. See [USER_GUIDE.md](USER_GUIDE.md), [PAPER_ALIGNMENT.md](PAPER_ALIGNMENT.md) and [JOURNAL_DESIGN.md](JOURNAL_DESIGN.md) for current behavior, validation limits, models and outputs. The historical records below retain their original scope.
+
 # Measurement scope
 
 This page describes the grayscale desktop measurements and controlled segmentation experiment. The manuscript also defines the separate contour-guided reconstruction experiment and its evaluation. Dataset contents and access terms are described in [DATA_AVAILABILITY.md](../DATA_AVAILABILITY.md).

@@ -1,0 +1,452 @@
+{
+  "status": "passed",
+  "models": 15,
+  "images": 50,
+  "records": [
+    {
+      "image": "10-1-1(1)",
+      "fold": 3,
+      "candidates": 123,
+      "selected": 27,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-1(2)",
+      "fold": 1,
+      "candidates": 64,
+      "selected": 12,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-1(3)",
+      "fold": 2,
+      "candidates": 170,
+      "selected": 35,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-1",
+      "fold": 3,
+      "candidates": 245,
+      "selected": 47,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-2(1)",
+      "fold": 4,
+      "candidates": 316,
+      "selected": 63,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-2(2)",
+      "fold": 1,
+      "candidates": 381,
+      "selected": 71,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-2(3)",
+      "fold": 0,
+      "candidates": 251,
+      "selected": 52,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-2",
+      "fold": 2,
+      "candidates": 783,
+      "selected": 114,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-3",
+      "fold": 0,
+      "candidates": 383,
+      "selected": 84,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-9(1)",
+      "fold": 3,
+      "candidates": 359,
+      "selected": 80,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-9(2)",
+      "fold": 3,
+      "candidates": 206,
+      "selected": 38,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-1-9(3)",
+      "fold": 4,
+      "candidates": 229,
+      "selected": 49,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-2-1",
+      "fold": 0,
+      "candidates": 495,
+      "selected": 87,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-2-2",
+      "fold": 3,
+      "candidates": 759,
+      "selected": 115,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-2-3",
+      "fold": 3,
+      "candidates": 145,
+      "selected": 29,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-2-4",
+      "fold": 0,
+      "candidates": 334,
+      "selected": 75,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-9-1",
+      "fold": 2,
+      "candidates": 260,
+      "selected": 64,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-9-2",
+      "fold": 4,
+      "candidates": 732,
+      "selected": 105,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-9-3",
+      "fold": 0,
+      "candidates": 352,
+      "selected": 77,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "10-9-4",
+      "fold": 2,
+      "candidates": 328,
+      "selected": 71,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-10-11(1)",
+      "fold": 3,
+      "candidates": 259,
+      "selected": 42,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-10-11(2)",
+      "fold": 1,
+      "candidates": 254,
+      "selected": 36,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-10-11(3)",
+      "fold": 1,
+      "candidates": 685,
+      "selected": 91,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-10-12(1)",
+      "fold": 4,
+      "candidates": 262,
+      "selected": 52,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-10-12(2)",
+      "fold": 0,
+      "candidates": 341,
+      "selected": 76,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-10-12(3)",
+      "fold": 1,
+      "candidates": 786,
+      "selected": 88,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-25-6(1)",
+      "fold": 2,
+      "candidates": 155,
+      "selected": 33,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-25-6(2)",
+      "fold": 4,
+      "candidates": 260,
+      "selected": 35,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-25-7(1)",
+      "fold": 2,
+      "candidates": 406,
+      "selected": 94,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-25-7(2)",
+      "fold": 2,
+      "candidates": 168,
+      "selected": 32,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-25-7(3)",
+      "fold": 2,
+      "candidates": 308,
+      "selected": 66,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-25-9(1)",
+      "fold": 4,
+      "candidates": 205,
+      "selected": 41,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-25-9(2)",
+      "fold": 4,
+      "candidates": 153,
+      "selected": 27,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "235-25-9(3)",
+      "fold": 1,
+      "candidates": 297,
+      "selected": 57,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "447-1-1(1)",
+      "fold": 1,
+      "candidates": 333,
+      "selected": 57,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "447-1-1",
+      "fold": 1,
+      "candidates": 634,
+      "selected": 95,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "7-1-3(1)",
+      "fold": 4,
+      "candidates": 1009,
+      "selected": 127,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "7-1-3(2)",
+      "fold": 4,
+      "candidates": 449,
+      "selected": 81,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "7-1-3(3)",
+      "fold": 0,
+      "candidates": 632,
+      "selected": 104,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "7-1-6(1)",
+      "fold": 0,
+      "candidates": 656,
+      "selected": 103,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "7-1-6(2)",
+      "fold": 3,
+      "candidates": 916,
+      "selected": 122,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "7-1-6(3)",
+      "fold": 2,
+      "candidates": 456,
+      "selected": 89,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "7-1-6(4)",
+      "fold": 0,
+      "candidates": 1013,
+      "selected": 126,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "DN50-235-25-6(2)",
+      "fold": 1,
+      "candidates": 275,
+      "selected": 55,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "DN50-235-25-6(3)",
+      "fold": 1,
+      "candidates": 251,
+      "selected": 42,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "DN50-235-25-7(1)",
+      "fold": 0,
+      "candidates": 164,
+      "selected": 22,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "W82-447-1-13-3(1)",
+      "fold": 3,
+      "candidates": 524,
+      "selected": 96,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "W82-447-1-13-7(1)",
+      "fold": 4,
+      "candidates": 310,
+      "selected": 40,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "W82-447-1-13-7(2)",
+      "fold": 3,
+      "candidates": 81,
+      "selected": 22,
+      "forest_max_absolute_error": 1.1102230246251565e-16,
+      "primary_selection_exact": true
+    },
+    {
+      "image": "W82-447-1-13-7(3)",
+      "fold": 2,
+      "candidates": 757,
+      "selected": 96,
+      "forest_max_absolute_error": 2.220446049250313e-16,
+      "primary_selection_exact": true
+    }
+  ],
+  "full_chain": [
+    {
+      "image": "10-1-2(3)",
+      "fold": 0,
+      "axis_exact": true,
+      "candidate_paths_exact": true,
+      "feature_values_exact": true,
+      "seconds": 16.752684099948965
+    },
+    {
+      "image": "10-1-1(2)",
+      "fold": 1,
+      "axis_exact": true,
+      "candidate_paths_exact": true,
+      "feature_values_exact": true,
+      "seconds": 10.064061800017953
+    },
+    {
+      "image": "10-1-1(3)",
+      "fold": 2,
+      "axis_exact": true,
+      "candidate_paths_exact": true,
+      "feature_values_exact": true,
+      "seconds": 16.118953400058672
+    },
+    {
+      "image": "10-1-1(1)",
+      "fold": 3,
+      "axis_exact": true,
+      "candidate_paths_exact": true,
+      "feature_values_exact": true,
+      "seconds": 18.301735799992457
+    },
+    {
+      "image": "10-1-2(1)",
+      "fold": 4,
+      "axis_exact": true,
+      "candidate_paths_exact": true,
+      "feature_values_exact": true,
+      "seconds": 21.06379259994719
+    }
+  ],
+  "scope": "frozen probability graph replay; no new neural training; not independent validation",
+  "exact_primary_selections": 50,
+  "source_joblib_runtime_required": false
+}

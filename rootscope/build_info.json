@@ -1,0 +1,27 @@
+{
+  "application": "RootScope",
+  "source_fingerprint_sha256": "d79f72fc437ed3da9949fc703af09e9b8f67413359b893b9741d2a6eb31c8e9f",
+  "files": {
+    "cli.py": "a9190deaa702bb8c75ae0d059764b8854f6c3fae135bc222a8c1c831766097ec",
+    "desktop.py": "6c2220d588646034597fd53ea56dbd2c50f759465cf5aac07d84705f33da63c4",
+    "rootscope/__init__.py": "d1fbd02c9ff6501b35f8e2a65f9d3b0f4c339825ce784b704b7b3fd2d61f4add",
+    "rootscope/batch.py": "526ba6b86f55b26436628d0a204e19bdd4281f24c9e38fdaa62a74a8a777df45",
+    "rootscope/engine.py": "4b0806ffedf696afcaaba1168299f5112f0c4a2d50959f5469cd3901b101ee5d",
+    "rootscope/i18n.py": "df15ebf692429cbae4c2ea36f60fc402a1c22a4397f7eb0d6a9f849b46597d75",
+    "rootscope/models.py": "e54d61d83c4f393880cdd9cac29112ec01439b028ecd9f2f0d04fe0ce2dfa82b",
+    "rootscope/network.py": "37ac5956afcb3f8a550641ff71bef5dc07e5c53b3802920f651f97ba63d35754",
+    "rootscope/paper/__init__.py": "4427c7bccc8fb34acfb731faad9a14de21c6e29cda7251421f3ffab5a51fbafb",
+    "rootscope/paper/axis.py": "705dde21a2b9dd8ef532c1b5742c5169fe028e3b154c8eae4b342d9475d5eb54",
+    "rootscope/paper/batch.py": "7ccfb1949c2b4fdde70d10811912cfab5e71ad9ad3503c79d8a52ff84f1cf1f4",
+    "rootscope/paper/candidates.py": "35ba708faf1ac2c965293b99d7a959f7faa4be860fef8bedc278f29ffd27ba92",
+    "rootscope/paper/common.py": "e6e2d3769dac98e8c0b9d6c92119e2c3d0a020e8a1c9a73cdfe1e373e5acae73",
+    "rootscope/paper/decoder.py": "b9fa975e3b6cb8175b8016bed2efb5934ff3989d0409b98eb52ac3faf0829dfb",
+    "rootscope/paper/geometry.py": "7815eb8a5ad2ce51f1cdc88ce6b5f4d420f3ea4ad9eae9650e33f4c543159b55",
+    "rootscope/paper/hypothesis_graph.py": "99d90c1a2d0602a06a3a4a7ba1dcbb4de10a571308093366034762c98e802c36",
+    "rootscope/paper/policy.py": "f3e5e855834bf38c3eea52a7abd8f325572bebd66e7bee89ab546d84f2b0cb6a",
+    "rootscope/paper/preprocessing.py": "bef691d90bbd3f9e385237d715646ccf9dbafbd7cc675124a95fac2eaa87256a",
+    "rootscope/paper/runtime.py": "b5d05a8c5778a9352320b27aabd2abc4762fa7884b6cdaaa077f3a0d9ab42336",
+    "rootscope/paper/terminal.py": "05c6fff4d5eba7f47882bed6c7cf118190797ff50c89f72d902471adfee7642c",
+    "rootscope/phenotype_extractor.py": "5a7fe8931e436a3fb41366bd000a68ed5a030c47d56d9c0485efc3886fe01c63"
+  }
+}

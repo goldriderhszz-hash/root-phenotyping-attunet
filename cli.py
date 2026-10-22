@@ -31,8 +31,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("images", nargs="+", help="Image files or directories")
     parser.add_argument("--references", nargs="*", default=[], help="Reference masks or directories")
     parser.add_argument("--output", type=Path, required=True, help="Output parent directory")
-    parser.add_argument("--model", choices=[item["id"] for item in catalog()["models"]], default=DEFAULT_MODEL_ID,
-                        help="Locked seed-42 fold model; each has its own validation-selected threshold")
+    parser.add_argument("--model", choices=["auto"] + [f"paper_fold_{i}" for i in range(5)] + [item["id"] for item in catalog()["models"]], default="auto",
+                        help="auto selects a known study image by SHA-256; new images use fold 0 with a review flag")
+    parser.add_argument("--pipeline", choices=["paper", "legacy"], default="paper", help="Paper primary reconstruction or historical skeleton descriptors")
     parser.add_argument("--threshold", type=float, default=None,
                         help="Override the selected model's validation threshold")
     parser.add_argument("--save-probability", action="store_true")
@@ -43,8 +44,14 @@ def main(argv: list[str] | None = None) -> int:
     try:
         images = image_paths(args.images)
         references = image_paths(args.references)
+        if args.pipeline == 'legacy' and args.model == 'auto':
+            args.model = DEFAULT_MODEL_ID
+        if args.pipeline == 'legacy' and args.model.startswith('paper_'):
+            raise ValueError('Use fold_0 through fold_4 with the legacy pipeline')
+        if args.pipeline == 'paper' and args.model != 'auto' and not args.model.startswith('paper_'):
+            raise ValueError('Use auto or paper_fold_0 through paper_fold_4 with the paper pipeline')
         result = run_batch(images, references, args.output, args.threshold,
-                           args.save_probability, make_zip=not args.no_zip, model_id=args.model)
+                           args.save_probability, make_zip=not args.no_zip, model_id=args.model, pipeline=args.pipeline)
     except (OSError, ValueError) as error:
         parser.exit(2, f"RootScope: {error}\n")
     print(json.dumps({"folder": result["folder"], "archive": result["archive"],

@@ -1,0 +1,23 @@
+{
+  "status": "executed_with_recorded_difference",
+  "image": "10-1-2(3).tif",
+  "fold": 0,
+  "fold_assignment": "verified_study_image_hash",
+  "probability_max_absolute_difference": 0.018099278211593628,
+  "threshold_mask_different_pixels": 142,
+  "historical_selected_paths": 52,
+  "current_selected_paths": 50,
+  "descriptors": {
+    "axis_curve_length_px": 678.4776432125151,
+    "first_order_lateral_count": 3,
+    "branch_junction_count": 55,
+    "mean_parent_child_angle_deg": 37.82479774340058,
+    "ambiguous_contact_count": 17,
+    "valid_angle_n": 2,
+    "missing_angle_n": 1,
+    "reconstructed_path_count": 50,
+    "path_status": "candidate"
+  },
+  "interpretation": "One actual full-photograph ONNX CPU run. Historical saved probabilities may have been produced with a different backend/precision; exact historical topology is not promised.",
+  "svg_bytes": 2667578
+}

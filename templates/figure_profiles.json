@@ -1,0 +1,27 @@
+{
+  "checked": "2026-10-22",
+  "official_template": false,
+  "PlantMethods": {
+    "formats": [
+      "SVG",
+      "PDF",
+      "PNG"
+    ],
+    "figure_title_in_graphic": false,
+    "legend_location": "manuscript",
+    "max_file_mb": 10,
+    "source": "https://link.springer.com/journal/13007/submission-guidelines"
+  },
+  "Nature_reference": {
+    "width_mm": 180,
+    "max_height_mm": 170,
+    "editable_vectors": true,
+    "font": "Arial or Helvetica",
+    "text_points": [
+      5,
+      7
+    ],
+    "panel_label_points": 8,
+    "source": "https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/"
+  }
+}

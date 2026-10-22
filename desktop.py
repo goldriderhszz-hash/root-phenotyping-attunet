@@ -21,6 +21,7 @@ from rootscope.batch import IMAGE_SUFFIXES, run_batch
 from rootscope import APPLICATION_NAME
 from rootscope.engine import DEFAULT_THRESHOLD
 from rootscope.models import DEFAULT_MODEL_ID, catalog, model_spec
+from rootscope.paper.runtime import catalog as paper_catalog, model_spec as paper_model_spec
 BG = '#f4f8f6'
 WHITE = '#ffffff'
 INK = '#193544'
@@ -69,7 +70,7 @@ class RootScopeApp(Window):
         self.last_output: Path | None = None
         self.last_archive: Path | None = None
         self.threshold = tk.DoubleVar(value=DEFAULT_THRESHOLD)
-        self.model_id = tk.StringVar(value=DEFAULT_MODEL_ID)
+        self.model_id = tk.StringVar(value='auto')
         self.save_probability = tk.BooleanVar(value=False)
         self.output_folder = tk.StringVar(value=str(Path.home() / 'Documents' / 'RootScope Results'))
         self.layer = tk.StringVar(value='overlay')
@@ -117,7 +118,8 @@ class RootScopeApp(Window):
         threshold = self.threshold.get()
         self._model_changed()
         self.threshold.set(threshold)
-        self._threshold_changed(threshold)
+        if self.model_id.get() != 'auto':
+            self._threshold_changed(threshold)
         if self.last_result:
             self._complete(self.last_result)
             if selected and selected[0] in self.rows:
@@ -145,8 +147,8 @@ class RootScopeApp(Window):
         self.language_choice.set('English' if self.language == 'en' else '中文')
         self.language_choice.pack(side='bottom', padx=20, pady=12)
         self.language_choice.bind('<<ComboboxSelected>>', self._change_language)
-        label(sidebar, '◈  RootScope Desktop', 12, 'bold', WHITE, NAVY).pack(anchor='w', padx=25, pady=(31, 2))
-        label(sidebar, 'RESEARCH DESKTOP', 8, 'bold', '#9ebcb8', NAVY).pack(anchor='w', padx=54)
+        label(sidebar, 'RootScope', 12, 'bold', WHITE, NAVY).pack(anchor='w', padx=25, pady=(31, 2))
+        label(sidebar, 'ROOT IMAGE ANALYSIS', 8, 'bold', '#9ebcb8', NAVY).pack(anchor='w', padx=54)
         label(sidebar, tr('text_1bf3defde730'), 9, 'bold', '#8aadaa', NAVY).pack(anchor='w', padx=24, pady=(58, 13))
         self.analysis_nav = tk.Button(sidebar, text=tr('text_c59591205d33'), command=lambda: self._show_page('analysis'), anchor='w', padx=20, pady=12, bd=0, relief='flat', font=(FONT, 11, 'bold'), fg=WHITE, bg='#24565b', cursor='hand2')
         self.analysis_nav.pack(fill='x', padx=13, pady=3)
@@ -266,8 +268,8 @@ class RootScopeApp(Window):
         model_row = tk.Frame(settings, bg=WHITE)
         model_row.grid(row=1, column=0, sticky='ew', padx=20, pady=(0, 12))
         label(model_row, tr('text_5af4c063583e'), 9, 'bold').pack(side='left')
-        choices = [item['id'] for item in catalog()['models']]
-        self.model_choice = ttk.Combobox(model_row, textvariable=self.model_id, values=choices, state='readonly', width=12)
+        choices = ['auto'] + [item['id'] for item in paper_catalog()['segmentation_models']]
+        self.model_choice = ttk.Combobox(model_row, textvariable=self.model_id, values=choices, state='readonly', width=17)
         self.model_choice.pack(side='right')
         self.model_choice.bind('<<ComboboxSelected>>', self._model_changed)
         threshold_row = tk.Frame(settings, bg=WHITE)
@@ -275,7 +277,8 @@ class RootScopeApp(Window):
         label(threshold_row, tr('text_bd4262205c03'), 9, 'bold').pack(side='left')
         self.threshold_label = label(threshold_row, '0.47', 14, 'bold', TEAL)
         self.threshold_label.pack(side='right')
-        tk.Scale(settings, variable=self.threshold, from_=0.1, to=0.9, resolution=0.01, orient='horizontal', showvalue=False, command=self._threshold_changed, length=330, troughcolor='#dcebe5', activebackground=TEAL, highlightthickness=0, bd=0, bg=WHITE).grid(row=3, column=0, sticky='ew', padx=20)
+        self.threshold_slider = tk.Scale(settings, variable=self.threshold, from_=0.1, to=0.9, resolution=0.01, orient='horizontal', showvalue=False, command=self._threshold_changed, length=330, troughcolor='#dcebe5', activebackground=TEAL, highlightthickness=0, bd=0, bg=WHITE)
+        self.threshold_slider.grid(row=3, column=0, sticky='ew', padx=20)
         self.threshold_note = label(settings, tr('text_985837893288'), 8, color=MUTED)
         self.threshold_note.grid(row=4, column=0, sticky='w', padx=20)
         tk.Frame(settings, bg=LINE, height=1).grid(row=5, column=0, sticky='ew', padx=20, pady=14)
@@ -330,10 +333,10 @@ class RootScopeApp(Window):
         table_panel.grid_columnconfigure(0, weight=1)
         table_panel.grid_rowconfigure(1, weight=1)
         label(table_panel, tr('text_a9ee0f8b9c9b'), 12, 'bold').grid(row=0, column=0, sticky='w', padx=17, pady=(15, 11))
-        columns = ('name', 'path', 'segments', 'junctions', 'angle', 'qc')
+        columns = ('name', 'path', 'segments', 'laterals', 'junctions', 'angle', 'qc')
         self.table = ttk.Treeview(table_panel, columns=columns, show='headings', style='Root.Treeview', selectmode='browse', height=5)
-        labels = {'name': tr('text_0a0ce84ddefc'), 'path': tr('text_a6ec3bcf9764'), 'segments': tr('text_2655cdf66ea8'), 'junctions': tr('text_11ecc3977538'), 'angle': tr('text_ea4d5246424e'), 'qc': tr('text_b38c92c32df6')}
-        widths = {'name': 160, 'path': 160, 'segments': 145, 'junctions': 155, 'angle': 160, 'qc': 145}
+        labels = dict(zip(columns, [tr(k) for k in ('paper_image','paper_length','paper_paths','paper_laterals','paper_junctions','paper_angle','text_b38c92c32df6')]))
+        widths = {'name': 160, 'path': 130, 'segments': 120, 'laterals': 125, 'junctions': 130, 'angle': 160, 'qc': 140}
         for key in columns:
             self.table.heading(key, text=labels[key])
             self.table.column(key, width=widths[key], minwidth=widths[key], stretch=False, anchor='w' if key == 'name' else 'center')
@@ -388,32 +391,14 @@ class RootScopeApp(Window):
         window = canvas.create_window((0, 0), window=body, anchor='nw')
         body.bind('<Configure>', lambda event: canvas.configure(scrollregion=canvas.bbox('all')))
         canvas.bind('<Configure>', lambda event: canvas.itemconfigure(window, width=event.width))
-        sections = [(tr('text_435181f7240d'), tr('text_12876f9dbca9')), (tr('text_fb982e528d64'), tr('text_ba8a9d129592')), (tr('text_546eb27619da'), tr('text_127ecaed4a0c'))]
-        for title, text in sections:
+        for heading, content in [('paper_method_title','paper_method_body'), ('paper_model_title','paper_model_body'), ('paper_evidence_title','paper_evidence_body'), ('paper_export_title','paper_export_body')]:
             frame = tk.Frame(body, bg=WHITE)
-            frame.pack(fill='x', padx=24, pady=(19, 0))
-            label(frame, title, 12, 'bold').pack(anchor='w')
-            description = label(frame, text, 9, color=MUTED, wraplength=870, justify='left')
-            description.pack(anchor='w', pady=(7, 0))
+            frame.pack(fill='x', padx=24, pady=(22, 8))
+            label(frame, tr(heading), 12, 'bold').pack(anchor='w')
+            description = label(frame, tr(content), 10, color=MUTED, wraplength=870, justify='left')
+            description.pack(anchor='w', pady=(9, 0))
             frame.bind('<Configure>', lambda event, widget=description: widget.configure(wraplength=max(120,event.width-4)))
-        label(body, tr('text_ae1b7597035f'), 12, 'bold').pack(anchor='w', padx=24, pady=(26, 10))
-        cols = ('config', 'dice', 'iou', 'cldice', 'fine')
-        table = ttk.Treeview(body, columns=cols, show='headings', height=4, style='Root.Treeview')
-        for key, title, width in [('config', tr('text_d7d7ce790b9a'), 310), ('dice', 'Dice', 100), ('iou', 'IoU', 100), ('cldice', 'hard clDice', 130), ('fine', tr('text_87a6d54d5aaf'), 130)]:
-            table.heading(key, text=title)
-            table.column(key, width=width, anchor='w' if key == 'config' else 'center')
-        for values in [(tr('text_4b604be4f560'), '0.5504', '0.3821', '0.6207', '0.5883'), (tr('text_fdd5429cb311'), '0.5590', '0.3899', '0.6463', '0.5903'), (tr('text_de47abdc7362'), '0.5843', '0.4149', '0.6743', '0.6564'), (tr('text_9190cf526558'), '0.5754', '0.4065', '0.6586', '0.6348')]:
-            table.insert('', 'end', values=values)
-        table.pack(fill='x', padx=24)
-        horizontal = ttk.Scrollbar(body, orient='horizontal', command=table.xview)
-        horizontal.pack(fill='x', padx=24)
-        table.configure(xscrollcommand=horizontal.set)
-        study_note = label(body, tr('text_ba05c6039832'), 8, color=MUTED, wraplength=870, justify='left')
-        study_note.pack(anchor='w', padx=24, pady=(9, 0))
-        label(body, tr('text_0a6bad6aac69'), 12, 'bold').pack(anchor='w', padx=24, pady=(24, 7))
-        interpretation = label(body, tr('text_07ff08ebf446'), 9, color=MUTED, wraplength=870, justify='left')
-        interpretation.pack(anchor='w', padx=24, pady=(0, 28))
-        body.bind('<Configure>', lambda event: (canvas.configure(scrollregion=canvas.bbox('all')), study_note.configure(wraplength=max(120,event.width-48)), interpretation.configure(wraplength=max(120,event.width-48))))
+        self._model_changed()
 
     def _shortcuts(self):
         self.bind('<Control-o>', lambda event: self._choose_images())
@@ -497,11 +482,14 @@ class RootScopeApp(Window):
         self.threshold_label.configure(text=f'{float(value):.2f}')
 
     def _model_changed(self, event=None):
-        spec = model_spec(self.model_id.get())
+        automatic = self.model_id.get() == 'auto'
+        fold = 0 if automatic else int(self.model_id.get().rsplit('_',1)[-1])
+        spec = paper_model_spec(fold)
         self.threshold.set(float(spec['threshold']))
-        self.threshold_label.configure(text=f"{float(spec['threshold']):.2f}")
-        self.threshold_note.configure(text=tr('text_4711faca156d', p0=f"{float(spec['threshold']):.2f}"))
-        self.model_sidebar.configure(text=tr('text_fd91828ca4a3', p0=f"{spec['fold']}"))
+        self.threshold_slider.configure(state='disabled' if automatic else 'normal')
+        self.threshold_label.configure(text='Auto' if automatic else f"{float(spec['threshold']):.2f}")
+        self.threshold_note.configure(text=tr('paper_auto_threshold') if automatic else tr('text_4711faca156d', p0=f"{float(spec['threshold']):.2f}"))
+        self.model_sidebar.configure(text=tr('paper_sidebar'))
 
     def _start(self):
         if self.running:
@@ -530,7 +518,7 @@ class RootScopeApp(Window):
             widget.configure(text='—')
         inputs = list(self.images)
         references = list(self.references)
-        threshold = float(self.threshold.get())
+        threshold = None if self.model_id.get() == 'auto' else float(self.threshold.get())
         model_id = self.model_id.get()
         save_probability = self.save_probability.get()
         threading.Thread(target=self._worker, args=(inputs, references, folder, threshold, save_probability, model_id), daemon=True).start()
@@ -538,7 +526,7 @@ class RootScopeApp(Window):
     def _worker(self, images, references, output, threshold, save_probability, model_id):
         set_language(self.language)
         try:
-            result = run_batch(images, references, output, threshold, save_probability, self.cancel_event, lambda done, total, text: self.events.put(('progress', done, total, text)), model_id=model_id)
+            result = run_batch(images, references, output, threshold, save_probability, self.cancel_event, lambda done, total, text: self.events.put(('progress', done, total, text)), model_id=model_id, pipeline='paper')
             self.events.put(('complete', result))
         except Exception as error:
             self.events.put(('error', str(error)))
@@ -589,7 +577,7 @@ class RootScopeApp(Window):
         fractions = sorted((item['foreground_fraction'] for item in rows))
         self.stats['images'].configure(text=str(len(rows)))
         self.stats['foreground'].configure(text=f'{100 * ((fractions[(len(fractions) - 1) // 2] + fractions[len(fractions) // 2]) / 2):.2f}' if fractions else '—')
-        self.stats['paths'].configure(text=str(sum((item['descriptors']['path_status'] == 'ok' for item in rows))))
+        self.stats['paths'].configure(text=str(sum((item['descriptors']['path_status'] in ('ok','candidate') for item in rows))))
         self.stats['qc'].configure(text=str(sum((bool(item['qc_flags']) for item in rows))))
         for item in rows:
             descriptors = item['descriptors']
@@ -597,7 +585,7 @@ class RootScopeApp(Window):
             def shown(value):
                 return '—' if value is None else f'{value:.1f}'
             iid = item['image_id']
-            self.table.insert('', 'end', iid=iid, values=(item['image_name'], shown(descriptors['dominant_path_length']), descriptors['retained_segment_count'], descriptors['junction_region_count'], shown(descriptors['mean_local_acute_angle_deg']), tr('text_eaae1132582f') if item['qc_flags'] else tr('text_f78d037abccd')))
+            self.table.insert('', 'end', iid=iid, values=(item['image_name'], shown(descriptors.get('axis_curve_length_px')), descriptors.get('reconstructed_path_count'), descriptors.get('first_order_lateral_count'), descriptors.get('branch_junction_count'), shown(descriptors.get('mean_parent_child_angle_deg')), tr('text_eaae1132582f') if item['qc_flags'] else tr('text_f78d037abccd')))
             self.rows[iid] = item
         if rows:
             self.table.selection_set(rows[0]['image_id'])
@@ -630,6 +618,8 @@ class RootScopeApp(Window):
             def metric(value):
                 return '—' if value is None else f'{value:.3f}'
             detail += tr('text_eaa8f62504bf', p0=f"{metric(evaluation['dice'])}", p1=f"{metric(evaluation['iou'])}", p2=f"{metric(evaluation['hard_cldice'])}")
+        if item.get('pipeline') == 'paper':
+            detail = tr('paper_detail', fold=item['fold'], count=item['descriptors']['reconstructed_path_count']) + '\n' + detail
         self.details.configure(text=detail)
         self._refresh_preview()
 
@@ -688,7 +678,18 @@ def main():
             if probability.shape != (256, 256) or not np.isfinite(probability).all():
                 raise RuntimeError(f"Self-test failed: invalid output for {spec['id']}")
             checked.append({'id': spec['id'], 'sha256': spec['sha256'], 'provider': engine.device})
-        report = {'status': 'ok', 'application': APPLICATION_NAME, 'models': checked, 'shape': [256, 256]}
+        from rootscope.paper.runtime import PaperEngine, artifact, catalog as paper_catalog
+        paper_checked = []
+        for fold in range(5):
+            engine = PaperEngine(fold)
+            gray = np.full((256,256),180,np.uint8)
+            probability = engine.predict_photo(gray, np.repeat(gray[:,:,None],3,axis=2))
+            if probability.shape != gray.shape or not np.isfinite(probability).all():
+                raise RuntimeError('Invalid D3 output')
+            for kind in ('count','geometry','RGB','axis_policy'):
+                artifact(fold,kind)
+            paper_checked.append({'id':engine.spec['id'],'sha256':engine.spec['sha256'],'provider':engine.device})
+        report = {'status': 'ok', 'application': APPLICATION_NAME, 'models': checked, 'paper_models':paper_checked, 'reconstruction_artifacts':len(paper_catalog()['reconstruction_models']), 'shape': [256, 256]}
         if len(sys.argv) >= 3:
             Path(sys.argv[2]).write_text(json.dumps(report, indent=2), encoding='utf-8')
         else:

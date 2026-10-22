@@ -37,13 +37,13 @@ jobs:
             throw "Packaged RootScope self-test failed"
           }
           $result = Get-Content $report -Raw | ConvertFrom-Json
-          if ($result.status -ne "ok" -or $result.models.Count -ne 5) {
-            throw "The release must load all five ONNX models"
+          if ($result.status -ne "ok" -or $result.models.Count -ne 5 -or $result.paper_models.Count -ne 5 -or $result.reconstruction_artifacts -ne 20) {
+            throw "The release must load historical/D3 models and all paper reconstruction artifacts"
           }
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: RootScope-Desktop-Windows-x64
+          name: RootScope-Windows-x64
           path: |
-            release/RootScope-Desktop-Windows-x64.zip
+            release/RootScope-Windows-x64.zip
             release/SHA256SUMS.txt

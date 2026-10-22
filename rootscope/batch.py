@@ -35,6 +35,8 @@ def finite(value):
         return [finite(item) for item in value]
     if isinstance(value, (float, np.floating)):
         return float(value) if math.isfinite(float(value)) else None
+    if isinstance(value, (bool, np.bool_)):
+        return bool(value)
     if isinstance(value, (int, np.integer)):
         return int(value)
     return value
@@ -49,6 +51,10 @@ def match_reference(image: Path, references: list[Path]) -> Path | None:
 def row_for(result: dict) -> dict:
     row = {key: result.get(key) for key in ('image_name', 'image_sha256', 'width', 'height', 'foreground_fraction', 'threshold')}
     row.update(result['descriptors'])
+    if result.get('pipeline') == 'paper':
+        row.update({key: result[key] for key in ('pipeline', 'model_id', 'fold', 'onnx_sha256')})
+        row['biological_identity_validated'] = False
+        row['solver_status'] = result['reconstruction'].get('solver', {}).get('solver_status')
     row['qc_flags'] = ';'.join(result['qc_flags'])
     row['reference_sha256'] = result.get('reference_sha256')
     for key, value in result.get('evaluation', {}).items():
@@ -68,7 +74,13 @@ def write_csv(path: Path, rows: list[dict], fallback_fields: list[str]) -> None:
         writer.writeheader()
         writer.writerows(rows)
 
-def run_batch(images: list[Path], references: list[Path], output_root: Path, threshold: float | None=None, save_probability: bool=False, cancel_event: threading.Event | None=None, progress: Progress | None=None, make_zip: bool=True, model_id: str=DEFAULT_MODEL_ID) -> dict:
+def run_batch(images: list[Path], references: list[Path], output_root: Path, threshold: float | None=None, save_probability: bool=False, cancel_event: threading.Event | None=None, progress: Progress | None=None, make_zip: bool=True, model_id: str=DEFAULT_MODEL_ID, pipeline: str='legacy') -> dict:
+    if pipeline == 'paper':
+        from .paper.batch import run_paper_batch
+        return run_paper_batch(images, references, output_root, threshold, save_probability,
+                               cancel_event, progress, make_zip, model_id)
+    if pipeline != 'legacy':
+        raise ValueError('Unknown pipeline')
     if not images:
         raise ValueError(tr('text_1de29b7bc60c'))
     spec = model_spec(model_id)

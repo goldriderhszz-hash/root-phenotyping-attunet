@@ -1,1 +1,1 @@
-APPLICATION_NAME = "RootScope Desktop"
+APPLICATION_NAME = "RootScope"

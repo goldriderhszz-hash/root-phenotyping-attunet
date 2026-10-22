@@ -1,3 +1,7 @@
+# Current RootScope application
+
+The application now defaults to the paper reconstruction pipeline. See [USER_GUIDE.md](USER_GUIDE.md), [PAPER_ALIGNMENT.md](PAPER_ALIGNMENT.md) and [JOURNAL_DESIGN.md](JOURNAL_DESIGN.md) for current behavior, validation limits, models and outputs. The historical records below retain their original scope.
+
 # Downloads
 
 |Resource|Location|

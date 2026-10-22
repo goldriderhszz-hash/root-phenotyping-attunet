@@ -1,3 +1,11 @@
+# RootScope models
+
+The default paper pipeline uses five D3 three-channel ONNX models and fold-specific frozen reconstruction forests and axis policies. Exact hashes, thresholds, source-checkpoint hashes and export diagnostics are in `model/paper/catalog.json`. Numeric forests load without pickle, joblib or scikit-learn. `study_folds.json` matches study images by content hash. There is no all-data production model. See [paper alignment](docs/PAPER_ALIGNMENT.md).
+
+## Historical single-channel segmentation models
+
+The following pre-existing documentation describes `--pipeline legacy` and the archived desktop release.
+
 # Released model catalog
 
 Five frozen Attention U-Net models with the fixed soft-clDice training loss are distributed as ONNX graphs. They are independent fold checkpoints from seed 42, not an ensemble and not a refit on all 50 images. The source checkpoint, epoch, and threshold for each fold were selected without looking at that fold's test images. The machine-readable record is [`model/catalog.json`](model/catalog.json).

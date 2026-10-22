@@ -1,50 +1,35 @@
-# RootScope Desktop user guide
+# RootScope user guide
 
-This guide describes RootScope Desktop from image import to traceable exports.
+RootScope performs D3 segmentation and contour-guided whole-root reconstruction for rhizobag photographs. Results require review. See [paper alignment](PAPER_ALIGNMENT.md) for validation and scientific limitations.
 
-## Import and configure
+## Windows
 
-Use **Select images**, **Import folder** or drag-and-drop. Supported formats are TIFF, PNG, JPEG and BMP. Folder import includes files at the selected level, not nested directories. Duplicate file paths are ignored. **Clear** clears inputs while idle.
+Extract the complete `RootScope-Windows-x64.zip`. Open `RootScope.exe` and keep `_internal` beside it. Select images or a folder, keep model `auto`, choose an output directory and run analysis. Known study images use their own recorded fold by image hash; new images use fold 0 with a review flag. Automatic mode uses each fold's validation-selected threshold. Manual fold/threshold choices are recorded.
 
-If source images and reference-mask PNGs share a directory, select only the source
-files: whole-folder import includes every supported image, including mask PNGs.
-Reference matching uses stems; provide an unambiguous matching mask for each source.
+Select a result to view the source, overlay, mask and retained paths. The table shows operational axis length (px), retained paths, geometric Y attachments, degree-3 junctions and parent-child projected angle (deg). Missing measurements are NA. Orange is the protected axis; blue is other retained paths. **Review required** is a request to inspect results, not a measurement of human correction burden.
 
-Optional reference masks match the source stem or `_mask`/`-mask` suffixes. Supply white root foreground, black background and identical dimensions. The reader binarizes references at intensity >127. Reference masks do not enter prediction.
+The language selector supports English and Chinese. Inputs and completed results are preserved when switching while idle. Large images and complex graphs can take appreciably longer than small examples; cancellation takes effect between images.
 
-Select a fold model. Selection restores its validation threshold; manual changes are recorded in provenance. For the study use `research/fold_assignments.json` to choose each image's held-out model. A checkpoint selected for unrelated images does not carry an external accuracy guarantee. Selecting a threshold from test-mask scores invalidates held-out evaluation.
+## Source and command line
 
-For new images, fold 0 and its threshold 0.47 provide a declared, reproducible starting configuration. Inspect masks and QC outputs; no fold has been established as biologically superior on new images. Do not choose among folds by scoring the same labels later reported as held-out evaluation. The fixed-loss models were retained as the highest-Dice case for the error audit, although the study's pixel-loss Attention U-Net had smaller segment/junction errors. These five models do not establish reliable biological counting.
-
-Import upright root images. The dominant path selects the component with greatest vertical span and does not estimate anatomical orientation; rotating an image can change the selected path. Eight-neighbor adjacency can produce candidate junctions at rasterized bends as well as contacts and crossings.
-
-Choose a writable output directory and optionally save float32 probability maps. Each task writes a new subdirectory.
-
-## Analyze and inspect
-
-Choose **Run analysis**. Language/model selection is disabled during processing. **Cancel** stops after the current image completes, retaining completed outputs and a cancelled report. Closing during analysis asks whether to exit after that image.
-
-Select a result row. Source/overlay/mask/skeleton views support inspection of missed thin roots, extra foreground, crossings, false connections and border contact. The overlay highlights predicted foreground and the dominant path. The skeleton view combines the pruned skeleton with the raw dominant path. Individual-root identity is not traced.
-
-The table reports a path in pixels, retained segments, candidate junction regions and an exploratory angle in degrees. **No flags** indicates only that implemented checks raised no flag; **Review required** indicates at least one flag. Neither is an anatomical accuracy verdict.
-
-Settings and results have vertical scrollbars; the table has a horizontal scrollbar. Scroll small windows to inspect all settings and preview content.
-
-## Language and export
-
-Choose **English** or **Chinese** while idle. First use defaults to English; later runs retain the selected language where profile writing is available. Inputs, references, output setting, model, threshold, probability option, selected layer and current results are preserved. OS file dialogs retain their OS language.
-
-Scientific columns, model identifiers, units and QC codes remain stable. Diagnostic text may differ by language. Numeric results do not.
-
-Choose **Open results** and retain CSV, JSON, provenance and masks together. Original images/references must be preserved separately. CSV uses UTF-8 BOM. Missing numbers are empty in CSV and `null` in JSON. Read `path_status`, `angle_failure_reason`, `valid_angle_n`, `qc_flags` and `errors.csv`; do not replace missing values with zero.
-
-## Batch use
-
-```powershell
-python cli.py images --references masks --output results --model fold_2 --save-probability --no-zip
-python cli.py image.tif --output results --language zh
-RootScope.exe --batch image.tif --output results --model fold_2 --no-zip
+```text
+python -m pip install -r requirements.txt
+python desktop.py
+python cli.py images --output results
+python cli.py image.tif --output results --model paper_fold_2 --save-probability
+python cli.py images --output historical-results --pipeline legacy --model fold_0
 ```
 
-The command/GUI share the numerical pipeline. CLI exit codes are 0 for completion without image errors, 1 for logged image errors and 2 for argument/input validation errors. The windowed executable has no terminal progress; wait for its process to end.
+Python 3.12 with Tk is needed for the GUI. Source tests and Windows packaging are in GitHub Actions. The paper runtime loads frozen numeric forests without requiring scikit-learn/joblib. No ensemble or all-data production model is implied. A grayscale file is accepted as a photograph with replicated channels, but it differs from the colour acquisition used in D3 and requires separate validation.
 
+## Outputs
+
+Each run creates `Report.md`, `results.csv`, `results.json`, `errors.csv`, `provenance.json`, masks, PNG overlays and editable `reconstruction.svg`. The optional float32 probability archive supports debugging. A matching reference mask supplies segmentation scores; it cannot supply whole-root identities or anatomical counts. Whole-root reference contours are never passed to reconstruction at inference.
+
+The historical release remains available at the `rootscope-desktop` tag. It uses the old skeleton pipeline; the new application is named RootScope. Commit IDs, algorithm identifiers and archived tags are retained for reproducibility.
+
+## Build notes
+
+Run `scripts/build_windows.ps1 -Python python` on Windows. Standard Python distributions provide Tcl/Tk dependencies. A relocated/custom Tcl runtime may require `-TclZlib PATH_TO_ZLIB1_DLL`; this explicit option bundles that runtime dependency. Run `RootScope.exe --self-test REPORT.json` to verify all ten ONNX models and twenty reconstruction artifacts. A visible GUI still requires an interactive Windows desktop.
+
+The SVG embeds a JPEG presentation photograph; `source_decoded.png` preserves the decoded image losslessly. Analytical calculations always use the input photograph, not the figure preview.

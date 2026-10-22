@@ -8,5 +8,10 @@
   "descriptor_records": 2400,
   "reconstruction_records": 250,
   "source_images": 50,
-  "reference_polygons": 3290
+  "reference_polygons": 3290,
+  "current_application": "RootScope",
+  "current_pipeline": "contour-guided-whole-root",
+  "current_primary_arm": "whole_RGB_joint",
+  "model_catalog": "model/paper/catalog.json",
+  "desktop_software_commit_is_historical": true
 }

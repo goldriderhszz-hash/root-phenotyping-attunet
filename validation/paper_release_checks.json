@@ -1,0 +1,94 @@
+{
+  "status": "passed_with_stated_limits",
+  "date": "2026-10-22",
+  "application": "RootScope",
+  "source_tests": 17,
+  "frozen_pool_selections_exact": 50,
+  "frozen_probability_full_chain_images": 5,
+  "packaged_self_test": {
+    "status": "ok",
+    "application": "RootScope",
+    "models": [
+      {
+        "id": "fold_0",
+        "sha256": "f81770d5c8e2e710da1b30f3354fef4e69d4641079b291fd7e857d4c647b8892",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "fold_1",
+        "sha256": "abcfbccab4d37b4696bb27c6474eed9e30bf0eaf722223990b77dcb78b6dc039",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "fold_2",
+        "sha256": "a070c19c20783b5e6dce7d437ec7e973ff625726f9021638e34276ca9123cc59",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "fold_3",
+        "sha256": "7b087ce9197ca5463dcfc873e2f0fae935a64317fd25ce0013df44a365bb01fd",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "fold_4",
+        "sha256": "85fd5f8fbad1b31dde9c3f97855caa8089256c283f852d061579865d734f9603",
+        "provider": "CPUExecutionProvider"
+      }
+    ],
+    "paper_models": [
+      {
+        "id": "paper_fold_0",
+        "sha256": "215b1ce515282d1b6be310b0165d3531dfe891456f7b78859871f793bd4ba148",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "paper_fold_1",
+        "sha256": "5cd495ee71af5fdcd36d49e0cee5e7a2fead5f0886a8367a89e99df32e3ccb25",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "paper_fold_2",
+        "sha256": "f35ad78d5a2c1a7fe6c0465e0a9bbdf0416389a48468b840c0fdee5d63c94b46",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "paper_fold_3",
+        "sha256": "fab1f0afc5b5336518783a2dee25b64af3c3d499a676e4933b14a4a9ad0bad6f",
+        "provider": "CPUExecutionProvider"
+      },
+      {
+        "id": "paper_fold_4",
+        "sha256": "8d7f6e985344e0e3a4a3acc3ed334c89b3bc70fa84fc091012bff2a0ba504df0",
+        "provider": "CPUExecutionProvider"
+      }
+    ],
+    "reconstruction_artifacts": 20,
+    "shape": [
+      256,
+      256
+    ]
+  },
+  "source_gui_constructor": {
+    "title": "RootScope",
+    "model": "auto",
+    "columns": [
+      "name",
+      "path",
+      "segments",
+      "laterals",
+      "junctions",
+      "angle",
+      "qc"
+    ],
+    "threshold_label": "Auto"
+  },
+  "native_screenshot_verified": false,
+  "manuscript": {
+    "name": "Manuscript.docx",
+    "revision": "PlantMethods format revision 2026-10-22",
+    "sha256": "9700b2c5c7fb5bdd450fba7bf4f658ff524c1a5c557e49f4fc23019c7348de60"
+  },
+  "no_new_training": true,
+  "no_external_validation": true,
+  "field_state_of_the_art_claim": false
+}

@@ -1,19 +1,9 @@
-# Output schema
+# RootScope outputs
 
-Field names are identical in both interface languages. `results.json` stores nested descriptors and optional reference evaluation; CSV flattens scientific measurements. Non-finite values become missing. Failed images appear in `errors.csv` and are excluded from successful results, so report their denominators.
+The paper pipeline exports `axis_curve_length_px`, `reconstructed_path_count`, `first_order_lateral_count` (geometric Y attachments), `branch_junction_count` (degree 3), `ambiguous_contact_count`, `mean_parent_child_angle_deg`, `valid_angle_n`, and `missing_angle_n`. Missing values are JSON null / blank CSV cells; reports display NA. Do not interpret blank as zero.
 
-| Fields | Role |
-| --- | --- |
-| image_name, image_sha256, width, height | Input identity, hash and pixel dimensions |
-| foreground_fraction, threshold | Foreground share and actual probability cutoff |
-| dominant_path_length | Raw-skeleton path length in pixels |
-| retained_segment_count, junction_region_count | Operational counts under the frozen extractor |
-| mean_local_acute_angle_deg | Exploratory local acute angle in degrees |
-| valid_angle_n, angle_failure_reason, path_status | Measurement availability and reasons |
-| scale_status, length_unit, closing_kernel, pruning_iterations, min_component_pixels | Scale interpretation and extractor settings |
-| qc_flags | Machine-readable review flags |
-| eval_*, reference_*, error_* | Optional metrics, reference descriptors and prediction-minus-reference errors |
+Results identify image hash, fold, threshold, ONNX hash, assignment method and review flags. Nested reconstruction records include selected candidate IDs, paths/curves in y,x pixel coordinates, graph edges, model error-target predictions, extension metadata, solver status and gap. Status 0 indicates a solver optimum; feasible time-limited incumbents are explicitly flagged. Boolean identity-validation fields remain false.
 
-QC flags are `empty_prediction`, `very_low_foreground` (<0.001), `high_foreground` (>0.2), `touches_image_border`, `path_unavailable` and `angle_unavailable`. These are review heuristics, not calibrated error probabilities.
+`provenance.json` includes the complete model catalog and software dependencies. `Report.md` gives a human-readable summary; `reconstruction.svg` embeds the source photograph and editable vector curves. PNG dpi metadata does not change source resolution. No physical calibration is inferred.
 
-Provenance identifies the application, timestamps, model/fold/seed, ONNX/checkpoint hashes, default/used thresholds, input/reference hashes, processing settings, runtime provider and library versions. Per-image IDs, paths and timestamps can differ between equivalent runs. Private `_` keys are omitted from public result JSON. CSV uses UTF-8 BOM.
+With `--pipeline legacy`, the historical fields retain their original definitions: dominant raw-skeleton path, processed segments, junction regions and local acute angle. These historical quantities must not be pooled with the paper fields merely because their labels are similar.
