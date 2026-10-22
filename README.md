@@ -46,7 +46,7 @@ python desktop.py
 python cli.py images --output results
 ```
 
-The UI and exports report pixel units, missing values, model hashes and review flags. The name has no version suffix; archived tags and commit IDs remain for reproducibility. The previous [desktop release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop) contains the historical skeleton pipeline, which remains available with `--pipeline legacy`. Current Windows builds are available from this repository's Actions artifacts.
+The UI and exports report pixel units, missing values, model hashes and review flags. The name has no version suffix; archived tags and commit IDs remain for reproducibility. [Download RootScope for Windows x64](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope) (499 MB; verify `SHA256SUMS.txt`). The previous [desktop release](https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope-desktop) contains the historical skeleton pipeline, which remains available with `--pipeline legacy`.
 
 The paper's primary reconstruction matched 682/3290 roots (20.73%) at the declared 75% reciprocal path-support threshold on reused development images. This is a research prototype requiring review, not independently validated anatomical phenotyping. Journal-oriented presentation does not establish acceptance by Plant Methods.
 

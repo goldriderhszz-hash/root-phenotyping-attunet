@@ -1,0 +1,36 @@
+{
+  "url": "https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/tag/rootscope",
+  "commit": "e06774d15852ea206a880c8db554616c38c73db0",
+  "tag": "rootscope",
+  "title": "RootScope",
+  "assets": [
+    {
+      "name": "RootScope-Windows-x64.zip",
+      "size": 499337145,
+      "digest": "sha256:bdcd0edab8aff2a75442bf6f40d24c734fa9d471ed7595287edb913ac68b443c",
+      "browser_download_url": "https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/rootscope/RootScope-Windows-x64.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 93,
+      "digest": "sha256:e0c94a5d654d698e0dccde76c79ff9c7e6cc7f9f9f7c9182e21f4cf28bb91db9",
+      "browser_download_url": "https://github.com/goldriderhszz-hash/root-phenotyping-attunet/releases/download/rootscope/SHA256SUMS.txt"
+    }
+  ],
+  "workflows": [
+    {
+      "id": 39720087939,
+      "name": "Source tests",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/goldriderhszz-hash/root-phenotyping-attunet/actions/runs/39720087939"
+    },
+    {
+      "id": 39720087953,
+      "name": "Windows desktop build",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/goldriderhszz-hash/root-phenotyping-attunet/actions/runs/39720087953"
+    }
+  ]
+}
